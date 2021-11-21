@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Main_menu.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Freeplay off0000" x="0" y="0" width="1138" height="235"/>
+	<SubTexture name="Freeplay selected0000" x="0" y="235" width="1264" height="260"/>
+	<SubTexture name="Makingof off0000" x="0" y="495" width="1138" height="194"/>
+	<SubTexture name="Makingof selected0000" x="0" y="689" width="1224" height="208"/>
+	<SubTexture name="Options off0000" x="0" y="897" width="1138" height="221"/>
+	<SubTexture name="Options selected0000" x="0" y="1118" width="1244" height="241"/>
+	<SubTexture name="Story off0000" x="0" y="1359" width="1138" height="237"/>
+	<SubTexture name="Story selected0000" x="0" y="1596" width="1244" height="258"/>
+</TextureAtlas>

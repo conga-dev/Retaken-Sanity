@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				54,
+				-47
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "3Rebeccaleft"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-29,
+				-165
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "3Rebeccadown"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-46,
+				220
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "3Rebeccaup"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-29,
+				-47
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "3Rebeccaright"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "3Rebeccaidle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/DanceRebecca",
+	"position": [
+		0,
+		170
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		300,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

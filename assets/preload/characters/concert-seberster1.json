@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-6
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "3Sebleft"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-1
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "3Sebdown"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-2
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "3Sebup"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-2
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "3Sebright"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "3Sebidle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "3Sebmiss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "3Sebmiss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "3Sebmiss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "3Sebmiss"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/DanceSeb1",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "dad",
+	"flip_x": true,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		330,
+		130
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

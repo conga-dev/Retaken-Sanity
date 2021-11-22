@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="song1Giz.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Gizdown0000" x="0" y="0" width="349" height="740" frameX="0" frameY="-12" frameWidth="389" frameHeight="752"/>
+	<SubTexture name="Gizdown0001" x="349" y="0" width="349" height="752" frameX="0" frameY="0" frameWidth="389" frameHeight="752"/>
+	<SubTexture name="Gizdown0002" x="698" y="0" width="389" height="752"/>
+	<SubTexture name="Gizdown0003" x="1087" y="0" width="363" height="752" frameX="0" frameY="0" frameWidth="389" frameHeight="752"/>
+	<SubTexture name="Gizdown0004" x="1087" y="0" width="363" height="752" frameX="0" frameY="0" frameWidth="389" frameHeight="752"/>
+	<SubTexture name="Gizdown0005" x="1087" y="0" width="363" height="752" frameX="0" frameY="0" frameWidth="389" frameHeight="752"/>
+	<SubTexture name="Gizdown0006" x="1087" y="0" width="363" height="752" frameX="0" frameY="0" frameWidth="389" frameHeight="752"/>
+	<SubTexture name="Gizdown0007" x="1450" y="0" width="368" height="752" frameX="0" frameY="0" frameWidth="389" frameHeight="752"/>
+	<SubTexture name="Gizdown0008" x="1818" y="0" width="347" height="752" frameX="0" frameY="0" frameWidth="389" frameHeight="752"/>
+	<SubTexture name="Gizdown0009" x="2165" y="0" width="360" height="752" frameX="0" frameY="0" frameWidth="389" frameHeight="752"/>
+	<SubTexture name="Gizdown0010" x="2165" y="0" width="360" height="752" frameX="0" frameY="0" frameWidth="389" frameHeight="752"/>
+	<SubTexture name="Gizdown0011" x="2165" y="0" width="360" height="752" frameX="0" frameY="0" frameWidth="389" frameHeight="752"/>
+	<SubTexture name="Gizidle0000" x="2525" y="0" width="349" height="753" frameX="0" frameY="-10" frameWidth="389" frameHeight="763"/>
+	<SubTexture name="Gizidle0001" x="2874" y="0" width="349" height="753" frameX="0" frameY="-10" frameWidth="389" frameHeight="763"/>
+	<SubTexture name="Gizidle0002" x="3223" y="0" width="389" height="759" frameX="0" frameY="-4" frameWidth="389" frameHeight="763"/>
+	<SubTexture name="Gizidle0003" x="3612" y="0" width="363" height="763" frameX="0" frameY="0" frameWidth="389" frameHeight="763"/>
+	<SubTexture name="Gizidle0004" x="0" y="763" width="363" height="763" frameX="0" frameY="0" frameWidth="389" frameHeight="763"/>
+	<SubTexture name="Gizidle0005" x="0" y="763" width="363" height="763" frameX="0" frameY="0" frameWidth="389" frameHeight="763"/>
+	<SubTexture name="Gizidle0006" x="0" y="763" width="363" height="763" frameX="0" frameY="0" frameWidth="389" frameHeight="763"/>
+	<SubTexture name="Gizidle0007" x="363" y="763" width="368" height="763" frameX="0" frameY="0" frameWidth="389" frameHeight="763"/>
+	<SubTexture name="Gizidle0008" x="731" y="763" width="347" height="763" frameX="0" frameY="0" frameWidth="389" frameHeight="763"/>
+	<SubTexture name="Gizidle0009" x="1078" y="763" width="360" height="763" frameX="0" frameY="0" frameWidth="389" frameHeight="763"/>
+	<SubTexture name="Gizidle0010" x="1078" y="763" width="360" height="763" frameX="0" frameY="0" frameWidth="389" frameHeight="763"/>
+	<SubTexture name="Gizidle0011" x="1078" y="763" width="360" height="763" frameX="0" frameY="0" frameWidth="389" frameHeight="763"/>
+	<SubTexture name="Gizleft0000" x="1438" y="763" width="355" height="755" frameX="0" frameY="-4" frameWidth="395" frameHeight="759"/>
+	<SubTexture name="Gizleft0001" x="1793" y="763" width="352" height="759" frameX="-3" frameY="0" frameWidth="395" frameHeight="759"/>
+	<SubTexture name="Gizleft0002" x="2145" y="763" width="392" height="759" frameX="-3" frameY="0" frameWidth="395" frameHeight="759"/>
+	<SubTexture name="Gizleft0003" x="2537" y="763" width="366" height="759" frameX="-3" frameY="0" frameWidth="395" frameHeight="759"/>
+	<SubTexture name="Gizleft0004" x="2537" y="763" width="366" height="759" frameX="-3" frameY="0" frameWidth="395" frameHeight="759"/>
+	<SubTexture name="Gizleft0005" x="2537" y="763" width="366" height="759" frameX="-3" frameY="0" frameWidth="395" frameHeight="759"/>
+	<SubTexture name="Gizleft0006" x="2537" y="763" width="366" height="759" frameX="-3" frameY="0" frameWidth="395" frameHeight="759"/>
+	<SubTexture name="Gizleft0007" x="2903" y="763" width="371" height="759" frameX="-3" frameY="0" frameWidth="395" frameHeight="759"/>
+	<SubTexture name="Gizleft0008" x="3274" y="763" width="350" height="759" frameX="-3" frameY="0" frameWidth="395" frameHeight="759"/>
+	<SubTexture name="Gizleft0009" x="3624" y="763" width="363" height="759" frameX="-3" frameY="0" frameWidth="395" frameHeight="759"/>
+	<SubTexture name="Gizleft0010" x="3624" y="763" width="363" height="759" frameX="-3" frameY="0" frameWidth="395" frameHeight="759"/>
+	<SubTexture name="Gizleft0011" x="3624" y="763" width="363" height="759" frameX="-3" frameY="0" frameWidth="395" frameHeight="759"/>
+	<SubTexture name="Gizmiss0000" x="0" y="1526" width="363" height="763"/>
+	<SubTexture name="Gizmiss0001" x="0" y="1526" width="363" height="763"/>
+	<SubTexture name="Gizmiss0002" x="0" y="1526" width="363" height="763"/>
+	<SubTexture name="Gizmiss0003" x="0" y="1526" width="363" height="763"/>
+	<SubTexture name="Gizmiss0004" x="0" y="1526" width="363" height="763"/>
+	<SubTexture name="Gizmiss0005" x="0" y="1526" width="363" height="763"/>
+	<SubTexture name="Gizmiss0006" x="0" y="1526" width="363" height="763"/>
+	<SubTexture name="Gizmiss0007" x="0" y="1526" width="363" height="763"/>
+	<SubTexture name="Gizmiss0008" x="0" y="1526" width="363" height="763"/>
+	<SubTexture name="Gizmiss0009" x="0" y="1526" width="363" height="763"/>
+	<SubTexture name="Gizmiss0010" x="0" y="1526" width="363" height="763"/>
+	<SubTexture name="Gizmiss0011" x="0" y="1526" width="363" height="763"/>
+	<SubTexture name="Gizright0000" x="363" y="1526" width="342" height="747" frameX="-4" frameY="-9" frameWidth="386" frameHeight="756"/>
+	<SubTexture name="Gizright0001" x="705" y="1526" width="346" height="756" frameX="0" frameY="0" frameWidth="386" frameHeight="756"/>
+	<SubTexture name="Gizright0002" x="1051" y="1526" width="386" height="756"/>
+	<SubTexture name="Gizright0003" x="1437" y="1526" width="360" height="756" frameX="0" frameY="0" frameWidth="386" frameHeight="756"/>
+	<SubTexture name="Gizright0004" x="1437" y="1526" width="360" height="756" frameX="0" frameY="0" frameWidth="386" frameHeight="756"/>
+	<SubTexture name="Gizright0005" x="1437" y="1526" width="360" height="756" frameX="0" frameY="0" frameWidth="386" frameHeight="756"/>
+	<SubTexture name="Gizright0006" x="1437" y="1526" width="360" height="756" frameX="0" frameY="0" frameWidth="386" frameHeight="756"/>
+	<SubTexture name="Gizright0007" x="1797" y="1526" width="365" height="756" frameX="0" frameY="0" frameWidth="386" frameHeight="756"/>
+	<SubTexture name="Gizright0008" x="2162" y="1526" width="344" height="756" frameX="0" frameY="0" frameWidth="386" frameHeight="756"/>
+	<SubTexture name="Gizright0009" x="2506" y="1526" width="357" height="756" frameX="0" frameY="0" frameWidth="386" frameHeight="756"/>
+	<SubTexture name="Gizright0010" x="2506" y="1526" width="357" height="756" frameX="0" frameY="0" frameWidth="386" frameHeight="756"/>
+	<SubTexture name="Gizright0011" x="2506" y="1526" width="357" height="756" frameX="0" frameY="0" frameWidth="386" frameHeight="756"/>
+	<SubTexture name="Gizup0000" x="2863" y="1526" width="349" height="772" frameX="0" frameY="0" frameWidth="389" frameHeight="772"/>
+	<SubTexture name="Gizup0001" x="3212" y="1526" width="349" height="762" frameX="0" frameY="-10" frameWidth="389" frameHeight="772"/>
+	<SubTexture name="Gizup0002" x="3561" y="1526" width="389" height="762" frameX="0" frameY="-10" frameWidth="389" frameHeight="772"/>
+	<SubTexture name="Gizup0003" x="0" y="2298" width="363" height="762" frameX="0" frameY="-10" frameWidth="389" frameHeight="772"/>
+	<SubTexture name="Gizup0004" x="0" y="2298" width="363" height="762" frameX="0" frameY="-10" frameWidth="389" frameHeight="772"/>
+	<SubTexture name="Gizup0005" x="0" y="2298" width="363" height="762" frameX="0" frameY="-10" frameWidth="389" frameHeight="772"/>
+	<SubTexture name="Gizup0006" x="0" y="2298" width="363" height="762" frameX="0" frameY="-10" frameWidth="389" frameHeight="772"/>
+	<SubTexture name="Gizup0007" x="363" y="2298" width="368" height="762" frameX="0" frameY="-10" frameWidth="389" frameHeight="772"/>
+	<SubTexture name="Gizup0008" x="731" y="2298" width="347" height="762" frameX="0" frameY="-10" frameWidth="389" frameHeight="772"/>
+	<SubTexture name="Gizup0009" x="1078" y="2298" width="360" height="762" frameX="0" frameY="-10" frameWidth="389" frameHeight="772"/>
+	<SubTexture name="Gizup0010" x="1078" y="2298" width="360" height="762" frameX="0" frameY="-10" frameWidth="389" frameHeight="772"/>
+	<SubTexture name="Gizup0011" x="1078" y="2298" width="360" height="762" frameX="0" frameY="-10" frameWidth="389" frameHeight="772"/>
+</TextureAtlas>

@@ -627,13 +627,67 @@ class PlayState extends MusicBeatState
 					bg.antialiasing = false;
 					add(bg);
 				}
+			case 'gammastage':
+			{
+				var bg:FlxSprite = new FlxSprite(0, 200).makeGraphic(FlxG.width, FlxG.height, FlxColor.RED);
+				add(bg);
+			}
+			case 'hospital':
+			{
+				var bg:BGSprite = new BGSprite('wakeup/Background', 0, 0, 1, 1);
+				
+				var curtains:BGSprite = new BGSprite('wakeup/curtains', 190, 250, 1, 1, ['curtains'], true);
+
+				var gfChair:BGSprite = new BGSprite('wakeup/Gf_eating', 680, 780, 1, 1, ['GFBGsprite1'], true);
+
+				var starvinglol:BGSprite = new BGSprite('wakeup/rebeccaeating', 950, 660, 1, 1, ['BGloop'], true);
+
+				var table:BGSprite = new BGSprite('wakeup/Table', 1550, 940, 1, 1);
+
+				var sebreaster:BGSprite = new BGSprite('wakeup/sebdrinking', 1820, 490, 1, 1, ['BGSeberstersprite'], true);
+
+				add(bg);
+				add(curtains);
+				add(gfChair);
+				add(starvinglol);
+				add(table);
+				add(sebreaster);
+			}
+			case 'beach':
+			{
+				var bg:BGSprite = new BGSprite('unwind/Background', 0, 0, 1, 1);
+
+				var waves:FlxSprite = new FlxSprite(0, 700);
+				waves.frames = Paths.getSparrowAtlas('unwind/beachnwaves');
+				waves.animation.addByPrefix('idle', 'beachwaves', 24, true);
+				waves.animation.play('idle');
+				waves.antialiasing = ClientPrefs.globalAntialiasing;
+
+				var sebhot:BGSprite = new BGSprite('unwind/beachseb', 1000, 670, 1, 1, ['Beachseb'], true);
+
+				var gfsit:BGSprite = new BGSprite('unwind/beachGF', 500, 600, 1, 1, ['BeachGF'], true);
+
+				var ash:BGSprite = new BGSprite('unwind/Beachash', 1600, 800, 1, 1);
+
+				var axelLMAO:BGSprite = new BGSprite('unwind/BeachAxel', 100, 940, 1, 1);
+
+				var walkway:BGSprite = new BGSprite('unwind/walkway', -35, 1100, 1, 1);
+
+				add(bg);
+				add(waves);
+				add(sebhot);
+				add(gfsit);
+				add(ash);
+				add(axelLMAO);
+				add(walkway);
+			}
 		}
+
+		add(gfGroup);
 
 		if(isPixelStage) {
 			introSoundsSuffix = '-pixel';
 		}
-
-		add(gfGroup);
 
 		// Shitty layering but whatev it works LOL
 		if (curStage == 'limo')
@@ -718,6 +772,8 @@ class PlayState extends MusicBeatState
 		gf = new Character(0, 0, gfVersion);
 		startCharacterPos(gf);
 		gf.scrollFactor.set(0.95, 0.95);
+		if (curStage != 'beach')
+			gf.visible = false;
 		gfGroup.add(gf);
 
 		dad = new Character(0, 0, SONG.player2);
@@ -1275,8 +1331,16 @@ class PlayState extends MusicBeatState
 		inCutscene = false;
 		var ret:Dynamic = callOnLuas('onStartCountdown', []);
 		if(ret != FunkinLua.Function_Stop) {
-			generateStaticArrows(0);
-			generateStaticArrows(1);
+
+			if (curStage == 'beach') {
+				generateStaticArrows(0, 1);
+				generateStaticArrows(1, 1);
+			}
+			else {
+				generateStaticArrows(0);
+				generateStaticArrows(1);
+			}
+
 			for (i in 0...playerStrums.length) {
 				setOnLuas('defaultPlayerStrumX' + i, playerStrums.members[i].x);
 				setOnLuas('defaultPlayerStrumY' + i, playerStrums.members[i].y);
@@ -1589,11 +1653,18 @@ songSpeed = SONG.speed;
 						}
 					}
 
-					if (swagNote.mustPress)
-					{
-						swagNote.x += FlxG.width / 2; // general offset
+					if(curStage == 'beach') {
+						if (!swagNote.mustPress)
+						{
+							swagNote.x += FlxG.width / 2; // general offset
+						}
 					}
-					else {}
+					else {
+						if (swagNote.mustPress)
+						{
+							swagNote.x += FlxG.width / 2; // general offset
+						}
+					}
 
 					if(!noteTypeMap.exists(swagNote.noteType)) {
 						noteTypeMap.set(swagNote.noteType, true);
@@ -1665,7 +1736,7 @@ songSpeed = SONG.speed;
 		return FlxSort.byValues(FlxSort.ASCENDING, Obj1[0] - earlyTime1, Obj2[0] - earlyTime2);
 	}
 
-	private function generateStaticArrows(player:Int):Void
+	private function generateStaticArrows(player:Int, swap:Int = 0):Void
 	{
 		for (i in 0...4)
 		{
@@ -1677,14 +1748,27 @@ songSpeed = SONG.speed;
 				babyArrow.alpha = 0;
 				FlxTween.tween(babyArrow, {y: babyArrow.y + 10, alpha: 1}, 1, {ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
 			}
-
-			if (player == 1)
+			if (swap == 1)
 			{
-				playerStrums.add(babyArrow);
+				if (player == 1)
+				{
+					opponentStrums.add(babyArrow);
+				}
+				else
+				{
+					playerStrums.add(babyArrow);
+				}
 			}
 			else
 			{
-				opponentStrums.add(babyArrow);
+				if (player == 1)
+				{
+					playerStrums.add(babyArrow);
+				}
+				else
+				{
+					opponentStrums.add(babyArrow);
+				}
 			}
 
 			strumLineNotes.add(babyArrow);
@@ -2195,6 +2279,7 @@ songSpeed = SONG.speed;
 							if (daNote.animation.curAnim.name.endsWith('end')) {
 								daNote.y += 10.5 * (fakeCrochet / 400) * 1.5 * roundedSpeed + (46 * (roundedSpeed - 1));
 								daNote.y -= 46 * (1 - (fakeCrochet / 600)) * roundedSpeed;
+								daNote.y += 9;
 								if(PlayState.isPixelStage) {
 									daNote.y += 8;
 								} else {
@@ -2782,6 +2867,10 @@ songSpeed = SONG.speed;
 				callOnLuas('onMoveCamera', ['gf']);
 			}else{
 				callOnLuas('onMoveCamera', ['dad']);
+				if(curStage == 'gammastage') {
+					boyfriend.visible = false;
+					dad.visible = true;
+				}
 			}
 		}
 		else
@@ -2791,6 +2880,10 @@ songSpeed = SONG.speed;
 				callOnLuas('onMoveCamera', ['gf']);
 			}else{
 				callOnLuas('onMoveCamera', ['boyfriend']);
+				if(curStage == 'gammastage') {
+					boyfriend.visible = true;
+					dad.visible = false;
+				}
 			}
 		}
 	}
@@ -2949,7 +3042,7 @@ songSpeed = SONG.speed;
 
 				if (storyPlaylist.length <= 0)
 				{
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					FlxG.sound.playMusic(Paths.music('A113'));
 
 					cancelFadeTween();
 					CustomFadeTransition.nextCamera = camOther;
@@ -3024,7 +3117,7 @@ songSpeed = SONG.speed;
 					CustomFadeTransition.nextCamera = null;
 				}
 				MusicBeatState.switchState(new FreeplayState());
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				FlxG.sound.playMusic(Paths.music('A113'));
 				usedPractice = false;
 				changedDifficulty = false;
 				cpuControlled = false;
@@ -3932,7 +4025,7 @@ songSpeed = SONG.speed;
 	function StrumPlayAnim(isDad:Bool, id:Int, time:Float) {
 		var spr:StrumNote = null;
 		if(isDad) {
-			spr = strumLineNotes.members[id];
+			spr = opponentStrums.members[id];
 		} else {
 			spr = playerStrums.members[id];
 		}

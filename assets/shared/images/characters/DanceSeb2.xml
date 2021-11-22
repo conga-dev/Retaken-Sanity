@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="DanceSeb2.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="3Sebdown20000" x="0" y="0" width="422" height="335"/>
+	<SubTexture name="3Sebdown20001" x="422" y="0" width="422" height="335"/>
+	<SubTexture name="3Sebdown20002" x="422" y="0" width="422" height="335"/>
+	<SubTexture name="3Sebdown20003" x="422" y="0" width="422" height="335"/>
+	<SubTexture name="3Sebdown20004" x="422" y="0" width="422" height="335"/>
+	<SubTexture name="3Sebdown20005" x="422" y="0" width="422" height="335"/>
+	<SubTexture name="3Sebdown20006" x="422" y="0" width="422" height="335"/>
+	<SubTexture name="3Sebdown20007" x="422" y="0" width="422" height="335"/>
+	<SubTexture name="3Sebdown20008" x="422" y="0" width="422" height="335"/>
+	<SubTexture name="3Sebdown20009" x="422" y="0" width="422" height="335"/>
+	<SubTexture name="3Sebdown20010" x="422" y="0" width="422" height="335"/>
+	<SubTexture name="3Sebdown20011" x="422" y="0" width="422" height="335"/>
+	<SubTexture name="3Sebidle20000" x="844" y="0" width="422" height="322" frameX="0" frameY="-13" frameWidth="422" frameHeight="335"/>
+	<SubTexture name="3Sebidle20001" x="1266" y="0" width="422" height="321" frameX="0" frameY="-14" frameWidth="422" frameHeight="335"/>
+	<SubTexture name="3Sebidle20002" x="0" y="335" width="422" height="328" frameX="0" frameY="-7" frameWidth="422" frameHeight="335"/>
+	<SubTexture name="3Sebidle20003" x="422" y="335" width="422" height="335"/>
+	<SubTexture name="3Sebidle20004" x="844" y="335" width="422" height="334" frameX="0" frameY="-1" frameWidth="422" frameHeight="335"/>
+	<SubTexture name="3Sebidle20005" x="844" y="335" width="422" height="334" frameX="0" frameY="-1" frameWidth="422" frameHeight="335"/>
+	<SubTexture name="3Sebidle20006" x="844" y="335" width="422" height="334" frameX="0" frameY="-1" frameWidth="422" frameHeight="335"/>
+	<SubTexture name="3Sebidle20007" x="844" y="335" width="422" height="334" frameX="0" frameY="-1" frameWidth="422" frameHeight="335"/>
+	<SubTexture name="3Sebidle20008" x="844" y="335" width="422" height="334" frameX="0" frameY="-1" frameWidth="422" frameHeight="335"/>
+	<SubTexture name="3Sebidle20009" x="844" y="335" width="422" height="334" frameX="0" frameY="-1" frameWidth="422" frameHeight="335"/>
+	<SubTexture name="3Sebidle20010" x="844" y="335" width="422" height="334" frameX="0" frameY="-1" frameWidth="422" frameHeight="335"/>
+	<SubTexture name="3Sebidle20011" x="844" y="335" width="422" height="334" frameX="0" frameY="-1" frameWidth="422" frameHeight="335"/>
+	<SubTexture name="3Sebleft20000" x="1266" y="335" width="422" height="346"/>
+	<SubTexture name="3Sebleft20001" x="0" y="681" width="422" height="346"/>
+	<SubTexture name="3Sebleft20002" x="0" y="681" width="422" height="346"/>
+	<SubTexture name="3Sebleft20003" x="0" y="681" width="422" height="346"/>
+	<SubTexture name="3Sebleft20004" x="0" y="681" width="422" height="346"/>
+	<SubTexture name="3Sebleft20005" x="0" y="681" width="422" height="346"/>
+	<SubTexture name="3Sebleft20006" x="0" y="681" width="422" height="346"/>
+	<SubTexture name="3Sebleft20007" x="0" y="681" width="422" height="346"/>
+	<SubTexture name="3Sebleft20008" x="0" y="681" width="422" height="346"/>
+	<SubTexture name="3Sebleft20009" x="0" y="681" width="422" height="346"/>
+	<SubTexture name="3Sebleft20010" x="0" y="681" width="422" height="346"/>
+	<SubTexture name="3Sebleft20011" x="0" y="681" width="422" height="346"/>
+	<SubTexture name="3Sebmiss0000" x="422" y="681" width="422" height="357" frameX="0" frameY="-2" frameWidth="422" frameHeight="359"/>
+	<SubTexture name="3Sebmiss0001" x="844" y="681" width="422" height="356" frameX="0" frameY="0" frameWidth="422" frameHeight="359"/>
+	<SubTexture name="3Sebmiss0002" x="844" y="681" width="422" height="356" frameX="0" frameY="0" frameWidth="422" frameHeight="359"/>
+	<SubTexture name="3Sebmiss0003" x="844" y="681" width="422" height="356" frameX="0" frameY="0" frameWidth="422" frameHeight="359"/>
+	<SubTexture name="3Sebmiss0004" x="844" y="681" width="422" height="356" frameX="0" frameY="0" frameWidth="422" frameHeight="359"/>
+	<SubTexture name="3Sebmiss0005" x="844" y="681" width="422" height="356" frameX="0" frameY="0" frameWidth="422" frameHeight="359"/>
+	<SubTexture name="3Sebmiss0006" x="844" y="681" width="422" height="356" frameX="0" frameY="0" frameWidth="422" frameHeight="359"/>
+	<SubTexture name="3Sebmiss0007" x="844" y="681" width="422" height="356" frameX="0" frameY="0" frameWidth="422" frameHeight="359"/>
+	<SubTexture name="3Sebmiss0008" x="844" y="681" width="422" height="356" frameX="0" frameY="0" frameWidth="422" frameHeight="359"/>
+	<SubTexture name="3Sebmiss0009" x="844" y="681" width="422" height="356" frameX="0" frameY="0" frameWidth="422" frameHeight="359"/>
+	<SubTexture name="3Sebmiss0010" x="844" y="681" width="422" height="356" frameX="0" frameY="0" frameWidth="422" frameHeight="359"/>
+	<SubTexture name="3Sebmiss0011" x="844" y="681" width="422" height="356" frameX="0" frameY="0" frameWidth="422" frameHeight="359"/>
+	<SubTexture name="3Sebright20000" x="1266" y="681" width="422" height="358"/>
+	<SubTexture name="3Sebright20001" x="0" y="1039" width="422" height="358"/>
+	<SubTexture name="3Sebright20002" x="0" y="1039" width="422" height="358"/>
+	<SubTexture name="3Sebright20003" x="0" y="1039" width="422" height="358"/>
+	<SubTexture name="3Sebright20004" x="0" y="1039" width="422" height="358"/>
+	<SubTexture name="3Sebright20005" x="0" y="1039" width="422" height="358"/>
+	<SubTexture name="3Sebright20006" x="0" y="1039" width="422" height="358"/>
+	<SubTexture name="3Sebright20007" x="0" y="1039" width="422" height="358"/>
+	<SubTexture name="3Sebright20008" x="0" y="1039" width="422" height="358"/>
+	<SubTexture name="3Sebright20009" x="0" y="1039" width="422" height="358"/>
+	<SubTexture name="3Sebright20010" x="0" y="1039" width="422" height="358"/>
+	<SubTexture name="3Sebright20011" x="0" y="1039" width="422" height="358"/>
+	<SubTexture name="3Sebup20000" x="422" y="1039" width="421" height="362"/>
+	<SubTexture name="3Sebup20001" x="843" y="1039" width="421" height="362"/>
+	<SubTexture name="3Sebup20002" x="843" y="1039" width="421" height="362"/>
+	<SubTexture name="3Sebup20003" x="843" y="1039" width="421" height="362"/>
+	<SubTexture name="3Sebup20004" x="843" y="1039" width="421" height="362"/>
+	<SubTexture name="3Sebup20005" x="843" y="1039" width="421" height="362"/>
+	<SubTexture name="3Sebup20006" x="843" y="1039" width="421" height="362"/>
+	<SubTexture name="3Sebup20007" x="843" y="1039" width="421" height="362"/>
+	<SubTexture name="3Sebup20008" x="843" y="1039" width="421" height="362"/>
+	<SubTexture name="3Sebup20009" x="843" y="1039" width="421" height="362"/>
+	<SubTexture name="3Sebup20010" x="843" y="1039" width="421" height="362"/>
+	<SubTexture name="3Sebup20011" x="843" y="1039" width="421" height="362"/>
+</TextureAtlas>

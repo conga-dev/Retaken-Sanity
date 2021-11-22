@@ -41,7 +41,7 @@ class FreeplayState extends MusicBeatState
 
 	private var iconArray:Array<HealthIcon> = [];
 
-	var bg:FlxSprite;
+	var bar:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
@@ -89,9 +89,12 @@ class FreeplayState extends MusicBeatState
 
 		// LOAD CHARACTERS
 
-		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
-		add(bg);
+		bar = new FlxSprite();
+		bar.frames = Paths.getSparrowAtlas('menu_line');
+		bar.animation.addByPrefix('idle', 'menu_Line1');
+		bar.animation.play('idle');
+		bar.antialiasing = ClientPrefs.globalAntialiasing;
+		add(bar);
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
@@ -131,8 +134,6 @@ class FreeplayState extends MusicBeatState
 		add(scoreText);
 
 		if(curSelected >= songs.length) curSelected = 0;
-		bg.color = songs[curSelected].color;
-		intendedColor = bg.color;
 		changeSelection();
 		changeDiff();
 
@@ -342,19 +343,6 @@ class FreeplayState extends MusicBeatState
 			curSelected = songs.length - 1;
 		if (curSelected >= songs.length)
 			curSelected = 0;
-
-		var newColor:Int = songs[curSelected].color;
-		if(newColor != intendedColor) {
-			if(colorTween != null) {
-				colorTween.cancel();
-			}
-			intendedColor = newColor;
-			colorTween = FlxTween.color(bg, 1, bg.color, intendedColor, {
-				onComplete: function(twn:FlxTween) {
-					colorTween = null;
-				}
-			});
-		}
 
 		// selector.y = (70 * curSelected) + 30;
 

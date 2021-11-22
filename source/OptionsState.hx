@@ -156,7 +156,7 @@ class NotesSubstate extends MusicBeatSubstate
 			}
 
 			var note:FlxSprite = new FlxSprite(posX - 70, yPos);
-			note.frames = Paths.getSparrowAtlas('NOTE_assets');
+			note.frames = Paths.getSparrowAtlas('NOTE_assets2');
 			switch(i) {
 				case 0:
 					note.animation.addByPrefix('idle', 'purple0');

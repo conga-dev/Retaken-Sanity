@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				137,
+				0
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "RebeccabeaLEFT2",
+			"indices": []
+		},
+		{
+			"offsets": [
+				78,
+				-42
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "RebeccabeaDOWN2",
+			"indices": []
+		},
+		{
+			"offsets": [
+				50,
+				49
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "RebeccabeaUP2",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-62,
+				-44
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "RebeccabeaRIGHT2",
+			"indices": []
+		},
+		{
+			"offsets": [
+				65,
+				0
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "Rebeccabeachidle2",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "Rebeccabeachmiss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "Rebeccabeachmiss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "Rebeccabeachmiss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "Rebeccabeachmiss",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BeachRebecca2",
+	"position": [
+		100,
+		170
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		-520,
+		-80
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

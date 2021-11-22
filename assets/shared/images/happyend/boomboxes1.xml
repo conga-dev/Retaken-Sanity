@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="boomboxes1.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Boomboxes0000" x="0" y="0" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes0001" x="0" y="1012" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes0002" x="0" y="2024" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes0003" x="0" y="2024" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes0004" x="0" y="2024" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes0005" x="0" y="2024" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes0006" x="0" y="2024" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes0007" x="0" y="2024" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes0008" x="0" y="2024" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes0009" x="0" y="2024" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes0010" x="0" y="2024" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes0011" x="0" y="2024" width="3057" height="1012"/>
+</TextureAtlas>

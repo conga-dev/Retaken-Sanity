@@ -13,6 +13,7 @@ class StrumNote extends FlxSprite
 	private var noteData:Int = 0;
 
 	private var player:Int;
+	private var swap:Int;
 
 	public function new(x:Float, y:Float, leData:Int, player:Int) {
 		colorSwap = new ColorSwap();
@@ -22,7 +23,7 @@ class StrumNote extends FlxSprite
 		this.noteData = leData;
 		super(x, y);
 
-		var skin:String = 'NOTE_assets';
+		var skin:String = 'NOTE_assets2';
 		if(PlayState.SONG.arrowSkin != null && PlayState.SONG.arrowSkin.length > 1) skin = PlayState.SONG.arrowSkin;
 
 		if(PlayState.isPixelStage)

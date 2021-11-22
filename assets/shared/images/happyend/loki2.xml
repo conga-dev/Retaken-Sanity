@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="loki1.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Loki20000" x="0" y="0" width="363" height="410" frameX="0" frameY="-38" frameWidth="368" frameHeight="465"/>
+	<SubTexture name="Loki20001" x="0" y="0" width="363" height="410" frameX="0" frameY="-38" frameWidth="368" frameHeight="465"/>
+	<SubTexture name="Loki20002" x="363" y="0" width="357" height="393" frameX="-7" frameY="-59" frameWidth="368" frameHeight="465"/>
+	<SubTexture name="Loki20003" x="363" y="0" width="357" height="393" frameX="-7" frameY="-59" frameWidth="368" frameHeight="465"/>
+	<SubTexture name="Loki20004" x="720" y="0" width="357" height="448" frameX="-8" frameY="-14" frameWidth="368" frameHeight="465"/>
+	<SubTexture name="Loki20005" x="720" y="0" width="357" height="448" frameX="-8" frameY="-14" frameWidth="368" frameHeight="465"/>
+	<SubTexture name="Loki20006" x="1077" y="0" width="358" height="438" frameX="-9" frameY="-26" frameWidth="368" frameHeight="465"/>
+	<SubTexture name="Loki20007" x="1077" y="0" width="358" height="438" frameX="-9" frameY="-26" frameWidth="368" frameHeight="465"/>
+	<SubTexture name="Loki20008" x="1435" y="0" width="359" height="465" frameX="-9" frameY="0" frameWidth="368" frameHeight="465"/>
+	<SubTexture name="Loki20009" x="1435" y="0" width="359" height="465" frameX="-9" frameY="0" frameWidth="368" frameHeight="465"/>
+	<SubTexture name="Loki20010" x="0" y="465" width="364" height="393" frameX="-3" frameY="-67" frameWidth="368" frameHeight="465"/>
+	<SubTexture name="Loki20011" x="0" y="465" width="364" height="393" frameX="-3" frameY="-67" frameWidth="368" frameHeight="465"/>
+</TextureAtlas>

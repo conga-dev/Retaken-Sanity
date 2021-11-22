@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BeachGiz.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BeachGizIdle0000" x="0" y="0" width="327" height="725" frameX="-1" frameY="-21" frameWidth="370" frameHeight="746"/>
+	<SubTexture name="BeachGizIdle0001" x="327" y="0" width="328" height="723" frameX="0" frameY="-23" frameWidth="370" frameHeight="746"/>
+	<SubTexture name="BeachGizIdle0002" x="655" y="0" width="369" height="735" frameX="-1" frameY="-11" frameWidth="370" frameHeight="746"/>
+	<SubTexture name="BeachGizIdle0003" x="1024" y="0" width="345" height="746" frameX="-1" frameY="0" frameWidth="370" frameHeight="746"/>
+	<SubTexture name="BeachGizIdle0004" x="1369" y="0" width="345" height="745" frameX="-1" frameY="-1" frameWidth="370" frameHeight="746"/>
+	<SubTexture name="BeachGizIdle0005" x="1369" y="0" width="345" height="745" frameX="-1" frameY="-1" frameWidth="370" frameHeight="746"/>
+	<SubTexture name="BeachGizIdle0006" x="1369" y="0" width="345" height="745" frameX="-1" frameY="-1" frameWidth="370" frameHeight="746"/>
+	<SubTexture name="BeachGizIdle0007" x="1714" y="0" width="349" height="745" frameX="-1" frameY="-1" frameWidth="370" frameHeight="746"/>
+	<SubTexture name="BeachGizIdle0008" x="2063" y="0" width="329" height="745" frameX="-1" frameY="-1" frameWidth="370" frameHeight="746"/>
+	<SubTexture name="BeachGizIdle0009" x="2392" y="0" width="342" height="745" frameX="-1" frameY="-1" frameWidth="370" frameHeight="746"/>
+	<SubTexture name="BeachGizIdle0010" x="2392" y="0" width="342" height="745" frameX="-1" frameY="-1" frameWidth="370" frameHeight="746"/>
+	<SubTexture name="BeachGizIdle0011" x="2392" y="0" width="342" height="745" frameX="-1" frameY="-1" frameWidth="370" frameHeight="746"/>
+	<SubTexture name="BeachGizdown0000" x="2734" y="0" width="331" height="730" frameX="0" frameY="-9" frameWidth="371" frameHeight="739"/>
+	<SubTexture name="BeachGizdown0001" x="3065" y="0" width="331" height="739" frameX="0" frameY="0" frameWidth="371" frameHeight="739"/>
+	<SubTexture name="BeachGizdown0002" x="3396" y="0" width="371" height="739"/>
+	<SubTexture name="BeachGizdown0003" x="0" y="746" width="345" height="739" frameX="0" frameY="0" frameWidth="371" frameHeight="739"/>
+	<SubTexture name="BeachGizdown0004" x="0" y="746" width="345" height="739" frameX="0" frameY="0" frameWidth="371" frameHeight="739"/>
+	<SubTexture name="BeachGizdown0005" x="0" y="746" width="345" height="739" frameX="0" frameY="0" frameWidth="371" frameHeight="739"/>
+	<SubTexture name="BeachGizdown0006" x="0" y="746" width="345" height="739" frameX="0" frameY="0" frameWidth="371" frameHeight="739"/>
+	<SubTexture name="BeachGizdown0007" x="345" y="746" width="349" height="739" frameX="0" frameY="0" frameWidth="371" frameHeight="739"/>
+	<SubTexture name="BeachGizdown0008" x="694" y="746" width="329" height="739" frameX="0" frameY="0" frameWidth="371" frameHeight="739"/>
+	<SubTexture name="BeachGizdown0009" x="1023" y="746" width="342" height="739" frameX="0" frameY="0" frameWidth="371" frameHeight="739"/>
+	<SubTexture name="BeachGizdown0010" x="1023" y="746" width="342" height="739" frameX="0" frameY="0" frameWidth="371" frameHeight="739"/>
+	<SubTexture name="BeachGizdown0011" x="1023" y="746" width="342" height="739" frameX="0" frameY="0" frameWidth="371" frameHeight="739"/>
+	<SubTexture name="BeachGizleft0000" x="1365" y="746" width="369" height="747" frameX="0" frameY="0" frameWidth="409" frameHeight="747"/>
+	<SubTexture name="BeachGizleft0001" x="1734" y="746" width="356" height="747" frameX="-13" frameY="0" frameWidth="409" frameHeight="747"/>
+	<SubTexture name="BeachGizleft0002" x="2090" y="746" width="396" height="747" frameX="-13" frameY="0" frameWidth="409" frameHeight="747"/>
+	<SubTexture name="BeachGizleft0003" x="2486" y="746" width="370" height="747" frameX="-13" frameY="0" frameWidth="409" frameHeight="747"/>
+	<SubTexture name="BeachGizleft0004" x="2486" y="746" width="370" height="747" frameX="-13" frameY="0" frameWidth="409" frameHeight="747"/>
+	<SubTexture name="BeachGizleft0005" x="2486" y="746" width="370" height="747" frameX="-13" frameY="0" frameWidth="409" frameHeight="747"/>
+	<SubTexture name="BeachGizleft0006" x="2486" y="746" width="370" height="747" frameX="-13" frameY="0" frameWidth="409" frameHeight="747"/>
+	<SubTexture name="BeachGizleft0007" x="2856" y="746" width="374" height="747" frameX="-13" frameY="0" frameWidth="409" frameHeight="747"/>
+	<SubTexture name="BeachGizleft0008" x="3230" y="746" width="354" height="747" frameX="-13" frameY="0" frameWidth="409" frameHeight="747"/>
+	<SubTexture name="BeachGizleft0009" x="3584" y="746" width="367" height="747" frameX="-13" frameY="0" frameWidth="409" frameHeight="747"/>
+	<SubTexture name="BeachGizleft0010" x="3584" y="746" width="367" height="747" frameX="-13" frameY="0" frameWidth="409" frameHeight="747"/>
+	<SubTexture name="BeachGizleft0011" x="3584" y="746" width="367" height="747" frameX="-13" frameY="0" frameWidth="409" frameHeight="747"/>
+	<SubTexture name="BeachGizmiss0000" x="0" y="1493" width="345" height="745"/>
+	<SubTexture name="BeachGizmiss0001" x="0" y="1493" width="345" height="745"/>
+	<SubTexture name="BeachGizmiss0002" x="0" y="1493" width="345" height="745"/>
+	<SubTexture name="BeachGizmiss0003" x="0" y="1493" width="345" height="745"/>
+	<SubTexture name="BeachGizmiss0004" x="0" y="1493" width="345" height="745"/>
+	<SubTexture name="BeachGizmiss0005" x="0" y="1493" width="345" height="745"/>
+	<SubTexture name="BeachGizmiss0006" x="0" y="1493" width="345" height="745"/>
+	<SubTexture name="BeachGizmiss0007" x="0" y="1493" width="345" height="745"/>
+	<SubTexture name="BeachGizmiss0008" x="0" y="1493" width="345" height="745"/>
+	<SubTexture name="BeachGizmiss0009" x="0" y="1493" width="345" height="745"/>
+	<SubTexture name="BeachGizmiss0010" x="0" y="1493" width="345" height="745"/>
+	<SubTexture name="BeachGizmiss0011" x="0" y="1493" width="345" height="745"/>
+	<SubTexture name="BeachGizright0000" x="345" y="1493" width="321" height="743" frameX="-1" frameY="0" frameWidth="362" frameHeight="743"/>
+	<SubTexture name="BeachGizright0001" x="666" y="1493" width="322" height="743" frameX="0" frameY="0" frameWidth="362" frameHeight="743"/>
+	<SubTexture name="BeachGizright0002" x="988" y="1493" width="362" height="743"/>
+	<SubTexture name="BeachGizright0003" x="1350" y="1493" width="336" height="743" frameX="0" frameY="0" frameWidth="362" frameHeight="743"/>
+	<SubTexture name="BeachGizright0004" x="1350" y="1493" width="336" height="743" frameX="0" frameY="0" frameWidth="362" frameHeight="743"/>
+	<SubTexture name="BeachGizright0005" x="1350" y="1493" width="336" height="743" frameX="0" frameY="0" frameWidth="362" frameHeight="743"/>
+	<SubTexture name="BeachGizright0006" x="1350" y="1493" width="336" height="743" frameX="0" frameY="0" frameWidth="362" frameHeight="743"/>
+	<SubTexture name="BeachGizright0007" x="1686" y="1493" width="340" height="743" frameX="0" frameY="0" frameWidth="362" frameHeight="743"/>
+	<SubTexture name="BeachGizright0008" x="2026" y="1493" width="320" height="743" frameX="0" frameY="0" frameWidth="362" frameHeight="743"/>
+	<SubTexture name="BeachGizright0009" x="2346" y="1493" width="333" height="743" frameX="0" frameY="0" frameWidth="362" frameHeight="743"/>
+	<SubTexture name="BeachGizright0010" x="2346" y="1493" width="333" height="743" frameX="0" frameY="0" frameWidth="362" frameHeight="743"/>
+	<SubTexture name="BeachGizright0011" x="2346" y="1493" width="333" height="743" frameX="0" frameY="0" frameWidth="362" frameHeight="743"/>
+	<SubTexture name="BeachGizup0000" x="2679" y="1493" width="331" height="776" frameX="0" frameY="0" frameWidth="371" frameHeight="776"/>
+	<SubTexture name="BeachGizup0001" x="3010" y="1493" width="331" height="769" frameX="0" frameY="-7" frameWidth="371" frameHeight="776"/>
+	<SubTexture name="BeachGizup0002" x="3341" y="1493" width="371" height="769" frameX="0" frameY="-7" frameWidth="371" frameHeight="776"/>
+	<SubTexture name="BeachGizup0003" x="3712" y="1493" width="345" height="769" frameX="0" frameY="-7" frameWidth="371" frameHeight="776"/>
+	<SubTexture name="BeachGizup0004" x="3712" y="1493" width="345" height="769" frameX="0" frameY="-7" frameWidth="371" frameHeight="776"/>
+	<SubTexture name="BeachGizup0005" x="3712" y="1493" width="345" height="769" frameX="0" frameY="-7" frameWidth="371" frameHeight="776"/>
+	<SubTexture name="BeachGizup0006" x="3712" y="1493" width="345" height="769" frameX="0" frameY="-7" frameWidth="371" frameHeight="776"/>
+	<SubTexture name="BeachGizup0007" x="0" y="2269" width="349" height="769" frameX="0" frameY="-7" frameWidth="371" frameHeight="776"/>
+	<SubTexture name="BeachGizup0008" x="349" y="2269" width="329" height="769" frameX="0" frameY="-7" frameWidth="371" frameHeight="776"/>
+	<SubTexture name="BeachGizup0009" x="678" y="2269" width="342" height="769" frameX="0" frameY="-7" frameWidth="371" frameHeight="776"/>
+	<SubTexture name="BeachGizup0010" x="678" y="2269" width="342" height="769" frameX="0" frameY="-7" frameWidth="371" frameHeight="776"/>
+	<SubTexture name="BeachGizup0011" x="678" y="2269" width="342" height="769" frameX="0" frameY="-7" frameWidth="371" frameHeight="776"/>
+</TextureAtlas>

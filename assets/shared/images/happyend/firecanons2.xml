@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="firecanons1.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="firecanons20000" x="0" y="0" width="658" height="318" frameX="-262" frameY="-291" frameWidth="1021" frameHeight="612"/>
+	<SubTexture name="firecanons20001" x="0" y="0" width="658" height="318" frameX="-262" frameY="-291" frameWidth="1021" frameHeight="612"/>
+	<SubTexture name="firecanons20002" x="658" y="0" width="834" height="500" frameX="-90" frameY="-105" frameWidth="1021" frameHeight="612"/>
+	<SubTexture name="firecanons20003" x="658" y="0" width="834" height="500" frameX="-90" frameY="-105" frameWidth="1021" frameHeight="612"/>
+	<SubTexture name="firecanons20004" x="0" y="500" width="970" height="580" frameX="-39" frameY="-28" frameWidth="1021" frameHeight="612"/>
+	<SubTexture name="firecanons20005" x="0" y="500" width="970" height="580" frameX="-39" frameY="-28" frameWidth="1021" frameHeight="612"/>
+	<SubTexture name="firecanons20006" x="970" y="500" width="1021" height="612"/>
+	<SubTexture name="firecanons20007" x="970" y="500" width="1021" height="612"/>
+	<SubTexture name="firecanons20008" x="0" y="1112" width="946" height="572" frameX="-27" frameY="-39" frameWidth="1021" frameHeight="612"/>
+	<SubTexture name="firecanons20009" x="0" y="1112" width="946" height="572" frameX="-27" frameY="-39" frameWidth="1021" frameHeight="612"/>
+	<SubTexture name="firecanons20010" x="946" y="1112" width="930" height="525" frameX="-46" frameY="-81" frameWidth="1021" frameHeight="612"/>
+	<SubTexture name="firecanons20011" x="946" y="1112" width="930" height="525" frameX="-46" frameY="-81" frameWidth="1021" frameHeight="612"/>
+</TextureAtlas>

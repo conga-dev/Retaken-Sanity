@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="beachGF.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BeachGF0000" x="0" y="0" width="462" height="423"/>
+	<SubTexture name="BeachGF0001" x="462" y="0" width="462" height="423"/>
+	<SubTexture name="BeachGF0002" x="924" y="0" width="462" height="423"/>
+	<SubTexture name="BeachGF0003" x="1386" y="0" width="462" height="423"/>
+	<SubTexture name="BeachGF0004" x="1848" y="0" width="462" height="423"/>
+	<SubTexture name="BeachGF0005" x="2310" y="0" width="462" height="423"/>
+	<SubTexture name="BeachGF0006" x="2772" y="0" width="462" height="423"/>
+	<SubTexture name="BeachGF0007" x="3234" y="0" width="462" height="423"/>
+	<SubTexture name="BeachGF0008" x="0" y="423" width="462" height="423"/>
+	<SubTexture name="BeachGF0009" x="462" y="423" width="462" height="423"/>
+	<SubTexture name="BeachGF0010" x="924" y="423" width="462" height="423"/>
+	<SubTexture name="BeachGF0011" x="1386" y="423" width="462" height="423"/>
+	<SubTexture name="BeachGF0012" x="1848" y="423" width="462" height="423"/>
+	<SubTexture name="BeachGF0013" x="2310" y="423" width="462" height="423"/>
+	<SubTexture name="BeachGF0014" x="2772" y="423" width="462" height="423"/>
+	<SubTexture name="BeachGF0015" x="3234" y="423" width="462" height="423"/>
+	<SubTexture name="BeachGF0016" x="0" y="846" width="462" height="423"/>
+	<SubTexture name="BeachGF0017" x="462" y="846" width="462" height="423"/>
+	<SubTexture name="BeachGF0018" x="924" y="846" width="462" height="423"/>
+	<SubTexture name="BeachGF0019" x="462" y="846" width="462" height="423"/>
+	<SubTexture name="BeachGF0020" x="1386" y="846" width="462" height="423"/>
+	<SubTexture name="BeachGF0021" x="1848" y="846" width="462" height="423"/>
+	<SubTexture name="BeachGF0022" x="2310" y="846" width="462" height="423"/>
+	<SubTexture name="BeachGF0023" x="0" y="423" width="462" height="423"/>
+	<SubTexture name="BeachGF0024" x="2772" y="846" width="462" height="423"/>
+	<SubTexture name="BeachGF0025" x="3234" y="846" width="462" height="423"/>
+	<SubTexture name="BeachGF0026" x="0" y="1269" width="462" height="423"/>
+	<SubTexture name="BeachGF0027" x="462" y="1269" width="462" height="423"/>
+	<SubTexture name="BeachGF0028" x="924" y="1269" width="462" height="423"/>
+	<SubTexture name="BeachGF0029" x="462" y="0" width="462" height="423"/>
+</TextureAtlas>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="beachnwaves.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="beachwaves0000" x="0" y="0" width="2037" height="527"/>
+	<SubTexture name="beachwaves0001" x="2037" y="0" width="2037" height="527"/>
+	<SubTexture name="beachwaves0002" x="4074" y="0" width="2037" height="527"/>
+	<SubTexture name="beachwaves0003" x="6111" y="0" width="2037" height="527"/>
+	<SubTexture name="beachwaves0004" x="0" y="527" width="2037" height="527"/>
+	<SubTexture name="beachwaves0005" x="2037" y="527" width="2037" height="527"/>
+	<SubTexture name="beachwaves0006" x="4074" y="527" width="2037" height="527"/>
+	<SubTexture name="beachwaves0007" x="6111" y="527" width="2037" height="527"/>
+	<SubTexture name="beachwaves0008" x="0" y="1054" width="2037" height="527"/>
+	<SubTexture name="beachwaves0009" x="2037" y="1054" width="2037" height="527"/>
+	<SubTexture name="beachwaves0010" x="4074" y="1054" width="2037" height="527"/>
+	<SubTexture name="beachwaves0011" x="6111" y="1054" width="2037" height="527"/>
+	<SubTexture name="beachwaves0012" x="0" y="1581" width="2037" height="527"/>
+	<SubTexture name="beachwaves0013" x="2037" y="1581" width="2037" height="527"/>
+	<SubTexture name="beachwaves0014" x="4074" y="1581" width="2037" height="527"/>
+	<SubTexture name="beachwaves0015" x="6111" y="1581" width="2037" height="527"/>
+	<SubTexture name="beachwaves0016" x="0" y="2108" width="2037" height="527"/>
+	<SubTexture name="beachwaves0017" x="2037" y="2108" width="2037" height="527"/>
+	<SubTexture name="beachwaves0018" x="4074" y="2108" width="2037" height="527"/>
+	<SubTexture name="beachwaves0019" x="6111" y="2108" width="2037" height="527"/>
+	<SubTexture name="beachwaves0020" x="0" y="2635" width="2037" height="527"/>
+	<SubTexture name="beachwaves0021" x="2037" y="2635" width="2037" height="527"/>
+	<SubTexture name="beachwaves0022" x="4074" y="2635" width="2037" height="527"/>
+	<SubTexture name="beachwaves0023" x="6111" y="2635" width="2037" height="527"/>
+	<SubTexture name="beachwaves0024" x="0" y="3162" width="2037" height="527"/>
+	<SubTexture name="beachwaves0025" x="2037" y="3162" width="2037" height="527"/>
+	<SubTexture name="beachwaves0026" x="4074" y="3162" width="2037" height="527"/>
+	<SubTexture name="beachwaves0027" x="6111" y="3162" width="2037" height="527"/>
+	<SubTexture name="beachwaves0028" x="0" y="3689" width="2037" height="527"/>
+	<SubTexture name="beachwaves0029" x="2037" y="3689" width="2037" height="527"/>
+	<SubTexture name="beachwaves0030" x="4074" y="3689" width="2037" height="527"/>
+	<SubTexture name="beachwaves0031" x="6111" y="3689" width="2037" height="527"/>
+	<SubTexture name="beachwaves0032" x="0" y="4216" width="2037" height="527"/>
+	<SubTexture name="beachwaves0033" x="2037" y="4216" width="2037" height="527"/>
+	<SubTexture name="beachwaves0034" x="4074" y="4216" width="2037" height="527"/>
+</TextureAtlas>

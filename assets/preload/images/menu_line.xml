@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="menu_line.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="menu_Line10000" x="0" y="0" width="724" height="1554"/>
+	<SubTexture name="menu_Line10001" x="0" y="0" width="724" height="1554"/>
+	<SubTexture name="menu_Line10002" x="724" y="0" width="719" height="1554" frameX="0" frameY="0" frameWidth="724" frameHeight="1554"/>
+	<SubTexture name="menu_Line10003" x="724" y="0" width="719" height="1554" frameX="0" frameY="0" frameWidth="724" frameHeight="1554"/>
+</TextureAtlas>

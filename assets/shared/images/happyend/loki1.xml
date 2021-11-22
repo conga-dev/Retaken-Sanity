@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="loki1.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Loki10000" x="0" y="0" width="177" height="181" frameX="0" frameY="-22" frameWidth="177" frameHeight="203"/>
+	<SubTexture name="Loki10001" x="177" y="0" width="177" height="192" frameX="0" frameY="-11" frameWidth="177" frameHeight="203"/>
+	<SubTexture name="Loki10002" x="0" y="192" width="177" height="203"/>
+	<SubTexture name="Loki10003" x="0" y="192" width="177" height="203"/>
+	<SubTexture name="Loki10004" x="0" y="192" width="177" height="203"/>
+	<SubTexture name="Loki10005" x="0" y="192" width="177" height="203"/>
+	<SubTexture name="Loki10006" x="0" y="192" width="177" height="203"/>
+	<SubTexture name="Loki10007" x="0" y="192" width="177" height="203"/>
+	<SubTexture name="Loki10008" x="0" y="192" width="177" height="203"/>
+	<SubTexture name="Loki10009" x="0" y="192" width="177" height="203"/>
+	<SubTexture name="Loki10010" x="0" y="192" width="177" height="203"/>
+	<SubTexture name="Loki10011" x="0" y="192" width="177" height="203"/>
+</TextureAtlas>

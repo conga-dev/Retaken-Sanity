@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BeachRebecca2.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="RebeccabeaDOWN20000" x="0" y="0" width="370" height="465" frameX="-4" frameY="-9" frameWidth="376" frameHeight="474"/>
+	<SubTexture name="RebeccabeaDOWN20001" x="370" y="0" width="376" height="474"/>
+	<SubTexture name="RebeccabeaDOWN20002" x="370" y="0" width="376" height="474"/>
+	<SubTexture name="RebeccabeaDOWN20003" x="370" y="0" width="376" height="474"/>
+	<SubTexture name="RebeccabeaDOWN20004" x="370" y="0" width="376" height="474"/>
+	<SubTexture name="RebeccabeaDOWN20005" x="370" y="0" width="376" height="474"/>
+	<SubTexture name="RebeccabeaDOWN20006" x="370" y="0" width="376" height="474"/>
+	<SubTexture name="RebeccabeaDOWN20007" x="370" y="0" width="376" height="474"/>
+	<SubTexture name="RebeccabeaDOWN20008" x="370" y="0" width="376" height="474"/>
+	<SubTexture name="RebeccabeaDOWN20009" x="370" y="0" width="376" height="474"/>
+	<SubTexture name="RebeccabeaDOWN20010" x="370" y="0" width="376" height="474"/>
+	<SubTexture name="RebeccabeaDOWN20011" x="370" y="0" width="376" height="474"/>
+	<SubTexture name="RebeccabeaLEFT20000" x="746" y="0" width="430" height="515" frameX="0" frameY="0" frameWidth="437" frameHeight="515"/>
+	<SubTexture name="RebeccabeaLEFT20001" x="1176" y="0" width="430" height="515" frameX="-7" frameY="0" frameWidth="437" frameHeight="515"/>
+	<SubTexture name="RebeccabeaLEFT20002" x="1176" y="0" width="430" height="515" frameX="-7" frameY="0" frameWidth="437" frameHeight="515"/>
+	<SubTexture name="RebeccabeaLEFT20003" x="1176" y="0" width="430" height="515" frameX="-7" frameY="0" frameWidth="437" frameHeight="515"/>
+	<SubTexture name="RebeccabeaLEFT20004" x="1176" y="0" width="430" height="515" frameX="-7" frameY="0" frameWidth="437" frameHeight="515"/>
+	<SubTexture name="RebeccabeaLEFT20005" x="1176" y="0" width="430" height="515" frameX="-7" frameY="0" frameWidth="437" frameHeight="515"/>
+	<SubTexture name="RebeccabeaLEFT20006" x="1176" y="0" width="430" height="515" frameX="-7" frameY="0" frameWidth="437" frameHeight="515"/>
+	<SubTexture name="RebeccabeaLEFT20007" x="1176" y="0" width="430" height="515" frameX="-7" frameY="0" frameWidth="437" frameHeight="515"/>
+	<SubTexture name="RebeccabeaLEFT20008" x="1176" y="0" width="430" height="515" frameX="-7" frameY="0" frameWidth="437" frameHeight="515"/>
+	<SubTexture name="RebeccabeaLEFT20009" x="1176" y="0" width="430" height="515" frameX="-7" frameY="0" frameWidth="437" frameHeight="515"/>
+	<SubTexture name="RebeccabeaLEFT20010" x="1176" y="0" width="430" height="515" frameX="-7" frameY="0" frameWidth="437" frameHeight="515"/>
+	<SubTexture name="RebeccabeaLEFT20011" x="1176" y="0" width="430" height="515" frameX="-7" frameY="0" frameWidth="437" frameHeight="515"/>
+	<SubTexture name="RebeccabeaRIGHT20000" x="1606" y="0" width="383" height="467" frameX="-11" frameY="-4" frameWidth="394" frameHeight="471"/>
+	<SubTexture name="RebeccabeaRIGHT20001" x="0" y="515" width="394" height="471"/>
+	<SubTexture name="RebeccabeaRIGHT20002" x="0" y="515" width="394" height="471"/>
+	<SubTexture name="RebeccabeaRIGHT20003" x="0" y="515" width="394" height="471"/>
+	<SubTexture name="RebeccabeaRIGHT20004" x="0" y="515" width="394" height="471"/>
+	<SubTexture name="RebeccabeaRIGHT20005" x="0" y="515" width="394" height="471"/>
+	<SubTexture name="RebeccabeaRIGHT20006" x="0" y="515" width="394" height="471"/>
+	<SubTexture name="RebeccabeaRIGHT20007" x="0" y="515" width="394" height="471"/>
+	<SubTexture name="RebeccabeaRIGHT20008" x="0" y="515" width="394" height="471"/>
+	<SubTexture name="RebeccabeaRIGHT20009" x="0" y="515" width="394" height="471"/>
+	<SubTexture name="RebeccabeaRIGHT20010" x="0" y="515" width="394" height="471"/>
+	<SubTexture name="RebeccabeaRIGHT20011" x="0" y="515" width="394" height="471"/>
+	<SubTexture name="RebeccabeaUP20000" x="394" y="515" width="385" height="578" frameX="-16" frameY="0" frameWidth="413" frameHeight="578"/>
+	<SubTexture name="RebeccabeaUP20001" x="779" y="515" width="413" height="563" frameX="0" frameY="-13" frameWidth="413" frameHeight="578"/>
+	<SubTexture name="RebeccabeaUP20002" x="779" y="515" width="413" height="563" frameX="0" frameY="-13" frameWidth="413" frameHeight="578"/>
+	<SubTexture name="RebeccabeaUP20003" x="779" y="515" width="413" height="563" frameX="0" frameY="-13" frameWidth="413" frameHeight="578"/>
+	<SubTexture name="RebeccabeaUP20004" x="779" y="515" width="413" height="563" frameX="0" frameY="-13" frameWidth="413" frameHeight="578"/>
+	<SubTexture name="RebeccabeaUP20005" x="779" y="515" width="413" height="563" frameX="0" frameY="-13" frameWidth="413" frameHeight="578"/>
+	<SubTexture name="RebeccabeaUP20006" x="779" y="515" width="413" height="563" frameX="0" frameY="-13" frameWidth="413" frameHeight="578"/>
+	<SubTexture name="RebeccabeaUP20007" x="779" y="515" width="413" height="563" frameX="0" frameY="-13" frameWidth="413" frameHeight="578"/>
+	<SubTexture name="RebeccabeaUP20008" x="779" y="515" width="413" height="563" frameX="0" frameY="-13" frameWidth="413" frameHeight="578"/>
+	<SubTexture name="RebeccabeaUP20009" x="779" y="515" width="413" height="563" frameX="0" frameY="-13" frameWidth="413" frameHeight="578"/>
+	<SubTexture name="RebeccabeaUP20010" x="779" y="515" width="413" height="563" frameX="0" frameY="-13" frameWidth="413" frameHeight="578"/>
+	<SubTexture name="RebeccabeaUP20011" x="779" y="515" width="413" height="563" frameX="0" frameY="-13" frameWidth="413" frameHeight="578"/>
+	<SubTexture name="Rebeccabeachidle20000" x="1192" y="515" width="403" height="504" frameX="-7" frameY="-11" frameWidth="410" frameHeight="515"/>
+	<SubTexture name="Rebeccabeachidle20001" x="1595" y="515" width="404" height="504" frameX="-6" frameY="-11" frameWidth="410" frameHeight="515"/>
+	<SubTexture name="Rebeccabeachidle20002" x="0" y="1093" width="406" height="510" frameX="-3" frameY="-5" frameWidth="410" frameHeight="515"/>
+	<SubTexture name="Rebeccabeachidle20003" x="406" y="1093" width="408" height="515" frameX="0" frameY="0" frameWidth="410" frameHeight="515"/>
+	<SubTexture name="Rebeccabeachidle20004" x="814" y="1093" width="408" height="515" frameX="0" frameY="0" frameWidth="410" frameHeight="515"/>
+	<SubTexture name="Rebeccabeachidle20005" x="814" y="1093" width="408" height="515" frameX="0" frameY="0" frameWidth="410" frameHeight="515"/>
+	<SubTexture name="Rebeccabeachidle20006" x="814" y="1093" width="408" height="515" frameX="0" frameY="0" frameWidth="410" frameHeight="515"/>
+	<SubTexture name="Rebeccabeachidle20007" x="814" y="1093" width="408" height="515" frameX="0" frameY="0" frameWidth="410" frameHeight="515"/>
+	<SubTexture name="Rebeccabeachidle20008" x="814" y="1093" width="408" height="515" frameX="0" frameY="0" frameWidth="410" frameHeight="515"/>
+	<SubTexture name="Rebeccabeachidle20009" x="814" y="1093" width="408" height="515" frameX="0" frameY="0" frameWidth="410" frameHeight="515"/>
+	<SubTexture name="Rebeccabeachidle20010" x="814" y="1093" width="408" height="515" frameX="0" frameY="0" frameWidth="410" frameHeight="515"/>
+	<SubTexture name="Rebeccabeachidle20011" x="814" y="1093" width="408" height="515" frameX="0" frameY="0" frameWidth="410" frameHeight="515"/>
+	<SubTexture name="Rebeccabeachmiss0000" x="1222" y="1093" width="299" height="515"/>
+	<SubTexture name="Rebeccabeachmiss0001" x="1222" y="1093" width="299" height="515"/>
+	<SubTexture name="Rebeccabeachmiss0002" x="1222" y="1093" width="299" height="515"/>
+	<SubTexture name="Rebeccabeachmiss0003" x="1222" y="1093" width="299" height="515"/>
+	<SubTexture name="Rebeccabeachmiss0004" x="1222" y="1093" width="299" height="515"/>
+	<SubTexture name="Rebeccabeachmiss0005" x="1222" y="1093" width="299" height="515"/>
+	<SubTexture name="Rebeccabeachmiss0006" x="1222" y="1093" width="299" height="515"/>
+	<SubTexture name="Rebeccabeachmiss0007" x="1222" y="1093" width="299" height="515"/>
+	<SubTexture name="Rebeccabeachmiss0008" x="1222" y="1093" width="299" height="515"/>
+	<SubTexture name="Rebeccabeachmiss0009" x="1222" y="1093" width="299" height="515"/>
+	<SubTexture name="Rebeccabeachmiss0010" x="1222" y="1093" width="299" height="515"/>
+	<SubTexture name="Rebeccabeachmiss0011" x="1222" y="1093" width="299" height="515"/>
+</TextureAtlas>

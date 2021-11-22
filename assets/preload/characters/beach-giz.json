@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				37,
+				1
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BeachGizleft",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-1,
+				-7
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BeachGizdown",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-1,
+				30
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BeachGizup",
+			"indices": []
+		},
+		{
+			"offsets": [
+				18,
+				-3
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BeachGizright",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "BeachGizIdle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-1,
+				0
+			],
+			"loop": false,
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "BeachGizmiss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-1,
+				0
+			],
+			"loop": false,
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "BeachGizmiss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-1,
+				0
+			],
+			"loop": false,
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "BeachGizmiss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-1,
+				0
+			],
+			"loop": false,
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "BeachGizmiss",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BeachGiz",
+	"position": [
+		250,
+		-50
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		-590,
+		-180
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

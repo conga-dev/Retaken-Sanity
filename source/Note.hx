@@ -209,6 +209,7 @@ class Note extends FlxSprite
 			earlyHitMult = 1;
 		}
 		x += offsetX;
+		y += offsetY;
 	}
 
 	function reloadNote(?prefix:String = '', ?texture:String = '', ?suffix:String = '') {
@@ -220,7 +221,7 @@ class Note extends FlxSprite
 		if(texture.length < 1) {
 			skin = PlayState.SONG.arrowSkin;
 			if(skin == null || skin.length < 1) {
-				skin = 'NOTE_assets';
+				skin = 'NOTE_assets2';
 			}
 		}
 

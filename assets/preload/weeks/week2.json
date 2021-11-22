@@ -1,12 +1,11 @@
 {
 	"songs": [
-		["Spookeez", "spooky", [34, 51, 68]],
-		["South", "spooky", [34, 51, 68]],
-		["Monster", "monster", [34, 51, 68]]
+		["silenthills", "dad", [34, 51, 68]],
+		["lovetodeath", "dad", [34, 51, 68]]
 	],
 
 	"weekCharacters": [
-		"spooky",
+		"dad",
 		"bf",
 		"gf"
 	],

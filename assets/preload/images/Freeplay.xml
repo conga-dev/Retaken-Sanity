@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Freeplay.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="grey0000" x="0" y="0" width="377" height="147"/>
+	<SubTexture name="happyend0000" x="377" y="0" width="604" height="140"/>
+	<SubTexture name="inharmony0000" x="0" y="147" width="605" height="141"/>
+	<SubTexture name="lovetodeath0000" x="0" y="288" width="700" height="137"/>
+	<SubTexture name="maneater0000" x="0" y="425" width="602" height="148"/>
+	<SubTexture name="silenthills0000" x="0" y="573" width="666" height="131"/>
+	<SubTexture name="unwind0000" x="0" y="704" width="511" height="118"/>
+	<SubTexture name="wakeup0000" x="0" y="822" width="539" height="138"/>
+</TextureAtlas>

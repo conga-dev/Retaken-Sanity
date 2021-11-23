@@ -223,6 +223,24 @@ class PlayState extends MusicBeatState
 	public static var seenCutscene:Bool = false;
 	public static var deathCounter:Int = 0;
 
+	var coolbg1:BGSprite;
+	var boomboxes1:BGSprite;
+	var firecanons1:BGSprite;
+	var crowd1:BGSprite;
+	var mahlokie1:BGSprite;
+	var theLight1:BGSprite;
+
+	var coolbg2:BGSprite;
+	var boomboxes2:BGSprite;
+	var firecanons2:BGSprite;
+	var crowd2:BGSprite;
+	var mahlokie2:BGSprite;
+	var theLight2:BGSprite;
+
+	var concert1:FlxTypedGroup<BGSprite>;
+	var concert2:FlxTypedGroup<BGSprite>;
+	var concert2overlay:FlxTypedGroup<BGSprite>;
+
 	public var defaultCamZoom:Float = 1.05;
 
 	// how big to stretch the pixel art assets
@@ -681,9 +699,59 @@ class PlayState extends MusicBeatState
 				add(axelLMAO);
 				add(walkway);
 			}
-		}
+			case 'concert':
+			{
+				coolbg1 = new BGSprite('happyend/Background1', 0, 0, 1, 1);
 
-		add(gfGroup);
+				boomboxes1 = new BGSprite('happyend/boomboxes1', -600, 290, 1, 1, ['Boomboxes'], true);
+
+				firecanons1 = new BGSprite('happyend/firecanons1', 1300, 1000, 1, 1);
+
+				crowd1 = new BGSprite('happyend/people1', 0, 600, 1, 1, ['stagecrowd'], true);
+
+				mahlokie1 = new BGSprite('happyend/loki1', 900, 800, 1, 1, ['Loki1'], true);
+
+				theLight1 = new BGSprite('happyend/Light1', 0, 0, 1, 1);
+
+
+				coolbg2 = new BGSprite('happyend/Background2', 0, 50, 1, 1);
+
+				boomboxes2 = new BGSprite('happyend/boomboxes2', -600, 290, 1, 1);
+
+				firecanons2 = new BGSprite('happyend/firecanons2', 960, 620, 1, 1, ['firecanons2'], true);
+
+				crowd2 = new BGSprite('happyend/people2', 0, 600, 1, 1, ['stagecrowd'], true);
+
+				mahlokie2 = new BGSprite('happyend/loki2', 880, 630, 1, 1, ['Loki2'], true);
+
+				theLight2 = new BGSprite('happyend/Light2', 0, 900, 1, 1);
+
+				concert1 = new FlxTypedGroup<BGSprite>();
+				concert2 = new FlxTypedGroup<BGSprite>();
+				add(concert1);
+				add(concert2);
+
+				concert1.add(coolbg1);
+				concert1.add(crowd1);
+				concert1.add(mahlokie1);
+				concert1.add(boomboxes1);
+				concert1.add(firecanons1);
+				concert1.add(theLight1);
+
+				concert2.add(coolbg2);
+				concert2.add(crowd2);
+				concert2.add(mahlokie2);
+				concert2.add(boomboxes2);
+
+				concert2.visible = false;
+			}
+			case 'benstage':
+			{
+				var bg:BGSprite = new BGSprite('BenBG', 0, 0, 1, 1);
+				bg.scale.set(0.7, 0.7);
+				add(bg);
+			}
+		}
 
 		if(isPixelStage) {
 			introSoundsSuffix = '-pixel';
@@ -693,8 +761,9 @@ class PlayState extends MusicBeatState
 		if (curStage == 'limo')
 			add(limo);
 
-		add(dadGroup);
 		add(boyfriendGroup);
+		add(dadGroup);
+		add(gfGroup);
 		
 		if(curStage == 'spooky') {
 			add(halloweenWhite);
@@ -774,15 +843,25 @@ class PlayState extends MusicBeatState
 		gf.scrollFactor.set(0.95, 0.95);
 		if (curStage != 'beach')
 			gf.visible = false;
-		gfGroup.add(gf);
 
 		dad = new Character(0, 0, SONG.player2);
 		startCharacterPos(dad, true);
-		dadGroup.add(dad);
 
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
+
+		dadGroup.add(dad);
+
+		gfGroup.add(gf);
+
+		if(curStage == 'concert') {
+			concert2overlay = new FlxTypedGroup<BGSprite>();
+			add(concert2overlay);
+			concert2overlay.add(firecanons2);
+			concert2overlay.add(theLight2);
+			concert2overlay.visible = false;
+		}
 		
 		var camPos:FlxPoint = new FlxPoint(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y);
 		camPos.x += gf.cameraPosition[0];
@@ -926,7 +1005,7 @@ class PlayState extends MusicBeatState
 		healthBarBG.visible = !ClientPrefs.hideHud;
 		healthBarBG.xAdd = -4;
 		healthBarBG.yAdd = -4;
-		add(healthBarBG);
+		
 		if(ClientPrefs.downScroll) healthBarBG.y = 0.11 * FlxG.height;
 
 		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
@@ -935,6 +1014,7 @@ class PlayState extends MusicBeatState
 		// healthBar
 		healthBar.visible = !ClientPrefs.hideHud;
 		add(healthBar);
+		add(healthBarBG);
 		healthBarBG.sprTracker = healthBar;
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
@@ -963,6 +1043,17 @@ class PlayState extends MusicBeatState
 		add(botplayTxt);
 		if(ClientPrefs.downScroll) {
 			botplayTxt.y = timeBarBG.y - 78;
+		}
+
+		if(isStoryMode) {
+			scoreTxt.visible = false;
+			timeBar.visible = false;
+			timeBarBG.visible = false;
+			timeTxt.visible = false;
+			healthBarBG.alpha = 0.8;
+			healthBar.alpha = 0.8;
+			iconP1.alpha = 0.8;
+			iconP2.alpha = 0.8;
 		}
 
 		strumLineNotes.cameras = [camHUD];
@@ -1065,6 +1156,18 @@ class PlayState extends MusicBeatState
 				case 'senpai' | 'roses' | 'thorns':
 					if(daSong == 'roses') FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
+
+				case 'inharmony':
+					startVideo('cuts1');
+
+				case 'wakeup':
+					startVideo('cuts2');
+
+				case 'unwind':
+					startVideo('cuts3');
+
+				case 'happyend':
+					startVideo('cuts4');
 
 				default:
 					startCountdown();
@@ -2852,6 +2955,66 @@ songSpeed = SONG.speed;
 			
 			case 'BG Freaks Expression':
 				if(bgGirls != null) bgGirls.swapDanceType();
+
+			case 'Concert Color Blue':
+				if(curStage == 'concert') {
+					concert1.visible = false;
+					concert2.visible = true;
+					concert2overlay.visible = true;
+
+					if(boyfriend.curCharacter != 'concert-seberster2') {
+						if(!boyfriendMap.exists('concert-seberster2')) {
+							addCharacterToList('concert-seberster2', 0);
+						}
+
+						var wasGf:Bool = boyfriend.curCharacter.startsWith('gf');
+						boyfriend.visible = false;
+						boyfriend = boyfriendMap.get('concert-seberster2');
+						if(!boyfriend.curCharacter.startsWith('gf')) {
+							if(wasGf) {
+								gf.visible = true;
+							}
+						} else {
+							gf.visible = false;
+						}
+						if(!boyfriend.alreadyLoaded) {
+							boyfriend.alpha = 1;
+							boyfriend.alreadyLoaded = true;
+						}
+						boyfriend.visible = true;
+						iconP1.changeIcon(boyfriend.healthIcon);
+					}
+				}
+
+			case 'Concert Color Orange':
+				if(curStage == 'concert') {
+					concert1.visible = true;
+					concert2.visible = false;
+					concert2overlay.visible = false;
+
+					if(boyfriend.curCharacter != 'concert-seberster1') {
+						if(!boyfriendMap.exists('concert-seberster1')) {
+							addCharacterToList('concert-seberster1', 1);
+						}
+
+				 		var wasGf:Bool = boyfriend.curCharacter.startsWith('gf');
+						boyfriend.visible = false;
+						boyfriend = boyfriendMap.get('concert-seberster1');
+						if(!boyfriend.curCharacter.startsWith('gf')) {
+							if(wasGf) {
+								gf.visible = true;
+							}
+						} else {
+							gf.visible = false;
+						}
+						if(!boyfriend.alreadyLoaded) {
+							boyfriend.alpha = 1;
+							boyfriend.alreadyLoaded = true;
+						}
+						boyfriend.visible = true;
+						iconP1.changeIcon(boyfriend.healthIcon);
+					}
+				}
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
@@ -2953,17 +3116,24 @@ songSpeed = SONG.speed;
 	function finishSong():Void
 	{
 		var finishCallback:Void->Void = endSong; //In case you want to change it in a specific song.
+		var currSongg:String = storyPlaylist[0].toLowerCase();
 
 		updateTime = false;
 		FlxG.sound.music.volume = 0;
 		vocals.volume = 0;
 		vocals.pause();
-		if(ClientPrefs.noteOffset <= 0) {
-			finishCallback();
-		} else {
-			finishTimer = new FlxTimer().start(ClientPrefs.noteOffset / 1000, function(tmr:FlxTimer) {
+		if (currSongg == 'happyend') {
+			endingSong = true;
+			startVideo('cuts5');
+		}
+		else {
+			if(ClientPrefs.noteOffset <= 0) {
 				finishCallback();
-			});
+			} else {
+				finishTimer = new FlxTimer().start(ClientPrefs.noteOffset / 1000, function(tmr:FlxTimer) {
+					finishCallback();
+				});
+			}
 		}
 	}
 
@@ -3041,7 +3211,7 @@ songSpeed = SONG.speed;
 				storyPlaylist.remove(storyPlaylist[0]);
 
 				if (storyPlaylist.length <= 0)
-				{
+				{	
 					FlxG.sound.playMusic(Paths.music('A113'));
 
 					cancelFadeTween();
@@ -3237,14 +3407,14 @@ songSpeed = SONG.speed;
 		rating.acceleration.y = 550;
 		rating.velocity.y -= FlxG.random.int(140, 175);
 		rating.velocity.x -= FlxG.random.int(0, 10);
-		rating.visible = !ClientPrefs.hideHud;
+		rating.visible = false;
 
 		var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'combo' + pixelShitPart2));
 		comboSpr.screenCenter();
 		comboSpr.x = coolText.x;
 		comboSpr.acceleration.y = 600;
 		comboSpr.velocity.y -= 150;
-		comboSpr.visible = !ClientPrefs.hideHud;
+		comboSpr.visible = false;
 
 		comboSpr.velocity.x += FlxG.random.int(1, 10);
 		add(rating);
@@ -3296,7 +3466,7 @@ songSpeed = SONG.speed;
 			numScore.acceleration.y = FlxG.random.int(200, 300);
 			numScore.velocity.y -= FlxG.random.int(140, 160);
 			numScore.velocity.x = FlxG.random.float(-5, 5);
-			numScore.visible = !ClientPrefs.hideHud;
+			numScore.visible = false;
 
 			if (combo >= 10 || combo == 0)
 				add(numScore);

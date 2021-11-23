@@ -42,6 +42,7 @@ class FreeplayState extends MusicBeatState
 	private var iconArray:Array<HealthIcon> = [];
 
 	var bar:FlxSprite;
+	var hand:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
@@ -89,12 +90,23 @@ class FreeplayState extends MusicBeatState
 
 		// LOAD CHARACTERS
 
-		bar = new FlxSprite();
+		bar = new FlxSprite(0, -400);
 		bar.frames = Paths.getSparrowAtlas('menu_line');
 		bar.animation.addByPrefix('idle', 'menu_Line1');
 		bar.animation.play('idle');
+		bar.scale.set(0.6, 0.6);
 		bar.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bar);
+
+		hand = new FlxSprite(20, 0);
+		hand.frames = Paths.getSparrowAtlas('Inharmony_coverart');
+		hand.animation.addByIndices('open', 'Coverart_INHARMONY', [0, 1, 2, 3, 4, 5, 6, 7, 8], "", 24, false);
+		hand.animation.addByIndices('idle', 'Coverart_INHARMONY', [8], "", 24, true);
+		hand.animation.addByIndices('close', 'Coverart_INHARMONY', [8, 7, 6, 5, 4, 3, 2, 1, 0], "", 24, false);
+		hand.animation.play('open');
+		hand.scale.set(0.6, 0.6);
+		hand.antialiasing = ClientPrefs.globalAntialiasing;
+		add(hand);
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);

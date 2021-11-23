@@ -40,13 +40,16 @@ class Alphabet extends FlxSpriteGroup
 	var splitWords:Array<String> = [];
 
 	var isBold:Bool = false;
+	var isImag:Bool = false;
 	public var lettersArray:Array<AlphaCharacter> = [];
+
+	var theImag:FlxSprite;
 
 	public var finishedText:Bool = false;
 	public var typed:Bool = false;
 
 	public var typingSpeed:Float = 0.05;
-	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, ?typingSpeed:Float = 0.05, ?textSize:Float = 1)
+	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, ?typingSpeed:Float = 0.05, ?textSize:Float = 1, imag:Bool = false)
 	{
 		super(x, y);
 		forceX = Math.NEGATIVE_INFINITY;
@@ -56,12 +59,21 @@ class Alphabet extends FlxSpriteGroup
 		this.text = text;
 		this.typed = typed;
 		isBold = bold;
+		isImag = imag;
 
 		if (text != "")
 		{
 			if (typed)
 			{
 				startTypedText(typingSpeed);
+			}
+			else if(imag)
+			{
+				theImag = new FlxSprite();
+				theImag.frames = Paths.getSparrowAtlas('Freeplay');
+				theImag.animation.addByPrefix('word', text.toLowerCase());
+				theImag.animation.play('word');
+				add(theImag);
 			}
 			else
 			{

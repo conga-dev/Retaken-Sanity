@@ -12,6 +12,8 @@ class StrumNote extends FlxSprite
 	public var resetAnim:Float = 0;
 	private var noteData:Int = 0;
 
+	public var valpha:Float = 1;
+
 	private var player:Int;
 	private var swap:Int;
 
@@ -22,6 +24,8 @@ class StrumNote extends FlxSprite
 		this.player = player;
 		this.noteData = leData;
 		super(x, y);
+
+		alpha = valpha;
 
 		var skin:String = 'NOTE_assets2';
 		if(PlayState.SONG.arrowSkin != null && PlayState.SONG.arrowSkin.length > 1) skin = PlayState.SONG.arrowSkin;

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Inharmony_coverart.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Coverart_INHARMONY0000" x="0" y="0" width="169" height="134" frameX="0" frameY="-214" frameWidth="690" frameHeight="532"/>
+	<SubTexture name="Coverart_INHARMONY0001" x="0" y="0" width="169" height="134" frameX="0" frameY="-214" frameWidth="690" frameHeight="532"/>
+	<SubTexture name="Coverart_INHARMONY0002" x="169" y="0" width="545" height="291" frameX="0" frameY="-171" frameWidth="690" frameHeight="532"/>
+	<SubTexture name="Coverart_INHARMONY0003" x="169" y="0" width="545" height="291" frameX="0" frameY="-171" frameWidth="690" frameHeight="532"/>
+	<SubTexture name="Coverart_INHARMONY0004" x="714" y="0" width="653" height="435" frameX="0" frameY="-45" frameWidth="690" frameHeight="532"/>
+	<SubTexture name="Coverart_INHARMONY0005" x="714" y="0" width="653" height="435" frameX="0" frameY="-45" frameWidth="690" frameHeight="532"/>
+	<SubTexture name="Coverart_INHARMONY0006" x="0" y="435" width="690" height="532"/>
+	<SubTexture name="Coverart_INHARMONY0007" x="690" y="435" width="676" height="532" frameX="0" frameY="0" frameWidth="690" frameHeight="532"/>
+	<SubTexture name="Coverart_INHARMONY0008" x="690" y="435" width="676" height="532" frameX="0" frameY="0" frameWidth="690" frameHeight="532"/>
+</TextureAtlas>

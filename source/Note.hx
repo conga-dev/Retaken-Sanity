@@ -62,6 +62,8 @@ class Note extends FlxSprite
 	public var hitHealth:Float = 0.023;
 	public var missHealth:Float = 0.0475;
 
+	public var valpha:Float = 1;
+
 	public var texture(default, set):String = null;
 
 	public var noAnimation:Bool = false;
@@ -125,6 +127,8 @@ class Note extends FlxSprite
 		if(!inEditor) this.strumTime += ClientPrefs.noteOffset;
 
 		this.noteData = noteData;
+
+		alpha = valpha;
 
 		if(noteData > -1) {
 			texture = '';

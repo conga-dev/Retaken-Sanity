@@ -152,6 +152,7 @@ class NotesSubstate extends MusicBeatSubstate
 			for (j in 0...3) {
 				var optionText:Alphabet = new Alphabet(0, yPos, Std.string(ClientPrefs.arrowHSV[i][j]));
 				optionText.x = posX + (225 * j) + 100 - ((optionText.lettersArray.length * 90) / 2);
+				optionText.color = FlxColor.WHITE;
 				grpNumbers.add(optionText);
 			}
 
@@ -453,6 +454,7 @@ class ControlsSubstate extends MusicBeatSubstate {
 			}
 			optionText.yMult = 60;
 			optionText.targetY = i;
+			optionText.color = FlxColor.WHITE;
 			grpOptions.add(optionText);
 
 			if(!isCentered) {
@@ -781,6 +783,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 			}
 			optionText.yMult = 90;
 			optionText.targetY = i;
+			optionText.color = FlxColor.WHITE;
 			grpOptions.add(optionText);
 
 			if(!isCentered) {

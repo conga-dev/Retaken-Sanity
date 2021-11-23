@@ -1,103 +1,103 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				13,
 				-6
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Rebeccabeachleft"
+			"fps": 24,
+			"name": "Rebeccabeachleft",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-24
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Rebeccabeachdown"
+			"fps": 24,
+			"name": "Rebeccabeachdown",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				10
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Rebeccabeachup"
+			"fps": 24,
+			"name": "Rebeccabeachup",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-21,
 				1
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Rebeccabeachright"
+			"fps": 24,
+			"name": "Rebeccabeachright",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "idle",
-			"indices": [],
-			"name": "Rebeccabeachidle"
+			"fps": 24,
+			"name": "Rebeccabeachidle",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "Rebeccabeachmiss"
+			"fps": 24,
+			"name": "Rebeccabeachmiss",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "Rebeccabeachmiss"
+			"fps": 24,
+			"name": "Rebeccabeachmiss",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singUPmiss",
-			"indices": [],
-			"name": "Rebeccabeachmiss"
+			"fps": 24,
+			"name": "Rebeccabeachmiss",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "Rebeccabeachmiss"
+			"fps": 24,
+			"name": "Rebeccabeachmiss",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -114,7 +114,7 @@
 		235
 	],
 	"camera_position": [
-		-480,
+		-380,
 		-90
 	],
 	"sing_duration": 6.1,

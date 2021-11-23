@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				158,
+				13
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "lostaxelleft",
+			"indices": []
+		},
+		{
+			"offsets": [
+				49,
+				-79
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "lostaxeldown",
+			"indices": []
+		},
+		{
+			"offsets": [
+				31,
+				155
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "lostaxelup",
+			"indices": []
+		},
+		{
+			"offsets": [
+				1,
+				119
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "lostaxelright",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "lostaxelidle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Lostaxel",
+	"position": [
+		30,
+		200
+	],
+	"healthicon": "axel",
+	"flip_x": false,
+	"healthbar_colors": [
+		80,
+		80,
+		80
+	],
+	"camera_position": [
+		400,
+		-100
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

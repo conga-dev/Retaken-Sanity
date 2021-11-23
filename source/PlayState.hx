@@ -181,6 +181,7 @@ class PlayState extends MusicBeatState
 	var dialogueJson:DialogueFile = null;
 
 	public var coolRedStuff:FlxSprite;
+	public var coolBlackStuff:FlxSprite;
 
 	var halloweenBG:BGSprite;
 	var halloweenWhite:BGSprite;
@@ -244,7 +245,7 @@ class PlayState extends MusicBeatState
 	var concert2:FlxTypedGroup<BGSprite>;
 	var concert2overlay:FlxTypedGroup<BGSprite>;
 
-	public var defaultCamZoom:Float = 1.05;
+	public static var defaultCamZoom:Float = 1.05;
 
 	// how big to stretch the pixel art assets
 	public static var daPixelZoom:Float = 6;
@@ -758,10 +759,16 @@ class PlayState extends MusicBeatState
 			}
 			case 'benstage2':
 			{
-				var bg:BGSprite = new BGSprite('BenBG', 0, 0, 1, 1);
+				var bg:BGSprite = new BGSprite('BenBG2', 0, 0, 1, 1);
 				bg.scale.set(0.7, 0.7);
 				add(bg);
 				camZoomier = true;
+			}
+			case 'thehands':
+			{
+				var bg:BGSprite = new BGSprite('Lostaxel_background', 0, 0, 1, 1, ['Therealistichands'], true);
+				bg.scale.set(2, 2);
+				add(bg);
 			}
 		}
 
@@ -1059,15 +1066,21 @@ class PlayState extends MusicBeatState
 
 		coolRedStuff = new FlxSprite();
 		coolRedStuff.frames = Paths.getSparrowAtlas('redpulse');
-		coolRedStuff.animation.addByPrefix('idle', 'redpulse', 20, true);
-		coolRedStuff.animation.play('idle');
-		coolRedStuff.setGraphicSize(Std.int(FlxG.width * 0.8), Std.int(FlxG.height * 0.8));
+		//oh god please don't yell at me for this
+		coolRedStuff.animation.addByIndices('bop', 'redpulse', [19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0], "", 24);
+		coolRedStuff.animation.play('bop');
+		coolRedStuff.setGraphicSize(FlxG.width);
 		coolRedStuff.screenCenter();
 		if(curStage == 'benstage2') {
 			add(coolRedStuff);
 		}
 
-		if(!isStoryMode) {
+		coolBlackStuff = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		coolBlackStuff.screenCenter();
+		coolBlackStuff.alpha = 0;
+		add(coolBlackStuff);
+
+		if(isStoryMode) {
 			scoreTxt.visible = false;
 			timeBar.visible = false;
 			timeBarBG.visible = false;
@@ -1084,8 +1097,6 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-
-
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
@@ -1100,6 +1111,7 @@ class PlayState extends MusicBeatState
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 		coolRedStuff.cameras = [camHUD];
+		coolBlackStuff.cameras = [camHUD];
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
@@ -1200,6 +1212,9 @@ class PlayState extends MusicBeatState
 				case 'happyend':
 					startVideo('cuts4');
 
+				case 'silenthills':
+					startVideo('cuts7');
+
 				default:
 					startCountdown();
 			}
@@ -1284,7 +1299,7 @@ class PlayState extends MusicBeatState
 		char.y += char.positionArray[1];
 	}
 
-	public function startVideo(name:String):Void {
+	public function startVideo(name:String, startEnd:Bool = false):Void {
 		#if VIDEOS_ALLOWED
 		var foundFile:Bool = false;
 		var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
@@ -1316,6 +1331,8 @@ class PlayState extends MusicBeatState
 				remove(bg);
 				if(endingSong) {
 					endSong();
+				} else if (startEnd) {
+					trace('do next thing plz');
 				} else {
 					startCountdown();
 				}
@@ -1334,7 +1351,7 @@ class PlayState extends MusicBeatState
 
 	var dialogueCount:Int = 0;
 	//You don't have to add a song, just saying. You can just do "startDialogue(dialogueJson);" and it should work
-	public function startDialogue(dialogueFile:DialogueFile, ?song:String = null):Void
+	public function startDialogue(dialogueFile:DialogueFile, ?song:String = null, startEnd:Bool = false):Void
 	{
 		// TO DO: Make this more flexible, maybe?
 		if(dialogueFile.dialogue.length > 0) {
@@ -1352,7 +1369,9 @@ class PlayState extends MusicBeatState
 			doof.skipDialogueThing = skipDialogue;
 			doof.cameras = [camHUD];
 			add(doof);
-		} else {
+		} else if (startEnd) {
+			trace('do next thing plz');
+	 	} else {
 			FlxG.log.warn('Your dialogue file is badly formatted!');
 			if(endingSong) {
 				endSong();
@@ -2499,6 +2518,12 @@ songSpeed = SONG.speed;
 							}
 						}
 
+						var theMove:Int = 0;
+
+						if (curStage == 'benstage2') {
+							theMove = 30;
+						}
+
 						var animToPlay:String = '';
 						switch (Math.abs(daNote.noteData))
 						{
@@ -2510,6 +2535,19 @@ songSpeed = SONG.speed;
 								animToPlay = 'singUP';
 							case 3:
 								animToPlay = 'singRIGHT';
+						}
+						if (!daNote.isSustainNote) {
+							switch (Math.abs(daNote.noteData))
+							{
+								case 0:
+									camFollow.x -= theMove;
+								case 1:
+									camFollow.y += theMove;
+								case 2:
+									camFollow.y -= theMove;
+								case 3:
+									camFollow.x += theMove;
+							}
 						}
 						if(daNote.noteType == 'GF Sing') {
 							gf.playAnim(animToPlay + altAnim, true);
@@ -3149,7 +3187,7 @@ songSpeed = SONG.speed;
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
 
-	function moveCameraSection(?id:Int = 0):Void {
+	function moveCameraSection(?id:Int = 0, curNote:Int = null):Void {
 		if(SONG.notes[id] == null) return;
 
 		if (!SONG.notes[id].mustHitSection)
@@ -3254,7 +3292,18 @@ songSpeed = SONG.speed;
 		vocals.pause();
 		if (currSongg == 'happyend') {
 			endingSong = true;
+			coolBlackStuff.alpha = 1;
 			startVideo('cuts5');
+		}
+		else if (currSongg == 'lovetodeath') {
+			endingSong = true;
+			coolBlackStuff.alpha = 1;
+			startVideo('cuts8');
+		}
+		else if (currSongg == 'grey') {
+			endingSong = true;
+			coolBlackStuff.alpha = 1;
+			startVideo('cuts6');
 		}
 		else {
 			if(ClientPrefs.noteOffset <= 0) {
@@ -4310,6 +4359,10 @@ songSpeed = SONG.speed;
 				{
 					trainCooldown = FlxG.random.int(-4, 0);
 					trainStart();
+				}
+			case "benstage2":
+				if (curBeat % 2 == 0) {
+					coolRedStuff.animation.play('bop', true);
 				}
 		}
 

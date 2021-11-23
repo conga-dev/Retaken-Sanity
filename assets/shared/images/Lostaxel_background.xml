@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Lostaxel_background.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Therealistichands0000" x="0" y="0" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0001" x="0" y="0" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0002" x="1789" y="0" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0003" x="3578" y="0" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0004" x="5367" y="0" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0005" x="0" y="1442" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0006" x="1789" y="1442" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0007" x="3578" y="1442" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0008" x="5367" y="1442" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0009" x="0" y="2884" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0010" x="1789" y="2884" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0011" x="3578" y="2884" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0012" x="5367" y="2884" width="1789" height="1442"/>
+	<SubTexture name="Therealistichands0013" x="0" y="4326" width="1789" height="1442"/>
+</TextureAtlas>

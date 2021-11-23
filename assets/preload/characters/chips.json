@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "chip_idle"
+		},
+		{
+			"offsets": [
+				136,
+				-18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "chip_Left1"
+		},
+		{
+			"offsets": [
+				-40,
+				-180
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "chip_Down1"
+		},
+		{
+			"offsets": [
+				-65,
+				102
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "chip_Up1"
+		},
+		{
+			"offsets": [
+				-46,
+				-11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "chip_Right1"
+		},
+		{
+			"offsets": [
+				137,
+				-17
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "chip_Left_miss"
+		},
+		{
+			"offsets": [
+				-39,
+				-180
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "chip_Down_miss"
+		},
+		{
+			"offsets": [
+				-68,
+				100
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "chip_Up_miss"
+		},
+		{
+			"offsets": [
+				-45,
+				-11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "chip_Right_miss"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/chips",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "chips",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		36,
+		249
+	],
+	"camera_position": [
+		160,
+		-50
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

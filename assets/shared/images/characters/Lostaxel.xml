@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Lostaxel.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="lostaxeldown0000" x="0" y="0" width="396" height="405" frameX="-8" frameY="0" frameWidth="406" frameHeight="406"/>
+	<SubTexture name="lostaxeldown0001" x="396" y="0" width="396" height="394" frameX="-3" frameY="-11" frameWidth="406" frameHeight="406"/>
+	<SubTexture name="lostaxeldown0002" x="792" y="0" width="396" height="395" frameX="-3" frameY="-11" frameWidth="406" frameHeight="406"/>
+	<SubTexture name="lostaxeldown0003" x="792" y="0" width="396" height="395" frameX="-3" frameY="-11" frameWidth="406" frameHeight="406"/>
+	<SubTexture name="lostaxeldown0004" x="396" y="0" width="396" height="394" frameX="-3" frameY="-11" frameWidth="406" frameHeight="406"/>
+	<SubTexture name="lostaxeldown0005" x="396" y="0" width="396" height="394" frameX="-3" frameY="-11" frameWidth="406" frameHeight="406"/>
+	<SubTexture name="lostaxeldown0006" x="792" y="0" width="396" height="395" frameX="-3" frameY="-11" frameWidth="406" frameHeight="406"/>
+	<SubTexture name="lostaxeldown0007" x="792" y="0" width="396" height="395" frameX="-3" frameY="-11" frameWidth="406" frameHeight="406"/>
+	<SubTexture name="lostaxeldown0008" x="396" y="0" width="396" height="394" frameX="-3" frameY="-11" frameWidth="406" frameHeight="406"/>
+	<SubTexture name="lostaxeldown0009" x="396" y="0" width="396" height="394" frameX="-3" frameY="-11" frameWidth="406" frameHeight="406"/>
+	<SubTexture name="lostaxeldown0010" x="792" y="0" width="396" height="395" frameX="-3" frameY="-11" frameWidth="406" frameHeight="406"/>
+	<SubTexture name="lostaxeldown0011" x="792" y="0" width="396" height="395" frameX="-3" frameY="-11" frameWidth="406" frameHeight="406"/>
+	<SubTexture name="lostaxelidle0000" x="1188" y="0" width="324" height="489" frameX="-3" frameY="0" frameWidth="327" frameHeight="490"/>
+	<SubTexture name="lostaxelidle0001" x="1512" y="0" width="323" height="488" frameX="-3" frameY="-1" frameWidth="327" frameHeight="490"/>
+	<SubTexture name="lostaxelidle0002" x="1835" y="0" width="318" height="489" frameX="-5" frameY="-1" frameWidth="327" frameHeight="490"/>
+	<SubTexture name="lostaxelidle0003" x="2153" y="0" width="315" height="489" frameX="-7" frameY="-1" frameWidth="327" frameHeight="490"/>
+	<SubTexture name="lostaxelidle0004" x="2468" y="0" width="315" height="488" frameX="-7" frameY="-1" frameWidth="327" frameHeight="490"/>
+	<SubTexture name="lostaxelidle0005" x="2468" y="0" width="315" height="488" frameX="-7" frameY="-1" frameWidth="327" frameHeight="490"/>
+	<SubTexture name="lostaxelidle0006" x="2783" y="0" width="314" height="489" frameX="-7" frameY="-1" frameWidth="327" frameHeight="490"/>
+	<SubTexture name="lostaxelidle0007" x="2783" y="0" width="314" height="489" frameX="-7" frameY="-1" frameWidth="327" frameHeight="490"/>
+	<SubTexture name="lostaxelidle0008" x="2468" y="0" width="315" height="488" frameX="-7" frameY="-1" frameWidth="327" frameHeight="490"/>
+	<SubTexture name="lostaxelidle0009" x="2468" y="0" width="315" height="488" frameX="-7" frameY="-1" frameWidth="327" frameHeight="490"/>
+	<SubTexture name="lostaxelidle0010" x="2783" y="0" width="314" height="489" frameX="-7" frameY="-1" frameWidth="327" frameHeight="490"/>
+	<SubTexture name="lostaxelidle0011" x="2783" y="0" width="314" height="489" frameX="-7" frameY="-1" frameWidth="327" frameHeight="490"/>
+	<SubTexture name="lostaxelleft0000" x="3097" y="0" width="351" height="432" frameX="-66" frameY="-68" frameWidth="418" frameHeight="501"/>
+	<SubTexture name="lostaxelleft0001" x="3448" y="0" width="417" height="486" frameX="0" frameY="-14" frameWidth="418" frameHeight="501"/>
+	<SubTexture name="lostaxelleft0002" x="0" y="489" width="418" height="486" frameX="0" frameY="-15" frameWidth="418" frameHeight="501"/>
+	<SubTexture name="lostaxelleft0003" x="0" y="489" width="418" height="486" frameX="0" frameY="-15" frameWidth="418" frameHeight="501"/>
+	<SubTexture name="lostaxelleft0004" x="3448" y="0" width="417" height="486" frameX="0" frameY="-14" frameWidth="418" frameHeight="501"/>
+	<SubTexture name="lostaxelleft0005" x="3448" y="0" width="417" height="486" frameX="0" frameY="-14" frameWidth="418" frameHeight="501"/>
+	<SubTexture name="lostaxelleft0006" x="0" y="489" width="418" height="486" frameX="0" frameY="-15" frameWidth="418" frameHeight="501"/>
+	<SubTexture name="lostaxelleft0007" x="0" y="489" width="418" height="486" frameX="0" frameY="-15" frameWidth="418" frameHeight="501"/>
+	<SubTexture name="lostaxelleft0008" x="3448" y="0" width="417" height="486" frameX="0" frameY="-14" frameWidth="418" frameHeight="501"/>
+	<SubTexture name="lostaxelleft0009" x="3448" y="0" width="417" height="486" frameX="0" frameY="-14" frameWidth="418" frameHeight="501"/>
+	<SubTexture name="lostaxelleft0010" x="0" y="489" width="418" height="486" frameX="0" frameY="-15" frameWidth="418" frameHeight="501"/>
+	<SubTexture name="lostaxelleft0011" x="0" y="489" width="418" height="486" frameX="0" frameY="-15" frameWidth="418" frameHeight="501"/>
+	<SubTexture name="lostaxelright0000" x="418" y="489" width="417" height="606" frameX="-5" frameY="0" frameWidth="512" frameHeight="607"/>
+	<SubTexture name="lostaxelright0001" x="835" y="489" width="463" height="486" frameX="-9" frameY="-120" frameWidth="512" frameHeight="607"/>
+	<SubTexture name="lostaxelright0002" x="1298" y="489" width="471" height="487" frameX="0" frameY="-120" frameWidth="512" frameHeight="607"/>
+	<SubTexture name="lostaxelright0003" x="1298" y="489" width="471" height="487" frameX="0" frameY="-120" frameWidth="512" frameHeight="607"/>
+	<SubTexture name="lostaxelright0004" x="835" y="489" width="463" height="486" frameX="-9" frameY="-120" frameWidth="512" frameHeight="607"/>
+	<SubTexture name="lostaxelright0005" x="835" y="489" width="463" height="486" frameX="-9" frameY="-120" frameWidth="512" frameHeight="607"/>
+	<SubTexture name="lostaxelright0006" x="1298" y="489" width="471" height="487" frameX="0" frameY="-120" frameWidth="512" frameHeight="607"/>
+	<SubTexture name="lostaxelright0007" x="1298" y="489" width="471" height="487" frameX="0" frameY="-120" frameWidth="512" frameHeight="607"/>
+	<SubTexture name="lostaxelright0008" x="835" y="489" width="463" height="486" frameX="-9" frameY="-120" frameWidth="512" frameHeight="607"/>
+	<SubTexture name="lostaxelright0009" x="835" y="489" width="463" height="486" frameX="-9" frameY="-120" frameWidth="512" frameHeight="607"/>
+	<SubTexture name="lostaxelright0010" x="1298" y="489" width="471" height="487" frameX="0" frameY="-120" frameWidth="512" frameHeight="607"/>
+	<SubTexture name="lostaxelright0011" x="1298" y="489" width="471" height="487" frameX="0" frameY="-120" frameWidth="512" frameHeight="607"/>
+	<SubTexture name="lostaxelup0000" x="1769" y="489" width="325" height="636" frameX="0" frameY="-7" frameWidth="368" frameHeight="644"/>
+	<SubTexture name="lostaxelup0001" x="2094" y="489" width="284" height="608" frameX="-84" frameY="-35" frameWidth="368" frameHeight="644"/>
+	<SubTexture name="lostaxelup0002" x="2378" y="489" width="284" height="609" frameX="-84" frameY="-35" frameWidth="368" frameHeight="644"/>
+	<SubTexture name="lostaxelup0003" x="2378" y="489" width="284" height="609" frameX="-84" frameY="-35" frameWidth="368" frameHeight="644"/>
+	<SubTexture name="lostaxelup0004" x="2094" y="489" width="284" height="608" frameX="-84" frameY="-35" frameWidth="368" frameHeight="644"/>
+	<SubTexture name="lostaxelup0005" x="2094" y="489" width="284" height="608" frameX="-84" frameY="-35" frameWidth="368" frameHeight="644"/>
+	<SubTexture name="lostaxelup0006" x="2378" y="489" width="284" height="609" frameX="-84" frameY="-35" frameWidth="368" frameHeight="644"/>
+	<SubTexture name="lostaxelup0007" x="2378" y="489" width="284" height="609" frameX="-84" frameY="-35" frameWidth="368" frameHeight="644"/>
+	<SubTexture name="lostaxelup0008" x="2094" y="489" width="284" height="608" frameX="-84" frameY="-35" frameWidth="368" frameHeight="644"/>
+	<SubTexture name="lostaxelup0009" x="2094" y="489" width="284" height="608" frameX="-84" frameY="-35" frameWidth="368" frameHeight="644"/>
+	<SubTexture name="lostaxelup0010" x="2378" y="489" width="284" height="609" frameX="-84" frameY="-35" frameWidth="368" frameHeight="644"/>
+	<SubTexture name="lostaxelup0011" x="2378" y="489" width="284" height="609" frameX="-84" frameY="-35" frameWidth="368" frameHeight="644"/>
+</TextureAtlas>

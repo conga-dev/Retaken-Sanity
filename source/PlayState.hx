@@ -144,6 +144,7 @@ class PlayState extends MusicBeatState
 	public var grpNoteSplashes:FlxTypedGroup<NoteSplash>;
 
 	public var camZooming:Bool = false;
+	public var camZoomier:Bool = false;
 	private var curSong:String = "";
 
 	public var gfSpeed:Int = 1;
@@ -178,6 +179,8 @@ class PlayState extends MusicBeatState
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 	var dialogueJson:DialogueFile = null;
+
+	public var coolRedStuff:FlxSprite;
 
 	var halloweenBG:BGSprite;
 	var halloweenWhite:BGSprite;
@@ -709,20 +712,22 @@ class PlayState extends MusicBeatState
 
 				crowd1 = new BGSprite('happyend/people1', 0, 600, 1, 1, ['stagecrowd'], true);
 
-				mahlokie1 = new BGSprite('happyend/loki1', 900, 800, 1, 1, ['Loki1'], true);
+				mahlokie1 = new BGSprite('happyend/loki1', 870, 820, 1, 1, ['Loki1'], true);
+				mahlokie1.scale.set(0.8, 0.8);
 
 				theLight1 = new BGSprite('happyend/Light1', 0, 0, 1, 1);
 
 
 				coolbg2 = new BGSprite('happyend/Background2', 0, 50, 1, 1);
 
-				boomboxes2 = new BGSprite('happyend/boomboxes2', -600, 290, 1, 1);
+				boomboxes2 = new BGSprite('happyend/boomboxes2', -600, 290, 1, 1, ['Boomboxes2'], true);
 
 				firecanons2 = new BGSprite('happyend/firecanons2', 960, 620, 1, 1, ['firecanons2'], true);
 
 				crowd2 = new BGSprite('happyend/people2', 0, 600, 1, 1, ['stagecrowd'], true);
 
-				mahlokie2 = new BGSprite('happyend/loki2', 880, 630, 1, 1, ['Loki2'], true);
+				mahlokie2 = new BGSprite('happyend/loki2', 880, 650, 1, 1, ['Loki2'], true);
+				mahlokie2.scale.set(0.8, 0.8);
 
 				theLight2 = new BGSprite('happyend/Light2', 0, 900, 1, 1);
 
@@ -750,6 +755,13 @@ class PlayState extends MusicBeatState
 				var bg:BGSprite = new BGSprite('BenBG', 0, 0, 1, 1);
 				bg.scale.set(0.7, 0.7);
 				add(bg);
+			}
+			case 'benstage2':
+			{
+				var bg:BGSprite = new BGSprite('BenBG', 0, 0, 1, 1);
+				bg.scale.set(0.7, 0.7);
+				add(bg);
+				camZoomier = true;
 			}
 		}
 
@@ -1045,7 +1057,17 @@ class PlayState extends MusicBeatState
 			botplayTxt.y = timeBarBG.y - 78;
 		}
 
-		if(isStoryMode) {
+		coolRedStuff = new FlxSprite();
+		coolRedStuff.frames = Paths.getSparrowAtlas('redpulse');
+		coolRedStuff.animation.addByPrefix('idle', 'redpulse', 20, true);
+		coolRedStuff.animation.play('idle');
+		coolRedStuff.setGraphicSize(Std.int(FlxG.width * 0.8), Std.int(FlxG.height * 0.8));
+		coolRedStuff.screenCenter();
+		if(curStage == 'benstage2') {
+			add(coolRedStuff);
+		}
+
+		if(!isStoryMode) {
 			scoreTxt.visible = false;
 			timeBar.visible = false;
 			timeBarBG.visible = false;
@@ -1054,7 +1076,15 @@ class PlayState extends MusicBeatState
 			healthBar.alpha = 0.8;
 			iconP1.alpha = 0.8;
 			iconP2.alpha = 0.8;
+			if(curSong.toLowerCase() == 'lovetodeath') {
+				healthBarBG.visible = false;
+				healthBar.visible = false;
+				iconP1.visible = false;
+				iconP2.visible = false;
+			}
 		}
+
+
 
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
@@ -1069,6 +1099,7 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
+		coolRedStuff.cameras = [camHUD];
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
@@ -1807,6 +1838,21 @@ songSpeed = SONG.speed;
 
 				var newCharacter:String = event[4];
 				addCharacterToList(newCharacter, charType);
+
+			case 'Change Character Blood':
+				var charType:Int = 0;
+				switch(event[3].toLowerCase()) {
+					case 'gf' | 'girlfriend':
+						charType = 2;
+					case 'dad' | 'opponent':
+						charType = 1;
+					default:
+						charType = Std.parseInt(event[3]);
+						if(Math.isNaN(charType)) charType = 0;
+				}
+
+				var newCharacter:String = event[4];
+				addCharacterToList(newCharacter, charType);
 		}
 
 		if(!eventPushedMap.exists(event[2])) {
@@ -1839,7 +1885,7 @@ songSpeed = SONG.speed;
 		return FlxSort.byValues(FlxSort.ASCENDING, Obj1[0] - earlyTime1, Obj2[0] - earlyTime2);
 	}
 
-	private function generateStaticArrows(player:Int, swap:Int = 0):Void
+	private function generateStaticArrows(player:Int, swap:Int = 0, invis:Bool = false):Void
 	{
 		for (i in 0...4)
 		{
@@ -1850,6 +1896,10 @@ songSpeed = SONG.speed;
 				babyArrow.y -= 10;
 				babyArrow.alpha = 0;
 				FlxTween.tween(babyArrow, {y: babyArrow.y + 10, alpha: 1}, 1, {ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
+			}
+			if(invis)
+			{
+				babyArrow.alpha = 0;
 			}
 			if (swap == 1)
 			{
@@ -2289,6 +2339,12 @@ songSpeed = SONG.speed;
 		}
 
 		if (camZooming)
+		{
+			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
+			camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
+		}
+
+		if (camZoomier)
 		{
 			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
 			camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
@@ -2945,6 +3001,80 @@ songSpeed = SONG.speed;
 
 							gf.visible = false;
 							gf = gfMap.get(value2);
+							if(!gf.alreadyLoaded) {
+								gf.alpha = 1;
+								gf.alreadyLoaded = true;
+							}
+						}
+				}
+				reloadHealthBarColors();
+
+			case 'Change Character Blood':
+
+				var theHurt:String = "";
+				if (boyfriend.curCharacter.contains("hurt"))
+					theHurt = "hurt";
+				var characType:Int = 0;
+
+				switch(value1) {
+					case 'gf' | 'girlfriend':
+						characType = 2;
+					case 'dad' | 'opponent':
+						characType = 1;
+					default:
+						characType = Std.parseInt(value1);
+						if(Math.isNaN(characType)) characType = 0;
+				}
+
+				switch(characType) {
+					case 0:
+						if(boyfriend.curCharacter != value2 + theHurt) {
+							if(!boyfriendMap.exists(value2 + theHurt)) {
+								addCharacterToList(value2 + theHurt, characType);
+							}
+
+							boyfriend.visible = false;
+							boyfriend = boyfriendMap.get(value2 + theHurt);
+							if(!boyfriend.alreadyLoaded) {
+								boyfriend.alpha = 1;
+								boyfriend.alreadyLoaded = true;
+							}
+							boyfriend.visible = true;
+							iconP1.changeIcon(boyfriend.healthIcon);
+						}
+
+					case 1:
+						if(dad.curCharacter != value2 + theHurt) {
+							if(!dadMap.exists(value2 + theHurt)) {
+								addCharacterToList(value2 + theHurt, characType);
+							}
+
+							var wasGf:Bool = dad.curCharacter.startsWith('gf');
+							dad.visible = false;
+							dad = dadMap.get(value2 + theHurt);
+							if(!dad.curCharacter.startsWith('gf')) {
+								if(wasGf) {
+									gf.visible = true;
+								}
+							} else {
+								gf.visible = false;
+							}
+							if(!dad.alreadyLoaded) {
+								dad.alpha = 1;
+								dad.alreadyLoaded = true;
+							}
+							dad.visible = true;
+							iconP2.changeIcon(dad.healthIcon);
+						}
+
+					case 2:
+						if(gf.curCharacter != value2 + theHurt) {
+							if(!gfMap.exists(value2 + theHurt)) {
+								addCharacterToList(value2 + theHurt, characType);
+							}
+
+							gf.visible = false;
+							gf = gfMap.get(value2 + theHurt);
 							if(!gf.alreadyLoaded) {
 								gf.alpha = 1;
 								gf.alreadyLoaded = true;
@@ -3662,6 +3792,23 @@ songSpeed = SONG.speed;
 
 			boyfriend.playAnim(animToPlay + daAlt, true);
 		}
+
+		if (curSong.toLowerCase() == 'silenthills') {
+			if (boyfriend.curCharacter == 'ben-rebecca') {
+				if(!boyfriendMap.exists('ben-rebeccahurt')) {
+					addCharacterToList('ben-rebeccahurt', 0);
+				}
+
+				boyfriend.visible = false;
+				boyfriend = boyfriendMap.get('ben-rebeccahurt');
+				if(!boyfriend.alreadyLoaded) {
+					boyfriend.alpha = 1;
+					boyfriend.alreadyLoaded = true;
+				}
+				boyfriend.visible = true;
+				iconP1.changeIcon(boyfriend.healthIcon);
+			}
+		}
 		callOnLuas('noteMiss', [notes.members.indexOf(daNote), daNote.noteData, daNote.noteType, daNote.isSustainNote]);
 	}
 
@@ -4086,6 +4233,11 @@ songSpeed = SONG.speed;
 		{
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.03;
+		}
+		if (camZoomier && FlxG.camera.zoom < 2.7 && ClientPrefs.camZooms && curBeat % 2 == 0)
+		{
+			FlxG.camera.zoom += 0.03;
+			camHUD.zoom += 0.06;
 		}
 
 		iconP1.setGraphicSize(Std.int(iconP1.width + 30));

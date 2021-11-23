@@ -79,7 +79,8 @@ class ChartingState extends MusicBeatState
 		['Screen Shake', "Value 1: Camera shake\nValue 2: HUD shake\n\nEvery value works as the following example: \"1, 0.05\".\nThe first number (1) is the duration.\nThe second number (0.05) is the intensity."],
 		['Change Character', "Value 1: Character to change (Dad, BF, GF)\nValue 2: New character's name"],
 		['Concert Color Blue', "Color Blue lol"],
-		['Concert Color Orange', "Color doesn't change back why tf this here???"]
+		['Concert Color Orange', "Color doesn't change back why tf this here???"],
+		['Change Character Blood', "Applies only to Silent Hills"]
 	];
 
 	var _file:FileReference;

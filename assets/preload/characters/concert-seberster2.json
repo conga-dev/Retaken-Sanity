@@ -1,103 +1,103 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-6
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "3Sebleft2"
+			"fps": 24,
+			"name": "3Sebleft2",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-1
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "3Sebdown2"
+			"fps": 24,
+			"name": "3Sebdown2",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-2
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singUP",
-			"indices": [],
-			"name": "3Sebup2"
+			"fps": 24,
+			"name": "3Sebup2",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-2
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "3Sebright2"
+			"fps": 24,
+			"name": "3Sebright2",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "idle",
-			"indices": [],
-			"name": "3Sebidle2"
+			"fps": 24,
+			"name": "3Sebidle2",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "3Sebmiss"
+			"fps": 24,
+			"name": "3Sebmiss",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "3Sebmiss"
+			"fps": 24,
+			"name": "3Sebmiss",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singUPmiss",
-			"indices": [],
-			"name": "3Sebmiss"
+			"fps": 24,
+			"name": "3Sebmiss",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "3Sebmiss"
+			"fps": 24,
+			"name": "3Sebmiss",
+			"indices": []
 		}
 	],
 	"no_antialiasing": true,
@@ -106,12 +106,12 @@
 		0,
 		0
 	],
-	"healthicon": "dad",
+	"healthicon": "seb",
 	"flip_x": true,
 	"healthbar_colors": [
-		175,
-		102,
-		206
+		140,
+		195,
+		0
 	],
 	"camera_position": [
 		330,

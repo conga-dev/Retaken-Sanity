@@ -2,16 +2,16 @@
 <TextureAtlas imagePath="boomboxes1.png">
 	<!-- Created with Adobe Animate version 21.0.7.42652 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Boomboxes20000" x="0" y="0" width="3056" height="1012"/>
-	<SubTexture name="Boomboxes20001" x="0" y="0" width="3056" height="1012"/>
-	<SubTexture name="Boomboxes20002" x="0" y="0" width="3056" height="1012"/>
-	<SubTexture name="Boomboxes20003" x="0" y="0" width="3056" height="1012"/>
-	<SubTexture name="Boomboxes20004" x="0" y="0" width="3056" height="1012"/>
-	<SubTexture name="Boomboxes20005" x="0" y="0" width="3056" height="1012"/>
-	<SubTexture name="Boomboxes20006" x="0" y="0" width="3056" height="1012"/>
-	<SubTexture name="Boomboxes20007" x="0" y="0" width="3056" height="1012"/>
-	<SubTexture name="Boomboxes20008" x="0" y="0" width="3056" height="1012"/>
-	<SubTexture name="Boomboxes20009" x="0" y="0" width="3056" height="1012"/>
-	<SubTexture name="Boomboxes20010" x="0" y="0" width="3056" height="1012"/>
-	<SubTexture name="Boomboxes20011" x="0" y="0" width="3056" height="1012"/>
+	<SubTexture name="Boomboxes20000" x="10" y="10" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes20001" x="10" y="1032" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes20002" x="10" y="2054" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes20003" x="10" y="2054" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes20004" x="10" y="2054" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes20005" x="10" y="2054" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes20006" x="10" y="2054" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes20007" x="10" y="2054" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes20008" x="10" y="2054" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes20009" x="10" y="2054" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes20010" x="10" y="2054" width="3057" height="1012"/>
+	<SubTexture name="Boomboxes20011" x="10" y="2054" width="3057" height="1012"/>
 </TextureAtlas>

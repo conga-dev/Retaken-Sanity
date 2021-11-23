@@ -1,103 +1,103 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				13,
 				-6
 			],
-			"loop": false,
-			"anim": "singLEFT",
 			"fps": 24,
-			"name": "Rebeccabeachleft",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Rebeccabeachleft"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-24
 			],
-			"loop": false,
-			"anim": "singDOWN",
 			"fps": 24,
-			"name": "Rebeccabeachdown",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Rebeccabeachdown"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				10
 			],
-			"loop": false,
-			"anim": "singUP",
 			"fps": 24,
-			"name": "Rebeccabeachup",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Rebeccabeachup"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-21,
 				1
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "Rebeccabeachright",
-			"indices": []
+			"indices": [],
+			"name": "Rebeccabeachright"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "Rebeccabeachidle",
-			"indices": []
+			"indices": [],
+			"name": "Rebeccabeachidle"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "Rebeccabeachmiss",
-			"indices": []
+			"indices": [],
+			"name": "Rebeccabeachmiss"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "Rebeccabeachmiss",
-			"indices": []
+			"indices": [],
+			"name": "Rebeccabeachmiss"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "Rebeccabeachmiss",
-			"indices": []
+			"indices": [],
+			"name": "Rebeccabeachmiss"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"anim": "singRIGHTmiss",
 			"fps": 24,
-			"name": "Rebeccabeachmiss",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "Rebeccabeachmiss"
 		}
 	],
 	"no_antialiasing": false,
@@ -106,12 +106,12 @@
 		100,
 		170
 	],
-	"healthicon": "dad",
+	"healthicon": "beachreb",
 	"flip_x": false,
 	"healthbar_colors": [
-		175,
-		102,
-		206
+		15,
+		142,
+		235
 	],
 	"camera_position": [
 		-480,

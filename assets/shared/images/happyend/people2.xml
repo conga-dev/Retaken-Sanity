@@ -2,16 +2,16 @@
 <TextureAtlas imagePath="people1.png">
 	<!-- Created with Adobe Animate version 21.0.7.42652 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="stagecrowd20000" x="10" y="10" width="1250" height="481" frameX="0" frameY="-14" frameWidth="1250" frameHeight="495"/>
-	<SubTexture name="stagecrowd20001" x="10" y="501" width="1250" height="488" frameX="0" frameY="-7" frameWidth="1250" frameHeight="495"/>
-	<SubTexture name="stagecrowd20002" x="10" y="999" width="1250" height="495"/>
-	<SubTexture name="stagecrowd20003" x="10" y="999" width="1250" height="495"/>
-	<SubTexture name="stagecrowd20004" x="10" y="999" width="1250" height="495"/>
-	<SubTexture name="stagecrowd20005" x="10" y="999" width="1250" height="495"/>
-	<SubTexture name="stagecrowd20006" x="10" y="999" width="1250" height="495"/>
-	<SubTexture name="stagecrowd20007" x="10" y="999" width="1250" height="495"/>
-	<SubTexture name="stagecrowd20008" x="10" y="999" width="1250" height="495"/>
-	<SubTexture name="stagecrowd20009" x="10" y="999" width="1250" height="495"/>
-	<SubTexture name="stagecrowd20010" x="10" y="999" width="1250" height="495"/>
-	<SubTexture name="stagecrowd20011" x="10" y="999" width="1250" height="495"/>
+	<SubTexture name="stagecrowd20000" x="10" y="10" width="1191" height="481" frameX="0" frameY="-14" frameWidth="1191" frameHeight="495"/>
+	<SubTexture name="stagecrowd20001" x="10" y="501" width="1191" height="488" frameX="0" frameY="-7" frameWidth="1191" frameHeight="495"/>
+	<SubTexture name="stagecrowd20002" x="10" y="999" width="1191" height="495"/>
+	<SubTexture name="stagecrowd20003" x="10" y="999" width="1191" height="495"/>
+	<SubTexture name="stagecrowd20004" x="10" y="999" width="1191" height="495"/>
+	<SubTexture name="stagecrowd20005" x="10" y="999" width="1191" height="495"/>
+	<SubTexture name="stagecrowd20006" x="10" y="999" width="1191" height="495"/>
+	<SubTexture name="stagecrowd20007" x="10" y="999" width="1191" height="495"/>
+	<SubTexture name="stagecrowd20008" x="10" y="999" width="1191" height="495"/>
+	<SubTexture name="stagecrowd20009" x="10" y="999" width="1191" height="495"/>
+	<SubTexture name="stagecrowd20010" x="10" y="999" width="1191" height="495"/>
+	<SubTexture name="stagecrowd20011" x="10" y="999" width="1191" height="495"/>
 </TextureAtlas>

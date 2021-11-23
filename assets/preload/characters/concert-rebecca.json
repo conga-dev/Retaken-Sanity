@@ -62,15 +62,15 @@
 		0,
 		170
 	],
-	"healthicon": "dad",
+	"healthicon": "rebnormal",
 	"flip_x": false,
 	"healthbar_colors": [
-		175,
-		102,
-		206
+		35,
+		142,
+		255
 	],
 	"camera_position": [
-		300,
+		330,
 		0
 	],
 	"sing_duration": 6.1,

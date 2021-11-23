@@ -1,103 +1,103 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				6,
 				-4
 			],
-			"loop": false,
-			"anim": "singLEFT",
 			"fps": 24,
-			"name": "Gizleft",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Gizleft"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-10
 			],
-			"loop": false,
-			"anim": "singDOWN",
 			"fps": 24,
-			"name": "Gizdown",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Gizdown"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				9
 			],
-			"loop": false,
-			"anim": "singUP",
 			"fps": 24,
-			"name": "Gizup",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Gizup"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-3,
 				-6
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "Gizright",
-			"indices": []
+			"indices": [],
+			"name": "Gizright"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "Gizidle",
-			"indices": []
+			"indices": [],
+			"name": "Gizidle"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "Gizmiss",
-			"indices": []
+			"indices": [],
+			"name": "Gizmiss"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "Gizmiss",
-			"indices": []
+			"indices": [],
+			"name": "Gizmiss"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "Gizmiss",
-			"indices": []
+			"indices": [],
+			"name": "Gizmiss"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"anim": "singRIGHTmiss",
 			"fps": 24,
-			"name": "Gizmiss",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "Gizmiss"
 		}
 	],
 	"no_antialiasing": false,
@@ -106,12 +106,12 @@
 		250,
 		-50
 	],
-	"healthicon": "dad",
+	"healthicon": "giz",
 	"flip_x": true,
 	"healthbar_colors": [
-		175,
-		102,
-		206
+		215,
+		122,
+		146
 	],
 	"camera_position": [
 		380,

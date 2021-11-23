@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="redpulse2.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="redpulse0000" x="10" y="10" width="601" height="346"/>
+	<SubTexture name="redpulse0001" x="621" y="10" width="601" height="346"/>
+	<SubTexture name="redpulse0002" x="1232" y="10" width="601" height="346"/>
+	<SubTexture name="redpulse0003" x="1843" y="10" width="601" height="346"/>
+	<SubTexture name="redpulse0004" x="2454" y="10" width="601" height="346"/>
+	<SubTexture name="redpulse0005" x="3065" y="10" width="601" height="346"/>
+	<SubTexture name="redpulse0006" x="10" y="366" width="601" height="346"/>
+	<SubTexture name="redpulse0007" x="621" y="366" width="601" height="346"/>
+	<SubTexture name="redpulse0008" x="1232" y="366" width="601" height="346"/>
+	<SubTexture name="redpulse0009" x="1843" y="366" width="601" height="346"/>
+	<SubTexture name="redpulse0010" x="2454" y="366" width="601" height="346"/>
+	<SubTexture name="redpulse0011" x="3065" y="366" width="601" height="346"/>
+	<SubTexture name="redpulse0012" x="10" y="722" width="601" height="346"/>
+	<SubTexture name="redpulse0013" x="621" y="722" width="601" height="346"/>
+	<SubTexture name="redpulse0014" x="1232" y="722" width="601" height="346"/>
+	<SubTexture name="redpulse0015" x="1843" y="722" width="601" height="346"/>
+	<SubTexture name="redpulse0016" x="2454" y="722" width="601" height="346"/>
+	<SubTexture name="redpulse0017" x="3065" y="722" width="601" height="346"/>
+	<SubTexture name="redpulse0018" x="10" y="1078" width="601" height="346"/>
+	<SubTexture name="redpulse0019" x="621" y="1078" width="601" height="346"/>
+</TextureAtlas>

@@ -1,15 +1,48 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
-				13,
-				-6
+				0,
+				-46
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				0,
+				-18
 			],
 			"loop": false,
-			"anim": "singLEFT",
 			"fps": 24,
-			"name": "left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				0,
+				-12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
 		},
 		{
 			"offsets": [
@@ -17,32 +50,43 @@
 				-24
 			],
 			"loop": false,
-			"anim": "singDOWN",
 			"fps": 24,
-			"name": "down",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				29,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "missdown"
+		},
+		{
+			"offsets": [
+				254,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "missleft"
 		},
 		{
 			"offsets": [
 				0,
-				10
+				-5
 			],
 			"loop": false,
-			"anim": "singUP",
 			"fps": 24,
-			"name": "up",
-			"indices": []
-		},
-		{
-			"offsets": [
-				-21,
-				1
-			],
-			"loop": false,
-			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "right",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "missright"
 		},
 		{
 			"offsets": [
@@ -50,28 +94,28 @@
 				0
 			],
 			"loop": false,
-			"anim": "idle",
 			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "missup"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Rebecca_ben_song1",
 	"position": [
-		100,
-		170
+		70,
+		20
 	],
-	"healthicon": "dad",
-	"flip_x": false,
+	"healthicon": "rebben",
+	"flip_x": true,
 	"healthbar_colors": [
-		175,
-		102,
-		206
+		0,
+		82,
+		106
 	],
 	"camera_position": [
-		-480,
-		-90
+		250,
+		10
 	],
 	"sing_duration": 6.1,
 	"scale": 1

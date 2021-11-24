@@ -179,7 +179,7 @@ class NotesSubstate extends MusicBeatSubstate
 			newShader.brightness = ClientPrefs.arrowHSV[i][2] / 100;
 			shaderArray.push(newShader);
 		}
-		hsvText = new Alphabet(0, 0, "Hue    Saturation  Brightness", false, false, 0, 0.65, true);
+		hsvText = new Alphabet(0, 0, "Hue    Saturation  Brightness", false, false, 0, 0.65, false, true);
 		add(hsvText);
 		changeSelection();
 	}

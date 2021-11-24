@@ -632,13 +632,13 @@ class ControlsSubstate extends MusicBeatSubstate {
 
 	private function addBindTexts(optionText:Alphabet, num:Int) {
 		var keys:Array<Dynamic> = controlMap.get(optionShit[num][1]);
-		var text1 = new AttachedText(InputFormatter.getKeyName(keys[0]), 400, -55);
+		var text1 = new AttachedText(InputFormatter.getKeyName(keys[0]), 400, -55, false, true);
 		text1.setPosition(optionText.x + 400, optionText.y - 55);
 		text1.sprTracker = optionText;
 		grpInputs.push(text1);
 		add(text1);
 
-		var text2 = new AttachedText(InputFormatter.getKeyName(keys[1]), 650, -55);
+		var text2 = new AttachedText(InputFormatter.getKeyName(keys[1]), 650, -55, false, true);
 		text2.setPosition(optionText.x + 650, optionText.y - 55);
 		text2.sprTracker = optionText;
 		grpInputsAlt.push(text2);
@@ -802,7 +802,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 					checkboxNumber.push(i);
 					add(checkbox);
 				} else {
-					var valueText:AttachedText = new AttachedText('0', optionText.width + 80);
+					var valueText:AttachedText = new AttachedText('0', optionText.width + 80, 0, false, true);
 					valueText.sprTracker = optionText;
 					grpTexts.add(valueText);
 					textNumber.push(i);

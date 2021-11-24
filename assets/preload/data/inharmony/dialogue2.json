@@ -1,0 +1,11 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "noone",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Until next time, see you soon..."
+		}
+	]
+}

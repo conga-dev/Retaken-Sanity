@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="phonetalkiegiz.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Talki_Giz0000" x="10" y="10" width="792" height="971"/>
+	<SubTexture name="Talki_Giz0001" x="10" y="10" width="792" height="971"/>
+	<SubTexture name="Talki_Giz0002" x="10" y="10" width="792" height="971"/>
+	<SubTexture name="Talki_Giz0003" x="10" y="10" width="792" height="971"/>
+	<SubTexture name="Talki_Giz0004" x="812" y="10" width="792" height="971"/>
+	<SubTexture name="Talki_Giz0005" x="812" y="10" width="792" height="971"/>
+	<SubTexture name="Talki_Giz0006" x="812" y="10" width="792" height="971"/>
+	<SubTexture name="Talki_Giz0007" x="812" y="10" width="792" height="971"/>
+	<SubTexture name="Talki_notGiz0000" x="812" y="10" width="792" height="971"/>
+</TextureAtlas>

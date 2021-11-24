@@ -1,0 +1,39 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "phoneseb",
+			"boxState": "angry",
+			"expression": "talk",
+			"text": "Hey, at the beach last time."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "phoneseb",
+			"boxState": "angry",
+			"expression": "talk",
+			"text": " I noticed you are coming back to your old \\n self. Are you confident enough to join\\n me on my next performance?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "phonerebecca",
+			"boxState": "angry",
+			"expression": "talk",
+			"text": "I am but you know what I sound\\n like. If my vocals ruin a big show,\\n  that's not on me."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "phoneseb",
+			"boxState": "angry",
+			"expression": "talk",
+			"text": "8pm, same place I always\\n perform."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "phonerebecca",
+			"boxState": "angry",
+			"expression": "talk",
+			"text": "I will be there."
+		}
+	]
+}

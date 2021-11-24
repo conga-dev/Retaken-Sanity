@@ -1,0 +1,24 @@
+{
+	"position": [
+		0,
+		-190
+	],
+	"dialogue_pos": "left",
+	"scale": 1,
+	"image": "phonetalkiegiz",
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "talk",
+			"idle_name": "Talki_notGiz",
+			"loop_name": "Talki_Giz"
+		}
+	]
+}

@@ -179,6 +179,7 @@ class PlayState extends MusicBeatState
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 	var dialogueJson:DialogueFile = null;
+	var dialogueJson2:DialogueFile = null;
 
 	public var coolRedStuff:FlxSprite;
 	public var coolBlackStuff:FlxSprite;
@@ -656,17 +657,19 @@ class PlayState extends MusicBeatState
 			}
 			case 'hospital':
 			{
-				var bg:BGSprite = new BGSprite('wakeup/Background', 0, 0, 1, 1);
+
+				//dont yell at me i dont feel like doing math rn
+				var bg:BGSprite = new BGSprite('wakeup/Background', 0-600, 0-250, 1, 1);
 				
-				var curtains:BGSprite = new BGSprite('wakeup/curtains', 190, 250, 1, 1, ['curtains'], true);
+				var curtains:BGSprite = new BGSprite('wakeup/curtains', 190-600, 250-250, 1, 1, ['curtains'], true);
 
-				var gfChair:BGSprite = new BGSprite('wakeup/Gf_eating', 680, 780, 1, 1, ['GFBGsprite1'], true);
+				var gfChair:BGSprite = new BGSprite('wakeup/Gf_eating', 680-600, 780-250, 1, 1, ['GFBGsprite1'], true);
 
-				var starvinglol:BGSprite = new BGSprite('wakeup/rebeccaeating', 950, 660, 1, 1, ['BGloop'], true);
+				var starvinglol:BGSprite = new BGSprite('wakeup/rebeccaeating', 950-600, 660-250, 1, 1, ['BGloop'], true);
 
-				var table:BGSprite = new BGSprite('wakeup/Table', 1550, 940, 1, 1);
+				var table:BGSprite = new BGSprite('wakeup/Table', 1550-600, 940-250, 1, 1);
 
-				var sebreaster:BGSprite = new BGSprite('wakeup/sebdrinking', 1820, 490, 1, 1, ['BGSeberstersprite'], true);
+				var sebreaster:BGSprite = new BGSprite('wakeup/sebdrinking', 1820-600, 490-250, 1, 1, ['BGSeberstersprite'], true);
 
 				add(bg);
 				add(curtains);
@@ -677,60 +680,63 @@ class PlayState extends MusicBeatState
 			}
 			case 'beach':
 			{
-				var bg:BGSprite = new BGSprite('unwind/Background', 0, 0, 1, 1);
+				var bg:BGSprite = new BGSprite('unwind/Background', -1000+500, 0, 1, 1);
 
-				var waves:FlxSprite = new FlxSprite(0, 700);
+				var waves:FlxSprite = new FlxSprite(-1000+500, 700);
 				waves.frames = Paths.getSparrowAtlas('unwind/beachnwaves');
 				waves.animation.addByPrefix('idle', 'beachwaves', 24, true);
 				waves.animation.play('idle');
 				waves.antialiasing = ClientPrefs.globalAntialiasing;
 
-				var sebhot:BGSprite = new BGSprite('unwind/beachseb', 1000, 670, 1, 1, ['Beachseb'], true);
+				var sebhot:BGSprite = new BGSprite('unwind/beachseb', 0+500, 670, 1, 1, ['Beachseb'], true);
 
-				var gfsit:BGSprite = new BGSprite('unwind/beachGF', 500, 600, 1, 1, ['BeachGF'], true);
+				var gfsit:BGSprite = new BGSprite('unwind/beachGF', -500+500, 600, 1, 1, ['BeachGF'], true);
 
-				var ash:BGSprite = new BGSprite('unwind/Beachash', 1600, 800, 1, 1);
+				var ash:BGSprite = new BGSprite('unwind/Beachash', 300+500, 800, 1, 1);
 
-				var axelLMAO:BGSprite = new BGSprite('unwind/BeachAxel', 100, 940, 1, 1);
+				var conga:BGSprite = new BGSprite('unwind/beachconga', 680+500, 800, 1, 1);
 
-				var walkway:BGSprite = new BGSprite('unwind/walkway', -35, 1100, 1, 1);
+				var axelLMAO:BGSprite = new BGSprite('unwind/BeachAxel', -900+500, 940, 1, 1);
+
+				var walkway:BGSprite = new BGSprite('unwind/walkway', -1035+500, 1100, 1, 1);
 
 				add(bg);
 				add(waves);
 				add(sebhot);
 				add(gfsit);
 				add(ash);
+				add(conga);
 				add(axelLMAO);
 				add(walkway);
 			}
 			case 'concert':
 			{
-				coolbg1 = new BGSprite('happyend/Background1', 0, 0, 1, 1);
+				coolbg1 = new BGSprite('happyend/Background1', 0-1000, 0, 1, 1);
 
-				boomboxes1 = new BGSprite('happyend/boomboxes1', -600, 290, 1, 1, ['Boomboxes'], true);
+				boomboxes1 = new BGSprite('happyend/boomboxes1', -600-1000, 290, 1, 1, ['Boomboxes'], true);
 
-				firecanons1 = new BGSprite('happyend/firecanons1', 1300, 1000, 1, 1);
+				firecanons1 = new BGSprite('happyend/firecanons1', 1300-1000, 1000, 1, 1);
 
-				crowd1 = new BGSprite('happyend/people1', 0, 600, 1, 1, ['stagecrowd'], true);
+				crowd1 = new BGSprite('happyend/people1', 0-1000, 600, 1, 1, ['stagecrowd'], true);
 
-				mahlokie1 = new BGSprite('happyend/loki1', 870, 820, 1, 1, ['Loki1'], true);
+				mahlokie1 = new BGSprite('happyend/loki1', 870-1000, 820, 1, 1, ['Loki1'], true);
 				mahlokie1.scale.set(0.8, 0.8);
 
-				theLight1 = new BGSprite('happyend/Light1', 0, 0, 1, 1);
+				theLight1 = new BGSprite('happyend/Light1', 0-1000, 0, 1, 1);
 
 
-				coolbg2 = new BGSprite('happyend/Background2', 0, 50, 1, 1);
+				coolbg2 = new BGSprite('happyend/Background2', 0-1000, 50, 1, 1);
 
-				boomboxes2 = new BGSprite('happyend/boomboxes2', -600, 290, 1, 1, ['Boomboxes2'], true);
+				boomboxes2 = new BGSprite('happyend/boomboxes2', -600-1000, 290, 1, 1, ['Boomboxes2'], true);
 
-				firecanons2 = new BGSprite('happyend/firecanons2', 960, 620, 1, 1, ['firecanons2'], true);
+				firecanons2 = new BGSprite('happyend/firecanons2', 960-1000, 620, 1, 1, ['firecanons2'], true);
 
-				crowd2 = new BGSprite('happyend/people2', 0, 600, 1, 1, ['stagecrowd'], true);
+				crowd2 = new BGSprite('happyend/people2', 0-1000, 600, 1, 1, ['stagecrowd'], true);
 
-				mahlokie2 = new BGSprite('happyend/loki2', 880, 650, 1, 1, ['Loki2'], true);
+				mahlokie2 = new BGSprite('happyend/loki2', 850-1000, 650, 1, 1, ['Loki2'], true);
 				mahlokie2.scale.set(0.8, 0.8);
 
-				theLight2 = new BGSprite('happyend/Light2', 0, 900, 1, 1);
+				theLight2 = new BGSprite('happyend/Light2', 0-1000, 900, 1, 1);
 
 				concert1 = new FlxTypedGroup<BGSprite>();
 				concert2 = new FlxTypedGroup<BGSprite>();
@@ -902,9 +908,14 @@ class PlayState extends MusicBeatState
 				insert(members.indexOf(dadGroup) - 1, evilTrail);
 		}
 
-		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
+		var file:String = Paths.json(songName + '/dialogue1'); //Checks for json/Psych Engine dialogue
 		if (OpenFlAssets.exists(file)) {
 			dialogueJson = DialogueBoxPsych.parseDialogue(file);
+		}
+
+		var file2:String = Paths.json(songName + '/dialogue2'); //Checks for json/Psych Engine dialogue
+		if (OpenFlAssets.exists(file2)) {
+			dialogueJson2 = DialogueBoxPsych.parseDialogue(file2);
 		}
 
 		var file:String = Paths.txt(songName + '/' + songName + 'Dialogue'); //Checks for vanilla/Senpai dialogue
@@ -1201,10 +1212,10 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 
 				case 'inharmony':
-					startVideo('cuts1');
+					startVideo('cuts1', 1);
 
 				case 'wakeup':
-					startVideo('cuts2');
+					startVideo('cuts2', 1, 'hospital');
 
 				case 'unwind':
 					startVideo('cuts3');
@@ -1213,7 +1224,7 @@ class PlayState extends MusicBeatState
 					startVideo('cuts4');
 
 				case 'silenthills':
-					startVideo('cuts7');
+					startVideo('cuts7', 1, 'tension');
 
 				default:
 					startCountdown();
@@ -1299,7 +1310,7 @@ class PlayState extends MusicBeatState
 		char.y += char.positionArray[1];
 	}
 
-	public function startVideo(name:String, startEnd:Bool = false):Void {
+	public function startVideo(name:String, startEnd:Int = 0, ?song:String = null):Void {
 		#if VIDEOS_ALLOWED
 		var foundFile:Bool = false;
 		var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
@@ -1329,11 +1340,14 @@ class PlayState extends MusicBeatState
 
 			(new FlxVideo(fileName)).finishCallback = function() {
 				remove(bg);
-				if(endingSong) {
+				if (startEnd == 1) {
+					startDialogue(dialogueJson, song);
+				} else if (startEnd == 2) {
+					startVideo(song);
+				} else if(endingSong) {
 					endSong();
-				} else if (startEnd) {
-					trace('do next thing plz');
-				} else {
+				}  
+				else {
 					startCountdown();
 				}
 			}
@@ -1351,7 +1365,7 @@ class PlayState extends MusicBeatState
 
 	var dialogueCount:Int = 0;
 	//You don't have to add a song, just saying. You can just do "startDialogue(dialogueJson);" and it should work
-	public function startDialogue(dialogueFile:DialogueFile, ?song:String = null, startEnd:Bool = false):Void
+	public function startDialogue(dialogueFile:DialogueFile, ?song:String = null):Void
 	{
 		// TO DO: Make this more flexible, maybe?
 		if(dialogueFile.dialogue.length > 0) {
@@ -1369,9 +1383,7 @@ class PlayState extends MusicBeatState
 			doof.skipDialogueThing = skipDialogue;
 			doof.cameras = [camHUD];
 			add(doof);
-		} else if (startEnd) {
-			trace('do next thing plz');
-	 	} else {
+		} else {
 			FlxG.log.warn('Your dialogue file is badly formatted!');
 			if(endingSong) {
 				endSong();
@@ -2619,7 +2631,7 @@ songSpeed = SONG.speed;
 			}
 		}
 		
-		#if debug
+		//#if debug
 		if(!endingSong && !startingSong) {
 			if (FlxG.keys.justPressed.ONE) {
 				KillNotes();
@@ -2666,7 +2678,7 @@ songSpeed = SONG.speed;
 		setOnLuas('cameraY', camFollowPos.y);
 		setOnLuas('botPlay', PlayState.cpuControlled);
 		callOnLuas('onUpdatePost', [elapsed]);
-		#end
+		//#end
 	}
 
 	var isDead:Bool = false;
@@ -3183,6 +3195,23 @@ songSpeed = SONG.speed;
 						iconP1.changeIcon(boyfriend.healthIcon);
 					}
 				}
+
+			case 'HUD Change':
+				function tweenFunction(cam:FlxCamera, v:Float) { cam.alpha = v; }
+				FlxTween.num(camHUD.alpha, Std.parseInt(value1), Std.parseFloat(value2), {}, tweenFunction.bind(camHUD));
+
+			case 'Fade to/from Color':
+				switch(value1) 
+				{
+					case 'toblack':
+						FlxG.camera.fade(FlxColor.BLACK, Std.parseInt(value2), false);
+					case 'fromblack':
+						FlxG.camera.fade(FlxColor.BLACK, Std.parseInt(value2), true);
+					case 'towhite':
+						FlxG.camera.fade(FlxColor.WHITE, Std.parseInt(value2), false);
+					case 'fromwhite':
+						FlxG.camera.fade(FlxColor.WHITE, Std.parseInt(value2), true);
+				}
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
@@ -3287,18 +3316,33 @@ songSpeed = SONG.speed;
 		var currSongg:String = storyPlaylist[0].toLowerCase();
 
 		updateTime = false;
+		canPause = false;
 		FlxG.sound.music.volume = 0;
 		vocals.volume = 0;
 		vocals.pause();
 		if (currSongg == 'happyend') {
 			endingSong = true;
 			coolBlackStuff.alpha = 1;
-			startVideo('cuts5');
+			startVideo('cuts5', 2, 'credits');
 		}
 		else if (currSongg == 'lovetodeath') {
 			endingSong = true;
 			coolBlackStuff.alpha = 1;
 			startVideo('cuts8');
+		}
+		else if (currSongg == 'inharmony') {
+			endingSong = true;
+			startDialogue(dialogueJson2);
+		}
+		else if (currSongg == 'wakeup') {
+			endingSong = true;
+			coolBlackStuff.alpha = 1;
+			startDialogue(dialogueJson2);
+		}
+		else if (currSongg == 'unwind') {
+			endingSong = true;
+			coolBlackStuff.alpha = 1;
+			startDialogue(dialogueJson2);
 		}
 		else if (currSongg == 'grey') {
 			endingSong = true;

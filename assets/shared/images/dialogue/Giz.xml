@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Giz.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Giz10000" x="10" y="10" width="1157" height="2009"/>
+	<SubTexture name="Giz20000" x="1177" y="10" width="1157" height="2009"/>
+	<SubTexture name="Giz30000" x="2344" y="10" width="1157" height="2009"/>
+</TextureAtlas>

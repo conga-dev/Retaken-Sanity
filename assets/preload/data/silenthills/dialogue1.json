@@ -1,0 +1,74 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "rebeccaben",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Oh Ben, I am sorry that I left in such a hurry, leaving behind such a mess. Must have looked like a crime scene, almost."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "ben",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Don't worry, I actually cleaned up a bit for you after hearing you went to the hospital."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "rebeccaben",
+			"boxState": "normal",
+			"expression": "awkward",
+			"text": "Thank you, though you didn't have to."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "ben",
+			"boxState": "normal",
+			"expression": "joy",
+			"text": "It's a janitor's job to keep the building pristine and clean after all."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "rebeccaben",
+			"boxState": "normal",
+			"expression": "nervous",
+			"text": "Are those bars in front of the window? Are those new... Ben?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "ben",
+			"boxState": "normal",
+			"expression": "serious",
+			"text": "This might be our last chance to get to know each other, I saw the paperwork of you leaving the apartment soon. We can't have this. Not yet."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "rebeccaben",
+			"boxState": "normal",
+			"expression": "nervous",
+			"text": "Hold on, we can just talk this out, right?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "ben",
+			"boxState": "normal",
+			"expression": "crazy",
+			"text": "Not before I show you how much I love you."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "rebeccaben",
+			"boxState": "normal",
+			"expression": "scared",
+			"text": "U-Uh... please put down the knife..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "ben",
+			"boxState": "normal",
+			"expression": "crazy",
+			"text": "It's just how I love people..."
+		}
+	]
+}

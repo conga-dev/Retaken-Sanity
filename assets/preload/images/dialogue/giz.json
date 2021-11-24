@@ -1,0 +1,50 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		-540,
+		-830
+	],
+	"scale": 0.35,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Giz3",
+			"idle_name": "Giz3"
+		},
+		{
+			"loop_name": "Giz1",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "Giz1",
+			"anim": "sad",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "Giz2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "Giz2",
+			"anim": "angry",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	],
+	"image": "Giz"
+}

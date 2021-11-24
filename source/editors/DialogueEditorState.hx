@@ -37,6 +37,7 @@ class DialogueEditorState extends MusicBeatState
 {
 	var character:DialogueCharacter;
 	var box:FlxSprite;
+	var talkieBox:FlxSprite;
 	var daText:Alphabet;
 
 	var selectedText:FlxText;
@@ -62,21 +63,31 @@ class DialogueEditorState extends MusicBeatState
 				copyDefaultLine()
 			]
 		};
+
+		talkieBox = new FlxSprite(0, 0).loadGraphic(Paths.image('speech_phone_bubble'));
+		talkieBox.scrollFactor.set();
+		talkieBox.antialiasing = ClientPrefs.globalAntialiasing;
+		talkieBox.setGraphicSize(FlxG.width);
+		talkieBox.updateHitbox();
+		talkieBox.visible = false;
+		add(talkieBox);
 		
 		character = new DialogueCharacter();
 		character.scrollFactor.set();
 		add(character);
 
-		box = new FlxSprite(70, 370);
-		box.frames = Paths.getSparrowAtlas('speech_bubble');
+		box = new FlxSprite(0, 0).loadGraphic(Paths.image('speech_insanity_bubble'));
+		//box.frames = Paths.getSparrowAtlas('speech_insanity_bubble');
 		box.scrollFactor.set();
 		box.antialiasing = ClientPrefs.globalAntialiasing;
+		/*
 		box.animation.addByPrefix('normal', 'speech bubble normal', 24);
 		box.animation.addByPrefix('angry', 'AHH speech bubble', 24);
 		box.animation.addByPrefix('center', 'speech bubble middle', 24);
 		box.animation.addByPrefix('center-angry', 'AHH Speech Bubble middle', 24);
 		box.animation.play('normal', true);
-		box.setGraphicSize(Std.int(box.width * 0.9));
+		*/
+		box.setGraphicSize(FlxG.width);
 		box.updateHitbox();
 		add(box);
 
@@ -175,17 +186,29 @@ class DialogueEditorState extends MusicBeatState
 		var isAngry:Bool = angryCheckbox.checked;
 		var anim:String = isAngry ? 'angry' : 'normal';
 
+		if (isAngry) {
+			box.visible = false;
+			talkieBox.visible = true;
+			DialogueBoxPsych.DEFAULT_TEXT_X = 220;
+			DialogueBoxPsych.DEFAULT_TEXT_Y = 380;
+		} else {
+			box.visible = true;
+			talkieBox.visible = false;
+			DialogueBoxPsych.DEFAULT_TEXT_X = 90;
+			DialogueBoxPsych.DEFAULT_TEXT_Y = 430;
+		}
+
 		switch(character.jsonFile.dialogue_pos) {
 			case 'left':
-				box.flipX = true;
+				//box.flipX = true;
 			case 'center':
-				if(isAngry) {
-					anim = 'center-angry';
-				} else {
-					anim = 'center';
-				}
+				//if(isAngry) {
+				//	anim = 'center-angry';
+				//} else {
+				//	anim = 'center';
+				//}
 		}
-		box.animation.play(anim, true);
+		//box.animation.play(anim, true);
 		DialogueBoxPsych.updateBoxOffsets(box);
 	}
 

@@ -1,0 +1,24 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		-140,
+		-620
+	],
+	"scale": 0.35,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Rebecca1",
+			"idle_name": "Rebecca1"
+		}
+	],
+	"image": "Rebecca"
+}

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="phonetalkieseb.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Talki_Seb0000" x="10" y="10" width="795" height="885"/>
+	<SubTexture name="Talki_Seb0001" x="10" y="10" width="795" height="885"/>
+	<SubTexture name="Talki_Seb0002" x="10" y="10" width="795" height="885"/>
+	<SubTexture name="Talki_Seb0003" x="10" y="10" width="795" height="885"/>
+	<SubTexture name="Talki_Seb0004" x="815" y="10" width="795" height="885"/>
+	<SubTexture name="Talki_Seb0005" x="815" y="10" width="795" height="885"/>
+	<SubTexture name="Talki_Seb0006" x="815" y="10" width="795" height="885"/>
+	<SubTexture name="Talki_Seb0007" x="815" y="10" width="795" height="885"/>
+	<SubTexture name="Talki_notSeb0000" x="815" y="10" width="795" height="885"/>
+</TextureAtlas>

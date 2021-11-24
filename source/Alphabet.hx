@@ -26,6 +26,7 @@ class Alphabet extends FlxSpriteGroup
 	public var yAdd:Float = 0;
 	public var isMenuItem:Bool = false;
 	public var textSize:Float = 1.0;
+	public var staticWhite:Bool = false;
 
 	public var text:String = "";
 
@@ -49,9 +50,10 @@ class Alphabet extends FlxSpriteGroup
 	public var typed:Bool = false;
 
 	public var typingSpeed:Float = 0.05;
-	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, ?typingSpeed:Float = 0.05, ?textSize:Float = 1, imag:Bool = false)
+	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, ?typingSpeed:Float = 0.05, ?textSize:Float = 1, imag:Bool = false, ?staticWhite:Bool = false)
 	{
 		super(x, y);
+		this.staticWhite = staticWhite;
 		forceX = Math.NEGATIVE_INFINITY;
 		this.textSize = textSize;
 
@@ -156,7 +158,7 @@ class Alphabet extends FlxSpriteGroup
 				consecutiveSpaces = 0;
 
 				// var letter:AlphaCharacter = new AlphaCharacter(30 * loopNum, 0, textSize);
-				var letter:AlphaCharacter = new AlphaCharacter(xPos, 0, textSize);
+				var letter:AlphaCharacter = new AlphaCharacter(xPos, 0, textSize, staticWhite);
 
 				if (isBold)
 				{
@@ -285,7 +287,7 @@ class Alphabet extends FlxSpriteGroup
 				consecutiveSpaces = 0;
 
 				// var letter:AlphaCharacter = new AlphaCharacter(30 * loopNum, 0, textSize);
-				var letter:AlphaCharacter = new AlphaCharacter(xPos, 55 * yMulti, textSize);
+				var letter:AlphaCharacter = new AlphaCharacter(xPos, 55 * yMulti, textSize, staticWhite);
 				letter.row = curRow;
 				if (isBold)
 				{
@@ -380,10 +382,12 @@ class AlphaCharacter extends FlxSprite
 
 	private var textSize:Float = 1;
 
-	public function new(x:Float, y:Float, textSize:Float)
+	public function new(x:Float, y:Float, textSize:Float, ?white:Bool = false)
 	{
 		super(x, y);
 		var tex = Paths.getSparrowAtlas('alphabet');
+		if (white)
+			tex = Paths.getSparrowAtlas('alphabet-alt'); 
 		frames = tex;
 
 		setGraphicSize(Std.int(width * textSize));

@@ -23,6 +23,8 @@ using StringTools;
 class FreeplayState extends MusicBeatState
 {
 	var songs:Array<SongMetadata> = [];
+	var songsTargetY:Array<Int> = [0];
+	var theTweens:Array<FlxTween> = [];
 
 	var selector:FlxText;
 	private static var curSelected:Int = 0;
@@ -36,7 +38,7 @@ class FreeplayState extends MusicBeatState
 	var intendedScore:Int = 0;
 	var intendedRating:Float = 0;
 
-	private var grpSongs:FlxTypedGroup<Alphabet>;
+	private var grpSongs:FlxTypedGroup<FlxSprite>;
 	private var curPlaying:Bool = false;
 
 	private var iconArray:Array<HealthIcon> = [];
@@ -45,6 +47,8 @@ class FreeplayState extends MusicBeatState
 	var hand:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
+
+	
 
 	override function create()
 	{
@@ -108,14 +112,23 @@ class FreeplayState extends MusicBeatState
 		hand.antialiasing = ClientPrefs.globalAntialiasing;
 		add(hand);
 
-		grpSongs = new FlxTypedGroup<Alphabet>();
+		var selectedBar:FlxSprite = new FlxSprite(638, 408).makeGraphic(460, 55, FlxColor.WHITE);
+		add(selectedBar);
+		grpSongs = new FlxTypedGroup<FlxSprite>();
 		add(grpSongs);
 
 		for (i in 0...songs.length)
 		{
-			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false);
-			songText.isMenuItem = true;
-			songText.targetY = i;
+			//var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false);
+			//songText.isMenuItem = true;
+			songsTargetY[i] = i;
+			var songText:FlxSprite = new FlxSprite(0, (70 * i) + 30);
+			songText.frames = Paths.getSparrowAtlas('Freeplay');
+			songText.animation.addByPrefix('idle', songs[i].songName.toLowerCase(), 24, true);
+			songText.animation.play('idle');
+			songText.scale.set(0.6, 0.6);
+			songText.updateHitbox();
+			songText.antialiasing = true;
 			grpSongs.add(songText);
 
 			Paths.currentModDirectory = songs[i].folder;
@@ -124,11 +137,14 @@ class FreeplayState extends MusicBeatState
 
 			// using a FlxGroup is too much fuss!
 			iconArray.push(icon);
-			add(icon);
-
+			//add(icon);
+			theTweens[i] = FlxTween.tween(songText, {x: songText.x}, 0, {});
 			// songText.x += 40;
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
-			// songText.screenCenter(X);
+			songText.screenCenter(X);
+			songText.x += 233;	
+			var scaledY = FlxMath.remapToRange(songsTargetY[i], 0, 1, 0, 1.3);
+			songText.y = (scaledY * 120) + (FlxG.height * 0.48) + 43;
 		}
 		WeekData.setDirectoryFromWeek();
 
@@ -213,6 +229,13 @@ class FreeplayState extends MusicBeatState
 	private static var vocals:FlxSound = null;
 	override function update(elapsed:Float)
 	{
+		for (i in 0...grpSongs.members.length) {
+			grpSongs.members[i].screenCenter(X);
+			grpSongs.members[i].x += 233;
+			var scaledY = FlxMath.remapToRange(songsTargetY[i], 0, 1, 0, 1.3);
+			var lerpVal:Float = CoolUtil.boundTo(elapsed * 9.6, 0, 1);
+			grpSongs.members[i].y = FlxMath.lerp(grpSongs.members[i].y, (scaledY * 120) + (FlxG.height * 0.48) + 43, lerpVal);
+		}
 		if (FlxG.sound.music.volume < 0.7)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
@@ -372,17 +395,24 @@ class FreeplayState extends MusicBeatState
 
 		iconArray[curSelected].alpha = 1;
 
-		for (item in grpSongs.members)
+		for (i in 0...grpSongs.members.length)
 		{
-			item.targetY = bullShit - curSelected;
+			songsTargetY[i] = bullShit - curSelected;
 			bullShit++;
-
-			item.alpha = 0.6;
+			theTweens[i].cancel();
+			//item.alpha = 0.6;
 			// item.setGraphicSize(Std.int(item.width * 0.8));
-
-			if (item.targetY == 0)
+			theTweens[i] = FlxTween.num(grpSongs.members[i].scale.x, 0.4, 0.2, {}, function (v:Float) {
+				grpSongs.members[i].scale.set(v, v);
+				grpSongs.members[i].updateHitbox();
+			});
+			if (songsTargetY[i] == 0)
 			{
-				item.alpha = 1;
+				theTweens[i].cancel();
+				theTweens[i] = FlxTween.num(grpSongs.members[i].scale.x, 0.6, 0.2, {}, function (v:Float) {
+					grpSongs.members[i].scale.set(v, v);
+					grpSongs.members[i].updateHitbox();
+				});
 				// item.setGraphicSize(Std.int(item.width));
 			}
 		}

@@ -80,7 +80,9 @@ class ChartingState extends MusicBeatState
 		['Change Character', "Value 1: Character to change (Dad, BF, GF)\nValue 2: New character's name"],
 		['Concert Color Blue', "Color Blue lol"],
 		['Concert Color Orange', "Color doesn't change back why tf this here???"],
-		['Change Character Blood', "Applies only to Silent Hills"]
+		['Change Character Blood', "Applies only to Silent Hills"],
+		['HUD Change', "Value 1: Change opacity to this \nValue 2: Duration of change"],
+		['Fade to/from Color', "Value 1: to/from white/black \nValue 2: Duration of change"]
 	];
 
 	var _file:FileReference;

@@ -1,0 +1,63 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		-510,
+		-620
+	],
+	"scale": 0.35,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Rebecca4",
+			"idle_name": "Rebecca4"
+		},
+		{
+			"loop_name": "Rebecca5",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "Rebecca5",
+			"anim": "awkward",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "Rebecca6",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "Rebecca6",
+			"anim": "nervous",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "Rebecca7",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "Rebecca7",
+			"anim": "scared",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	],
+	"image": "Rebecca"
+}

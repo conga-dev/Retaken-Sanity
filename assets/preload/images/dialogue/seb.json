@@ -1,0 +1,24 @@
+{
+	"position": [
+		-200,
+		-130
+	],
+	"dialogue_pos": "right",
+	"scale": 0.9,
+	"image": "Seb",
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "talk",
+			"idle_name": "Seb1",
+			"loop_name": "Seb1"
+		}
+	]
+}

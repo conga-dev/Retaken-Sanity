@@ -1,0 +1,24 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		-250,
+		-90
+	],
+	"scale": 0.6,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Gone1",
+			"idle_name": "Gone1"
+		}
+	],
+	"image": "noone"
+}

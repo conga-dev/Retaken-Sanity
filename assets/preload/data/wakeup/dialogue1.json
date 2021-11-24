@@ -1,0 +1,95 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "Rebeccaenemy",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Why is everyone in my room?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "Giz",
+			"boxState": "normal",
+			"expression": "sad",
+			"text": "You are in the hospital! Making everyone worried cause you collapsed due to overworking AGAIN!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "Rebeccaenemy",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "Seb",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I wasn't worried if it would make you feel any better."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "Giz",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "SEB!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "Seb",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Really? She's half demon."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "Seb",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I've seen ordinary humans survive worse in this world."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "Rebeccaenemy",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Oh gosh, I am so sorry. You commissioned me for a rap battle and all I did was collapse in front of you."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talkhappy",
+			"text": "Don't worry, we are used to this by now."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talkhappy",
+			"text": " Weird stuff tends to happen when we sing against people. It's like our thing."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "Giz",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "While the others eat, how about I jam with you to thank you for being so chill about all this?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talkexcited",
+			"text": "I am up for it!"
+		}
+	]
+}

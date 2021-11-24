@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Ben.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Ben10000" x="10" y="10" width="1304" height="2074"/>
+	<SubTexture name="Ben20000" x="1324" y="10" width="1313" height="2061"/>
+	<SubTexture name="Ben30000" x="2647" y="10" width="1304" height="1963"/>
+	<SubTexture name="Ben40000" x="10" y="2094" width="1321" height="1953"/>
+</TextureAtlas>

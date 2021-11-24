@@ -1,0 +1,24 @@
+{
+	"position": [
+		0,
+		-150
+	],
+	"dialogue_pos": "left",
+	"scale": 1,
+	"image": "phonetalkieseb",
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "talk",
+			"idle_name": "Talki_notSeb",
+			"loop_name": "Talki_Seb"
+		}
+	]
+}

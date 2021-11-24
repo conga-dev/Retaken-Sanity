@@ -1,0 +1,63 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		-290,
+		-830
+	],
+	"scale": 0.35,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Ben1",
+			"idle_name": "Ben1"
+		},
+		{
+			"loop_name": "Ben2",
+			"idle_offsets": [
+				-10,
+				-3
+			],
+			"idle_name": "Ben2",
+			"anim": "joy",
+			"loop_offsets": [
+				-10,
+				-3
+			]
+		},
+		{
+			"loop_name": "Ben3",
+			"idle_offsets": [
+				-47,
+				-4
+			],
+			"idle_name": "Ben3",
+			"anim": "serious",
+			"loop_offsets": [
+				-47,
+				-4
+			]
+		},
+		{
+			"loop_name": "Ben4",
+			"idle_offsets": [
+				-52,
+				-6
+			],
+			"idle_name": "Ben4",
+			"anim": "crazy",
+			"loop_offsets": [
+				-52,
+				-6
+			]
+		}
+	],
+	"image": "Ben"
+}

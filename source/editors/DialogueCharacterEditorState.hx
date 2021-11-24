@@ -88,6 +88,19 @@ class DialogueCharacterEditorState extends MusicBeatState
 		add(mainGroup);
 		add(hudGroup);
 
+		box = new FlxSprite(0, 0).loadGraphic(Paths.image('speech_phone_bubble'));
+		//box.frames = Paths.getSparrowAtlas('speech_bubble');
+		box.scrollFactor.set();
+		box.antialiasing = ClientPrefs.globalAntialiasing;
+		/*
+		box.animation.addByPrefix('normal', 'speech bubble normal', 24);
+		box.animation.addByPrefix('center', 'speech bubble middle', 24);
+		box.animation.play('normal', true);
+		*/
+		box.setGraphicSize(FlxG.width);
+		box.updateHitbox();
+		hudGroup.add(box);
+
 		character = new DialogueCharacter();
 		character.scrollFactor.set();
 		mainGroup.add(character);
@@ -107,17 +120,6 @@ class DialogueCharacterEditorState extends MusicBeatState
 		ghostIdle.jsonFile = character.jsonFile;
 		ghostIdle.cameras = [camGame];
 		add(ghostIdle);
-
-		box = new FlxSprite(70, 370);
-		box.frames = Paths.getSparrowAtlas('speech_bubble');
-		box.scrollFactor.set();
-		box.antialiasing = ClientPrefs.globalAntialiasing;
-		box.animation.addByPrefix('normal', 'speech bubble normal', 24);
-		box.animation.addByPrefix('center', 'speech bubble middle', 24);
-		box.animation.play('normal', true);
-		box.setGraphicSize(Std.int(box.width * 0.9));
-		box.updateHitbox();
-		hudGroup.add(box);
 
 		tipText = new FlxText(10, 10, FlxG.width - 20, TIP_TEXT_MAIN, 8);
 		tipText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -452,11 +454,11 @@ class DialogueCharacterEditorState extends MusicBeatState
 		var anim:String = 'normal';
 		switch(character.jsonFile.dialogue_pos) {
 			case 'left':
-				box.flipX = true;
+				//box.flipX = true;
 			case 'center':
-				anim = 'center';
+				//anim = 'center';
 		}
-		box.animation.play(anim, true);
+		//box.animation.play(anim, true);
 		DialogueBoxPsych.updateBoxOffsets(box);
 	}
 

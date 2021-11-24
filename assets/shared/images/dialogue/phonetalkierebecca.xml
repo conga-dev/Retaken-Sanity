@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="phonetalkierebecca.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Talki_rebecca0000" x="10" y="10" width="847" height="941"/>
+	<SubTexture name="Talki_rebecca0001" x="10" y="10" width="847" height="941"/>
+	<SubTexture name="Talki_rebecca0002" x="10" y="10" width="847" height="941"/>
+	<SubTexture name="Talki_rebecca0003" x="10" y="10" width="847" height="941"/>
+	<SubTexture name="Talki_rebecca0004" x="867" y="10" width="847" height="941"/>
+	<SubTexture name="Talki_rebecca0005" x="867" y="10" width="847" height="941"/>
+	<SubTexture name="Talki_rebecca0006" x="867" y="10" width="847" height="941"/>
+	<SubTexture name="Talki_rebecca0007" x="867" y="10" width="847" height="941"/>
+	<SubTexture name="Talki_notrebecca0000" x="867" y="10" width="847" height="941"/>
+</TextureAtlas>

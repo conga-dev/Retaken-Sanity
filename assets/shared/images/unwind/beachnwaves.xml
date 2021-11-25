@@ -29,12 +29,12 @@
 	<SubTexture name="beachwaves0024" x="10" y="4306" width="2037" height="527"/>
 	<SubTexture name="beachwaves0025" x="2057" y="4306" width="2037" height="527"/>
 	<SubTexture name="beachwaves0026" x="4104" y="4306" width="2037" height="527"/>
-	<SubTexture name="beachwaves0027" x="10" y="4843" width="2037" height="527"/>
-	<SubTexture name="beachwaves0028" x="2057" y="4843" width="2037" height="527"/>
-	<SubTexture name="beachwaves0029" x="4104" y="4843" width="2037" height="527"/>
-	<SubTexture name="beachwaves0030" x="10" y="5380" width="2037" height="527"/>
-	<SubTexture name="beachwaves0031" x="2057" y="5380" width="2037" height="527"/>
-	<SubTexture name="beachwaves0032" x="4104" y="5380" width="2037" height="527"/>
-	<SubTexture name="beachwaves0033" x="10" y="5917" width="2037" height="527"/>
-	<SubTexture name="beachwaves0034" x="2057" y="5917" width="2037" height="527"/>
+	<SubTexture name="beachwaves0027" x="4104" y="4306" width="2037" height="527"/>
+	<SubTexture name="beachwaves0028" x="10" y="4843" width="2037" height="527"/>
+	<SubTexture name="beachwaves0029" x="10" y="4843" width="2037" height="527"/>
+	<SubTexture name="beachwaves0030" x="2057" y="4843" width="2037" height="527"/>
+	<SubTexture name="beachwaves0031" x="2057" y="4843" width="2037" height="527"/>
+	<SubTexture name="beachwaves0032" x="4104" y="4843" width="2037" height="527"/>
+	<SubTexture name="beachwaves0033" x="10" y="5380" width="2037" height="527"/>
+	<SubTexture name="beachwaves0034" x="2057" y="5380" width="2037" height="527"/>
 </TextureAtlas>

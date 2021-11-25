@@ -111,6 +111,9 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
+		
+
+
 		leftHand = new FlxSprite(-50, 150).loadGraphic(Paths.image('menuHand1'));
 		leftHand.antialiasing = ClientPrefs.globalAntialiasing;
 		leftHand.setGraphicSize(Std.int(leftHand.width * 0.65));
@@ -130,6 +133,13 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+
+		var textScrolling:FlxSprite = new FlxSprite(500, 50);
+		textScrolling.frames = Paths.getSparrowAtlas('temp_name_scroll1');
+		textScrolling.animation.addByPrefix('idle', 'Namescrowl', 24, true);
+		textScrolling.animation.play('idle');
+		textScrolling.scrollFactor.set();
+		add(textScrolling);
 
 		// NG.core.calls.event.logEvent('swag').send();
 

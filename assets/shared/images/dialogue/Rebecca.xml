@@ -3,10 +3,10 @@
 	<!-- Created with Adobe Animate version 21.0.7.42652 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="Rebecca10000" x="10" y="10" width="1093" height="1647"/>
-	<SubTexture name="Rebecca20000" x="10" y="10" width="1093" height="1647"/>
-	<SubTexture name="Rebecca30000" x="10" y="10" width="1093" height="1647"/>
-	<SubTexture name="Rebecca40000" x="1113" y="10" width="1094" height="1626"/>
-	<SubTexture name="Rebecca50000" x="2217" y="10" width="1094" height="1626"/>
-	<SubTexture name="Rebecca60000" x="10" y="1667" width="1094" height="1626"/>
-	<SubTexture name="Rebecca70000" x="1114" y="1667" width="1094" height="1626"/>
+	<SubTexture name="Rebecca20000" x="1113" y="10" width="1093" height="1647"/>
+	<SubTexture name="Rebecca30000" x="2216" y="10" width="1093" height="1647"/>
+	<SubTexture name="Rebecca40000" x="3319" y="10" width="1094" height="1626"/>
+	<SubTexture name="Rebecca50000" x="4423" y="10" width="1094" height="1626"/>
+	<SubTexture name="Rebecca60000" x="5527" y="10" width="1094" height="1626"/>
+	<SubTexture name="Rebecca70000" x="6631" y="10" width="1094" height="1626"/>
 </TextureAtlas>

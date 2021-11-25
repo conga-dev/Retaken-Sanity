@@ -1,39 +1,39 @@
 {
 	"dialogue": [
 		{
-			"speed": 0.05,
-			"portrait": "phonegiz",
-			"boxState": "angry",
 			"expression": "talk",
-			"text": "Hey, um, I know it's been like, only like a\\nweek since you came back from\\nthe hospital, but how about we have\\n   a chill time at the beach? I'll bring snacks."
+			"text": "Hey, um, I know it's been like, only a week\\nsince you came back from the hospital, but\\n how about we have a chill time at the\\n   beach? I'll bring snacks.",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phonegiz"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "phonerebecca",
-			"boxState": "angry",
 			"expression": "talk",
-			"text": "What snacks are we talking about?"
+			"text": "   What snacks are we talking about?",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phonerebecca"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "phonegiz",
-			"boxState": "angry",
 			"expression": "talk",
-			"text": "Tuna sandwiches and sweet tea."
+			"text": "   Tuna sandwiches and sweet tea.",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phonegiz"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "phonerebecca",
-			"boxState": "angry",
 			"expression": "talk",
-			"text": "Make it BLT sandwiches and I am\\n  in."
+			"text": "    Make it BLT sandwiches and I am\\ in.",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phonerebecca"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "phonegiz",
-			"boxState": "angry",
 			"expression": "talk",
-			"text": "Heh, deal."
+			"text": "  Heh, deal.",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phonegiz"
 		}
 	]
 }

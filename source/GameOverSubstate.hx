@@ -53,7 +53,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		camGamOvr = new FlxCamera();
 		FlxG.cameras.add(camGamOvr);
 
-		theEnd = new FlxSprite(-10, -745);
+		theEnd = new FlxSprite(200, -745);
 		theEnd.frames = Paths.getSparrowAtlas('Gameover');
 		theEnd.animation.addByPrefix('firstDeath', 'Gameover', 24, false);
 		theEnd.animation.addByPrefix('deathConfirm', 'Continue', 24, false);

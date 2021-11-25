@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "note2",
+			"fps": 24,
+			"name": "note",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				-3
+			],
+			"anim": "idle2",
+			"fps": 24,
+			"name": "pt2_idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "transition2",
+			"fps": 24,
+			"name": "pt2_transition",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				-3
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "pt3_idle",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "note3",
+			"fps": 24,
+			"name": "pt3_note",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-3
+			],
+			"anim": "transition3",
+			"fps": 24,
+			"name": "pt3_transition",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Gamma_ending",
+	"position": [
+		30,
+		70
+	],
+	"healthicon": "gamma",
+	"flip_x": false,
+	"healthbar_colors": [
+		100,
+		0,
+		0
+	],
+	"camera_position": [
+		-162,
+		40
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

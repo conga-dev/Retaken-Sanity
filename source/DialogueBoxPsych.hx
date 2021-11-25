@@ -5,6 +5,7 @@ import flixel.FlxSprite;
 import flixel.system.FlxSound;
 import flixel.addons.text.FlxTypeText;
 import flixel.graphics.frames.FlxAtlasFrames;
+import flixel.group.FlxGroup.FlxTypedGroup;
 import openfl.utils.Assets as OpenFlAssets;
 import flixel.group.FlxSpriteGroup;
 import flixel.input.FlxKeyManager;
@@ -171,6 +172,8 @@ class DialogueBoxPsych extends FlxSpriteGroup
 	var box:FlxSprite;
 	var textToType:String = '';
 
+	var walkies:Bool;
+
 	var dialogueSound:FlxSound = null;
 
 	var dialoguePos:Int = 0;
@@ -183,7 +186,7 @@ class DialogueBoxPsych extends FlxSpriteGroup
 	var textBoxTypes:Array<String> = ['normal', 'angry'];
 	//var charPositionList:Array<String> = ['left', 'center', 'right'];
 
-	public function new(dialogueList:DialogueFile, ?song:String = null)
+	public function new(dialogueList:DialogueFile, walkies:Bool = false, ?song:String = null)
 	{
 		super();
 
@@ -192,6 +195,8 @@ class DialogueBoxPsych extends FlxSpriteGroup
 			FlxG.sound.music.fadeIn(2, 0, 1);
 		}
 		
+		this.walkies = walkies;
+
 		bgFade = new FlxSprite(-500, -500).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.WHITE);
 		bgFade.scrollFactor.set();
 		bgFade.visible = true;
@@ -211,7 +216,6 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		coolbox.animation.addByPrefix('center-angry', 'angry', 24);
 		coolbox.animation.addByPrefix('center-angryOpen', 'angry', 24, false);
 		coolbox.animation.play('normal', true);
-		coolbox.visible = false;
 		coolbox.setGraphicSize(FlxG.width);
 		coolbox.updateHitbox();
 		add(coolbox);
@@ -235,6 +239,14 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		box.setGraphicSize(FlxG.width);
 		box.updateHitbox();
 		add(box);
+
+		if (walkies) {
+			coolbox.visible = true;
+			box.visible = false;
+		} else {
+			coolbox.visible = false;
+			box.visible = true;
+		}
 
 		startNextDialog();
 	}
@@ -337,13 +349,9 @@ class DialogueBoxPsych extends FlxSpriteGroup
 								box.animation.play(checkArray[j] + textBoxTypes[i] + 'Open', true);
 								coolbox.animation.play(checkArray[j] + textBoxTypes[i] + 'Open', true);
 								if (animName.contains('angry')) {
-									box.visible = false;
-									coolbox.visible = true;
 									DEFAULT_TEXT_X = 220;
 									DEFAULT_TEXT_Y = 380;
 								} else {
-									box.visible = true;
-									coolbox.visible = false;
 									DEFAULT_TEXT_X = 90;
 									DEFAULT_TEXT_Y = 430;
 								}
@@ -384,13 +392,9 @@ class DialogueBoxPsych extends FlxSpriteGroup
 							box.animation.play(checkArray[j] + textBoxTypes[i], true);
 							coolbox.animation.play(checkArray[j] + textBoxTypes[i], true);
 							if (animName.contains('angry')) {
-								box.visible = false;
-								coolbox.visible = true;
 								DEFAULT_TEXT_X = 220;
 								DEFAULT_TEXT_Y = 380;
 							} else {
-								box.visible = true;
-								coolbox.visible = false;
 								DEFAULT_TEXT_X = 90;
 								DEFAULT_TEXT_Y = 430;
 							}
@@ -509,7 +513,13 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		}
 
 		var character:Int = 0;
-		box.visible = true;
+		if (walkies) {
+			coolbox.visible = true;
+			box.visible = false;
+		} else {
+			coolbox.visible = false;
+			box.visible = true;
+		}
 		for (i in 0...arrayCharacters.length) {
 			if(arrayCharacters[i].curCharacter == curDialogue.portrait) {
 				character = i;
@@ -525,13 +535,9 @@ class DialogueBoxPsych extends FlxSpriteGroup
 			box.animation.play(centerPrefix + boxType + 'Open', true);
 			coolbox.animation.play(centerPrefix + boxType + 'Open', true);
 			if (animName.contains('angry')) {
-				box.visible = false;
-				coolbox.visible = true;
 				DEFAULT_TEXT_X = 220;
 				DEFAULT_TEXT_Y = 380;
 			} else {
-				box.visible = true;
-				coolbox.visible = false;
 				DEFAULT_TEXT_X = 90;
 				DEFAULT_TEXT_Y = 430;
 			}
@@ -541,13 +547,9 @@ class DialogueBoxPsych extends FlxSpriteGroup
 			box.animation.play(centerPrefix + boxType, true);
 			coolbox.animation.play(centerPrefix + boxType, true);
 			if (animName.contains('angry')) {
-				box.visible = false;
-				coolbox.visible = true;
 				DEFAULT_TEXT_X = 220;
 				DEFAULT_TEXT_Y = 380;
 			} else {
-				box.visible = true;
-				coolbox.visible = false;
 				DEFAULT_TEXT_X = 90;
 				DEFAULT_TEXT_Y = 430;
 			}

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Storymode.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="week3 0000" x="0" y="0" width="549" height="126"/>
+	<SubTexture name="week2 0000" x="0" y="126" width="571" height="115"/>
+	<SubTexture name="week1 0000" x="571" y="126" width="440" height="252"/>
+</TextureAtlas>

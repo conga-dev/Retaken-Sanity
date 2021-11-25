@@ -183,6 +183,7 @@ class PlayState extends MusicBeatState
 
 	public var coolRedStuff:FlxSprite;
 	public var coolBlackStuff:FlxSprite;
+	public var coolWhiteStuff:FlxSprite;
 
 	var halloweenBG:BGSprite;
 	var halloweenWhite:BGSprite;
@@ -227,6 +228,8 @@ class PlayState extends MusicBeatState
 	public static var campaignMisses:Int = 0;
 	public static var seenCutscene:Bool = false;
 	public static var deathCounter:Int = 0;
+
+	var thisYou:FlxSprite;
 
 	var coolbg1:BGSprite;
 	var boomboxes1:BGSprite;
@@ -652,7 +655,7 @@ class PlayState extends MusicBeatState
 				}
 			case 'gammastage':
 			{
-				var bg:FlxSprite = new FlxSprite(0, 200).makeGraphic(FlxG.width, FlxG.height, FlxColor.RED);
+				var bg:FlxSprite = new FlxSprite(-2000, -2000).makeGraphic(4000, 4000, FlxColor.RED);
 				add(bg);
 			}
 			case 'hospital':
@@ -693,6 +696,7 @@ class PlayState extends MusicBeatState
 				var gfsit:BGSprite = new BGSprite('unwind/beachGF', -500+500, 600, 1, 1, ['BeachGF'], true);
 
 				var ash:BGSprite = new BGSprite('unwind/Beachash', 300+500, 800, 1, 1);
+				ash.scale.set(0.7, 0.7);
 
 				var conga:BGSprite = new BGSprite('unwind/beachconga', 680+500, 800, 1, 1);
 
@@ -717,7 +721,7 @@ class PlayState extends MusicBeatState
 
 				firecanons1 = new BGSprite('happyend/firecanons1', 1300-1000, 1000, 1, 1);
 
-				crowd1 = new BGSprite('happyend/people1', 0-1000, 600, 1, 1, ['stagecrowd'], true);
+				crowd1 = new BGSprite('happyend/people1', 0-1000 + 50, 600, 1, 1, ['stagecrowd'], true);
 
 				mahlokie1 = new BGSprite('happyend/loki1', 870-1000, 820, 1, 1, ['Loki1'], true);
 				mahlokie1.scale.set(0.8, 0.8);
@@ -731,9 +735,9 @@ class PlayState extends MusicBeatState
 
 				firecanons2 = new BGSprite('happyend/firecanons2', 960-1000, 620, 1, 1, ['firecanons2'], true);
 
-				crowd2 = new BGSprite('happyend/people2', 0-1000, 600, 1, 1, ['stagecrowd'], true);
+				crowd2 = new BGSprite('happyend/people2', 0-1000 + 50, 600, 1, 1, ['stagecrowd'], true);
 
-				mahlokie2 = new BGSprite('happyend/loki2', 850-1000, 650, 1, 1, ['Loki2'], true);
+				mahlokie2 = new BGSprite('happyend/loki2', 830-1000, 650, 1, 1, ['Loki2'], true);
 				mahlokie2.scale.set(0.8, 0.8);
 
 				theLight2 = new BGSprite('happyend/Light2', 0-1000, 900, 1, 1);
@@ -891,6 +895,16 @@ class PlayState extends MusicBeatState
 		var camPos:FlxPoint = new FlxPoint(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y);
 		camPos.x += gf.cameraPosition[0];
 		camPos.y += gf.cameraPosition[1];
+
+		thisYou = new FlxSprite();
+		thisYou.frames = Paths.getSparrowAtlas('unwind/YOUAREHERE');
+		thisYou.animation.addByPrefix('idle', 'YOU ARE HERE', 24, true);
+		thisYou.animation.play('idle');
+		thisYou.scale.set(0.5, 0.5);
+		thisYou.x = boyfriend.x - 230;
+		thisYou.y = boyfriend.y - 200;
+		thisYou.alpha = 0;
+		add(thisYou);
 
 		if(dad.curCharacter.startsWith('gf')) {
 			dad.setPosition(GF_X, GF_Y);
@@ -1090,6 +1104,11 @@ class PlayState extends MusicBeatState
 		coolBlackStuff.screenCenter();
 		coolBlackStuff.alpha = 0;
 		add(coolBlackStuff);
+		
+		coolWhiteStuff = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
+		coolWhiteStuff.screenCenter();
+		coolWhiteStuff.alpha = 0;
+		add(coolWhiteStuff);
 
 		if(isStoryMode) {
 			scoreTxt.visible = false;
@@ -1121,8 +1140,9 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
-		coolRedStuff.cameras = [camHUD];
+		coolRedStuff.cameras = [camOther];
 		coolBlackStuff.cameras = [camHUD];
+		coolWhiteStuff.cameras = [camHUD];
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
@@ -1341,7 +1361,7 @@ class PlayState extends MusicBeatState
 			(new FlxVideo(fileName)).finishCallback = function() {
 				remove(bg);
 				if (startEnd == 1) {
-					startDialogue(dialogueJson, song);
+					startDialogue(dialogueJson, false, song);
 				} else if (startEnd == 2) {
 					startVideo(song);
 				} else if(endingSong) {
@@ -1365,14 +1385,14 @@ class PlayState extends MusicBeatState
 
 	var dialogueCount:Int = 0;
 	//You don't have to add a song, just saying. You can just do "startDialogue(dialogueJson);" and it should work
-	public function startDialogue(dialogueFile:DialogueFile, ?song:String = null):Void
+	public function startDialogue(dialogueFile:DialogueFile, walkies:Bool = false, ?song:String = null):Void
 	{
 		// TO DO: Make this more flexible, maybe?
 		if(dialogueFile.dialogue.length > 0) {
 			inCutscene = true;
 			CoolUtil.precacheSound('dialogue');
 			CoolUtil.precacheSound('dialogueClose');
-			var doof:DialogueBoxPsych = new DialogueBoxPsych(dialogueFile, song);
+			var doof:DialogueBoxPsych = new DialogueBoxPsych(dialogueFile, walkies, song);
 			doof.scrollFactor.set();
 			if(endingSong) {
 				doof.finishThing = endSong;
@@ -2561,12 +2581,20 @@ songSpeed = SONG.speed;
 									camFollow.x += theMove;
 							}
 						}
-						if(daNote.noteType == 'GF Sing') {
-							gf.playAnim(animToPlay + altAnim, true);
+						if(daNote.noteType == 'GF Sing')
 							gf.holdTimer = 0;
-						} else {
-							dad.playAnim(animToPlay + altAnim, true);
+						else
 							dad.holdTimer = 0;
+						
+
+						if (!daNote.isSustainNote) {
+							if(daNote.noteType == 'GF Sing') {
+								gf.playAnim(animToPlay + altAnim, true);
+								gf.holdTimer = 0;
+							} else {
+								dad.playAnim(animToPlay + altAnim, true);
+								dad.holdTimer = 0;
+							}
 						}
 					}
 
@@ -3198,20 +3226,22 @@ songSpeed = SONG.speed;
 
 			case 'HUD Change':
 				function tweenFunction(cam:FlxCamera, v:Float) { cam.alpha = v; }
-				FlxTween.num(camHUD.alpha, Std.parseInt(value1), Std.parseFloat(value2), {}, tweenFunction.bind(camHUD));
+				FlxTween.num(camHUD.alpha, Std.parseFloat(value1), Std.parseFloat(value2), {}, tweenFunction.bind(camHUD));
 
-			case 'Fade to/from Color':
-				switch(value1) 
-				{
-					case 'toblack':
-						FlxG.camera.fade(FlxColor.BLACK, Std.parseInt(value2), false);
-					case 'fromblack':
-						FlxG.camera.fade(FlxColor.BLACK, Std.parseInt(value2), true);
-					case 'towhite':
-						FlxG.camera.fade(FlxColor.WHITE, Std.parseInt(value2), false);
-					case 'fromwhite':
-						FlxG.camera.fade(FlxColor.WHITE, Std.parseInt(value2), true);
-				}
+			case 'Fade Black':
+				function tweenFunction(spr:FlxSprite, v:Float) { spr.alpha = v; }
+				FlxTween.num(coolBlackStuff.alpha, Std.parseFloat(value1), Std.parseFloat(value2), {}, tweenFunction.bind(coolBlackStuff));
+
+			case 'Fade White':
+				function tweenFunction(spr:FlxSprite, v:Float) { spr.alpha = v; }
+				FlxTween.num(coolWhiteStuff.alpha, Std.parseFloat(value1), Std.parseFloat(value2), {}, tweenFunction.bind(coolWhiteStuff));
+
+			case 'change ThisYou':
+				function tweenFunction(spr:FlxSprite, v:Float) { spr.alpha = v; }
+				FlxTween.num(thisYou.alpha, Std.parseFloat(value1), Std.parseFloat(value2), {}, tweenFunction.bind(thisYou));
+
+			case 'Zoom To':
+				FlxTween.tween(FlxG.camera, {zoom: Std.parseFloat(value1)}, Std.parseFloat(value2));
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
@@ -3332,17 +3362,17 @@ songSpeed = SONG.speed;
 		}
 		else if (currSongg == 'inharmony') {
 			endingSong = true;
-			startDialogue(dialogueJson2);
+			startDialogue(dialogueJson2, false);
 		}
 		else if (currSongg == 'wakeup') {
 			endingSong = true;
 			coolBlackStuff.alpha = 1;
-			startDialogue(dialogueJson2);
+			startDialogue(dialogueJson2, true, 'phone');
 		}
 		else if (currSongg == 'unwind') {
 			endingSong = true;
 			coolBlackStuff.alpha = 1;
-			startDialogue(dialogueJson2);
+			startDialogue(dialogueJson2, true, 'phone');
 		}
 		else if (currSongg == 'grey') {
 			endingSong = true;
@@ -4005,12 +4035,19 @@ songSpeed = SONG.speed;
 						animToPlay = 'singRIGHT';
 				}
 
-				if(note.noteType == 'GF Sing') {
-					gf.playAnim(animToPlay + daAlt, true);
+				if(note.noteType == 'GF Sing')
 					gf.holdTimer = 0;
-				} else {
-					boyfriend.playAnim(animToPlay + daAlt, true);
+				else
 					boyfriend.holdTimer = 0;
+
+				if (!note.isSustainNote) {
+					if(note.noteType == 'GF Sing') {
+						gf.playAnim(animToPlay + daAlt, true);
+						gf.holdTimer = 0;
+					} else {
+						boyfriend.playAnim(animToPlay + daAlt, true);
+						boyfriend.holdTimer = 0;
+					}
 				}
 
 				if(note.noteType == 'Hey!') {

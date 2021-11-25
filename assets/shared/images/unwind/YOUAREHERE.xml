@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="YOUAREHERE.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="YOU ARE HERE0000" x="10" y="10" width="763" height="199" frameX="0" frameY="0" frameWidth="763" frameHeight="234"/>
+	<SubTexture name="YOU ARE HERE0001" x="783" y="10" width="763" height="199" frameX="0" frameY="-1" frameWidth="763" frameHeight="234"/>
+	<SubTexture name="YOU ARE HERE0002" x="10" y="219" width="763" height="207" frameX="0" frameY="-10" frameWidth="763" frameHeight="234"/>
+	<SubTexture name="YOU ARE HERE0003" x="783" y="219" width="763" height="215" frameX="0" frameY="-19" frameWidth="763" frameHeight="234"/>
+	<SubTexture name="YOU ARE HERE0004" x="783" y="219" width="763" height="215" frameX="0" frameY="-20" frameWidth="763" frameHeight="234"/>
+	<SubTexture name="YOU ARE HERE0005" x="783" y="219" width="763" height="215" frameX="0" frameY="-19" frameWidth="763" frameHeight="234"/>
+	<SubTexture name="YOU ARE HERE0006" x="10" y="444" width="763" height="213" frameX="0" frameY="-16" frameWidth="763" frameHeight="234"/>
+	<SubTexture name="YOU ARE HERE0007" x="783" y="444" width="763" height="201" frameX="0" frameY="-4" frameWidth="763" frameHeight="234"/>
+	<SubTexture name="YOU ARE HERE0008" x="10" y="10" width="763" height="199" frameX="0" frameY="-1" frameWidth="763" frameHeight="234"/>
+	<SubTexture name="YOU ARE HERE0009" x="10" y="10" width="763" height="199" frameX="0" frameY="0" frameWidth="763" frameHeight="234"/>
+</TextureAtlas>

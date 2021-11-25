@@ -82,7 +82,9 @@ class ChartingState extends MusicBeatState
 		['Concert Color Orange', "Color doesn't change back why tf this here???"],
 		['Change Character Blood', "Applies only to Silent Hills"],
 		['HUD Change', "Value 1: Change opacity to this \nValue 2: Duration of change"],
-		['Fade to/from Color', "Value 1: to/from white/black \nValue 2: Duration of change"]
+		['Fade Black', "Value 1: Change opacity to this \nValue 2: Duration of change"],
+		['change ThisYou', "Value 1: Change opacity to this \nValue 2: Duration of change"],
+		['Zoom To', "Value 1: Cam Zoom \nValue 2: Duration of change"]
 	];
 
 	var _file:FileReference;

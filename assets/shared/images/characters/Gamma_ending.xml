@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Gamma_ending.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="note0000" x="0" y="0" width="334" height="610"/>
+	<SubTexture name="note0001" x="334" y="0" width="334" height="608" frameX="0" frameY="-2" frameWidth="334" frameHeight="610"/>
+	<SubTexture name="note0002" x="334" y="0" width="334" height="608" frameX="0" frameY="-2" frameWidth="334" frameHeight="610"/>
+	<SubTexture name="note0003" x="334" y="0" width="334" height="608" frameX="0" frameY="-2" frameWidth="334" frameHeight="610"/>
+	<SubTexture name="note0004" x="668" y="0" width="334" height="608" frameX="0" frameY="-2" frameWidth="334" frameHeight="610"/>
+	<SubTexture name="note0005" x="668" y="0" width="334" height="608" frameX="0" frameY="-2" frameWidth="334" frameHeight="610"/>
+	<SubTexture name="note0006" x="668" y="0" width="334" height="608" frameX="0" frameY="-2" frameWidth="334" frameHeight="610"/>
+	<SubTexture name="note0007" x="668" y="0" width="334" height="608" frameX="0" frameY="-2" frameWidth="334" frameHeight="610"/>
+	<SubTexture name="note0008" x="668" y="0" width="334" height="608" frameX="0" frameY="-2" frameWidth="334" frameHeight="610"/>
+	<SubTexture name="note0009" x="668" y="0" width="334" height="608" frameX="0" frameY="-2" frameWidth="334" frameHeight="610"/>
+	<SubTexture name="pt2_idle0000" x="1002" y="0" width="334" height="607"/>
+	<SubTexture name="pt2_idle0001" x="1002" y="0" width="334" height="607"/>
+	<SubTexture name="pt2_idle0002" x="1002" y="0" width="334" height="607"/>
+	<SubTexture name="pt2_idle0003" x="1002" y="0" width="334" height="607"/>
+	<SubTexture name="pt2_idle0004" x="1336" y="0" width="334" height="607"/>
+	<SubTexture name="pt2_idle0005" x="1336" y="0" width="334" height="607"/>
+	<SubTexture name="pt2_idle0006" x="1336" y="0" width="334" height="607"/>
+	<SubTexture name="pt2_idle0007" x="1336" y="0" width="334" height="607"/>
+	<SubTexture name="pt2_idle0008" x="1336" y="0" width="334" height="607"/>
+	<SubTexture name="pt2_idle0009" x="1336" y="0" width="334" height="607"/>
+	<SubTexture name="pt2_transition0000" x="1670" y="0" width="133" height="450" frameX="-88" frameY="-161" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0001" x="1670" y="0" width="133" height="450" frameX="-88" frameY="-161" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0002" x="1670" y="0" width="133" height="450" frameX="-88" frameY="-161" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0003" x="1670" y="0" width="133" height="450" frameX="-88" frameY="-161" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0004" x="1803" y="0" width="218" height="435" frameX="-106" frameY="-173" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0005" x="1803" y="0" width="218" height="435" frameX="-106" frameY="-173" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0006" x="1803" y="0" width="218" height="435" frameX="-106" frameY="-173" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0007" x="1803" y="0" width="218" height="435" frameX="-106" frameY="-173" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0008" x="2021" y="0" width="181" height="459" frameX="-153" frameY="-141" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0009" x="2021" y="0" width="181" height="459" frameX="-153" frameY="-141" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0010" x="2021" y="0" width="181" height="459" frameX="-153" frameY="-141" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0011" x="2021" y="0" width="181" height="459" frameX="-153" frameY="-141" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0012" x="2202" y="0" width="285" height="598" frameX="-49" frameY="-2" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0013" x="2202" y="0" width="285" height="598" frameX="-49" frameY="-2" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0014" x="2202" y="0" width="285" height="598" frameX="-49" frameY="-2" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0015" x="2202" y="0" width="285" height="598" frameX="-49" frameY="-2" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0016" x="2487" y="0" width="307" height="600" frameX="-25" frameY="0" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0017" x="2487" y="0" width="307" height="600" frameX="-25" frameY="0" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0018" x="2487" y="0" width="307" height="600" frameX="-25" frameY="0" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0019" x="2487" y="0" width="307" height="600" frameX="-25" frameY="0" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0020" x="2794" y="0" width="330" height="607" frameX="-5" frameY="-1" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0021" x="2794" y="0" width="330" height="607" frameX="-5" frameY="-1" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0022" x="2794" y="0" width="330" height="607" frameX="-5" frameY="-1" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0023" x="2794" y="0" width="330" height="607" frameX="-5" frameY="-1" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0024" x="3124" y="0" width="334" height="607" frameX="0" frameY="-3" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0025" x="3124" y="0" width="334" height="607" frameX="0" frameY="-3" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0026" x="3124" y="0" width="334" height="607" frameX="0" frameY="-3" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0027" x="3124" y="0" width="334" height="607" frameX="0" frameY="-3" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0028" x="3124" y="0" width="334" height="607" frameX="0" frameY="-3" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt2_transition0029" x="3124" y="0" width="334" height="607" frameX="0" frameY="-3" frameWidth="335" frameHeight="611"/>
+	<SubTexture name="pt3_idle0000" x="3458" y="0" width="276" height="615"/>
+	<SubTexture name="pt3_idle0001" x="3458" y="0" width="276" height="615"/>
+	<SubTexture name="pt3_idle0002" x="3458" y="0" width="276" height="615"/>
+	<SubTexture name="pt3_idle0003" x="3458" y="0" width="276" height="615"/>
+	<SubTexture name="pt3_idle0004" x="3458" y="0" width="276" height="615"/>
+	<SubTexture name="pt3_idle0005" x="3734" y="0" width="276" height="615"/>
+	<SubTexture name="pt3_idle0006" x="3734" y="0" width="276" height="615"/>
+	<SubTexture name="pt3_idle0007" x="3734" y="0" width="276" height="615"/>
+	<SubTexture name="pt3_idle0008" x="3734" y="0" width="276" height="615"/>
+	<SubTexture name="pt3_idle0009" x="3734" y="0" width="276" height="615"/>
+	<SubTexture name="pt3_note0000" x="0" y="615" width="275" height="616" frameX="0" frameY="0" frameWidth="276" frameHeight="616"/>
+	<SubTexture name="pt3_note0001" x="0" y="615" width="275" height="616" frameX="0" frameY="0" frameWidth="276" frameHeight="616"/>
+	<SubTexture name="pt3_note0002" x="275" y="615" width="276" height="615" frameX="0" frameY="0" frameWidth="276" frameHeight="616"/>
+	<SubTexture name="pt3_note0003" x="275" y="615" width="276" height="615" frameX="0" frameY="0" frameWidth="276" frameHeight="616"/>
+	<SubTexture name="pt3_note0004" x="275" y="615" width="276" height="615" frameX="0" frameY="0" frameWidth="276" frameHeight="616"/>
+	<SubTexture name="pt3_note0005" x="551" y="615" width="276" height="615" frameX="0" frameY="0" frameWidth="276" frameHeight="616"/>
+	<SubTexture name="pt3_note0006" x="551" y="615" width="276" height="615" frameX="0" frameY="0" frameWidth="276" frameHeight="616"/>
+	<SubTexture name="pt3_note0007" x="551" y="615" width="276" height="615" frameX="0" frameY="0" frameWidth="276" frameHeight="616"/>
+	<SubTexture name="pt3_note0008" x="551" y="615" width="276" height="615" frameX="0" frameY="0" frameWidth="276" frameHeight="616"/>
+	<SubTexture name="pt3_note0009" x="551" y="615" width="276" height="615" frameX="0" frameY="0" frameWidth="276" frameHeight="616"/>
+	<SubTexture name="pt3_note20000" x="827" y="615" width="275" height="619" frameX="0" frameY="0" frameWidth="276" frameHeight="619"/>
+	<SubTexture name="pt3_note20001" x="827" y="615" width="275" height="619" frameX="0" frameY="0" frameWidth="276" frameHeight="619"/>
+	<SubTexture name="pt3_note20002" x="1102" y="615" width="276" height="616" frameX="0" frameY="-2" frameWidth="276" frameHeight="619"/>
+	<SubTexture name="pt3_note20003" x="1102" y="615" width="276" height="616" frameX="0" frameY="-2" frameWidth="276" frameHeight="619"/>
+	<SubTexture name="pt3_note20004" x="1102" y="615" width="276" height="616" frameX="0" frameY="-2" frameWidth="276" frameHeight="619"/>
+	<SubTexture name="pt3_note20005" x="1378" y="615" width="276" height="616" frameX="0" frameY="-2" frameWidth="276" frameHeight="619"/>
+	<SubTexture name="pt3_note20006" x="1378" y="615" width="276" height="616" frameX="0" frameY="-2" frameWidth="276" frameHeight="619"/>
+	<SubTexture name="pt3_note20007" x="1378" y="615" width="276" height="616" frameX="0" frameY="-2" frameWidth="276" frameHeight="619"/>
+	<SubTexture name="pt3_note20008" x="1378" y="615" width="276" height="616" frameX="0" frameY="-2" frameWidth="276" frameHeight="619"/>
+	<SubTexture name="pt3_note20009" x="1378" y="615" width="276" height="616" frameX="0" frameY="-2" frameWidth="276" frameHeight="619"/>
+	<SubTexture name="pt3_transition0000" x="1654" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0001" x="1654" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0002" x="1654" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0003" x="1654" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0004" x="1988" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0005" x="1988" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0006" x="1988" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0007" x="1988" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0008" x="2322" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0009" x="2322" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0010" x="2322" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0011" x="2322" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0012" x="2322" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0013" x="2322" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0014" x="2656" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0015" x="2656" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0016" x="2656" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0017" x="2656" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0018" x="2990" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0019" x="2990" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0020" x="2990" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0021" x="2990" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0022" x="2990" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0023" x="2990" y="615" width="334" height="607" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0024" x="3324" y="615" width="300" height="609" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0025" x="3324" y="615" width="300" height="609" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0026" x="3324" y="615" width="300" height="609" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0027" x="3324" y="615" width="300" height="609" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0028" x="3624" y="615" width="270" height="615" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0029" x="3624" y="615" width="270" height="615" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0030" x="0" y="1234" width="276" height="615" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0031" x="0" y="1234" width="276" height="615" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0032" x="0" y="1234" width="276" height="615" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0033" x="0" y="1234" width="276" height="615" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0034" x="0" y="1234" width="276" height="615" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0035" x="276" y="1234" width="276" height="615" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0036" x="276" y="1234" width="276" height="615" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0037" x="276" y="1234" width="276" height="615" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0038" x="276" y="1234" width="276" height="615" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+	<SubTexture name="pt3_transition0039" x="276" y="1234" width="276" height="615" frameX="0" frameY="0" frameWidth="334" frameHeight="615"/>
+</TextureAtlas>

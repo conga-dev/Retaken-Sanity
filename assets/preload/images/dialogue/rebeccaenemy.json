@@ -18,6 +18,32 @@
 			],
 			"loop_name": "Rebecca1",
 			"idle_name": "Rebecca1"
+		},
+		{
+			"anim": "nervous",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Rebecca2",
+			"idle_name": "Rebecca2"
+		},
+		{
+			"anim": "sadtalk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Rebecca3",
+			"idle_name": "Rebecca3"
 		}
 	],
 	"image": "Rebecca"

@@ -1,39 +1,39 @@
 {
 	"dialogue": [
 		{
-			"speed": 0.05,
-			"portrait": "phoneseb",
-			"boxState": "angry",
 			"expression": "talk",
-			"text": "Hey, at the beach last time."
+			"text": "   Hey, at the beach last time.",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phoneseb"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "phoneseb",
-			"boxState": "angry",
 			"expression": "talk",
-			"text": " I noticed you are coming back to your old \\n self. Are you confident enough to join\\n me on my next performance?"
+			"text": "I noticed you are coming back to your old \\n self. Are you confident enough to join\\n    me on my next performance?",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phoneseb"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "phonerebecca",
-			"boxState": "angry",
 			"expression": "talk",
-			"text": "I am but you know what I sound\\n like. If my vocals ruin a big show,\\n  that's not on me."
+			"text": "  I am, but you know what I sound like. If\\n    my vocals ruin the big show, that's not on\\n      me.",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phonerebecca"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "phoneseb",
-			"boxState": "angry",
 			"expression": "talk",
-			"text": "8pm, same place I always\\n perform."
+			"text": "   8pm, same place I always perform.",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phoneseb"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "phonerebecca",
-			"boxState": "angry",
 			"expression": "talk",
-			"text": "I will be there."
+			"text": "   I will be there.",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phonerebecca"
 		}
 	]
 }

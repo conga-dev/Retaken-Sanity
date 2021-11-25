@@ -1,95 +1,95 @@
 {
 	"dialogue": [
 		{
-			"speed": 0.05,
-			"portrait": "Rebeccaenemy",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "Why is everyone in my room?"
+			"text": "Why is everyone in my room?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Rebeccaenemy"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "Giz",
-			"boxState": "normal",
 			"expression": "sad",
-			"text": "You are in the hospital! Making everyone worried cause you collapsed due to overworking AGAIN!"
+			"text": "You are in the hospital! Making everyone worried cause you collapsed due to overworking AGAIN!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Giz"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "Rebeccaenemy",
+			"expression": "nervous",
+			"text": "...",
 			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Rebeccaenemy"
+		},
+		{
 			"expression": "talk",
-			"text": "..."
+			"text": "I wasn't worried, if it would make you feel any better.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Seb"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "Seb",
-			"boxState": "normal",
-			"expression": "talk",
-			"text": "I wasn't worried if it would make you feel any better."
-		},
-		{
-			"speed": 0.05,
-			"portrait": "Giz",
-			"boxState": "normal",
 			"expression": "angry",
-			"text": "SEB!"
+			"text": "SEB!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Giz"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "Seb",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "Really? She's half demon."
+			"text": "Really? She's half demon.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Seb"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "Seb",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "I've seen ordinary humans survive worse in this world."
+			"text": "I've seen ordinary humans survive worse in this world.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Seb"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "bf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "..."
+			"text": "...",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "Rebeccaenemy",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "Oh gosh, I am so sorry. You commissioned me for a rap battle and all I did was collapse in front of you."
+			"text": "Oh gosh, I am so sorry. You commissioned me and all I did was collapse in front of you.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Rebeccaenemy"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "bf",
-			"boxState": "normal",
 			"expression": "talkhappy",
-			"text": "Don't worry, we are used to this by now."
+			"text": "Don't worry, we are used to this by now.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "bf",
-			"boxState": "normal",
 			"expression": "talkhappy",
-			"text": " Weird stuff tends to happen when we sing against people. It's like our thing."
+			"text": " Weird stuff tends to happen when we sing against people. It's like our thing.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "Giz",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "While the others eat, how about I jam with you to thank you for being so chill about all this?"
+			"text": "While the others eat, how about I jam with you to thank you for being so chill about all this?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Giz"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "bf",
-			"boxState": "normal",
 			"expression": "talkexcited",
-			"text": "I am up for it!"
+			"text": "I am up for it!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
 		}
 	]
 }

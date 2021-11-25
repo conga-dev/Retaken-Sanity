@@ -64,9 +64,15 @@ class DialogueEditorState extends MusicBeatState
 			]
 		};
 
-		talkieBox = new FlxSprite(0, 0).loadGraphic(Paths.image('speech_phone_bubble'));
+		talkieBox = new FlxSprite(0, 0);
+		talkieBox.frames = Paths.getSparrowAtlas('speech_insanity_bubble');
 		talkieBox.scrollFactor.set();
 		talkieBox.antialiasing = ClientPrefs.globalAntialiasing;
+		talkieBox.animation.addByPrefix('normal', 'normal', 24);
+		talkieBox.animation.addByPrefix('angry', 'angry', 24);
+		talkieBox.animation.addByPrefix('center', 'normal', 24);
+		talkieBox.animation.addByPrefix('center-angry', 'angry', 24);
+		talkieBox.animation.play('normal', true);
 		talkieBox.setGraphicSize(FlxG.width);
 		talkieBox.updateHitbox();
 		talkieBox.visible = false;
@@ -76,17 +82,15 @@ class DialogueEditorState extends MusicBeatState
 		character.scrollFactor.set();
 		add(character);
 
-		box = new FlxSprite(0, 0).loadGraphic(Paths.image('speech_insanity_bubble'));
-		//box.frames = Paths.getSparrowAtlas('speech_insanity_bubble');
+		box = new FlxSprite(0, 0);
+		box.frames = Paths.getSparrowAtlas('speech_insanity_bubble');
 		box.scrollFactor.set();
 		box.antialiasing = ClientPrefs.globalAntialiasing;
-		/*
-		box.animation.addByPrefix('normal', 'speech bubble normal', 24);
-		box.animation.addByPrefix('angry', 'AHH speech bubble', 24);
-		box.animation.addByPrefix('center', 'speech bubble middle', 24);
-		box.animation.addByPrefix('center-angry', 'AHH Speech Bubble middle', 24);
+		box.animation.addByPrefix('normal', 'normal', 24);
+		box.animation.addByPrefix('angry', 'angry', 24);
+		box.animation.addByPrefix('center', 'normal', 24);
+		box.animation.addByPrefix('center-angry', 'angry', 24);
 		box.animation.play('normal', true);
-		*/
 		box.setGraphicSize(FlxG.width);
 		box.updateHitbox();
 		add(box);
@@ -208,7 +212,8 @@ class DialogueEditorState extends MusicBeatState
 				//	anim = 'center';
 				//}
 		}
-		//box.animation.play(anim, true);
+		box.animation.play(anim, true);
+		talkieBox.animation.play(anim, true);
 		DialogueBoxPsych.updateBoxOffsets(box);
 	}
 
@@ -256,7 +261,7 @@ class DialogueEditorState extends MusicBeatState
 
 		var textToType:String = lineInputText.text;
 		if(textToType == null || textToType.length < 1) textToType = ' ';
-		daText = new Alphabet(DialogueBoxPsych.DEFAULT_TEXT_X, DialogueBoxPsych.DEFAULT_TEXT_Y, textToType, false, true, speed, 0.7);
+		daText = new Alphabet(DialogueBoxPsych.DEFAULT_TEXT_X, DialogueBoxPsych.DEFAULT_TEXT_Y, textToType, false, true, speed, 0.55);
 		add(daText);
 
 		if(speed > 0) {

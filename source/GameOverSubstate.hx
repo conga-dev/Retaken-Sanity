@@ -6,6 +6,7 @@ import flixel.FlxSprite;
 import flixel.FlxCamera;
 import flixel.FlxSubState;
 import flixel.math.FlxMath;
+import flixel.math.FlxRandom;
 import flixel.math.FlxPoint;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
@@ -46,12 +47,16 @@ class GameOverSubstate extends MusicBeatSubstate
 		Conductor.songPosition = 0;
 
 		camGamOvr = new FlxCamera();
-		camGamOvr.bgColor.alpha = 0;
+		if (characterName == 'bf')
+			camGamOvr.bgColor.alpha = 1;
+		else
+			camGamOvr.bgColor.alpha = 0;
 		FlxG.cameras.add(camGamOvr);
 
 		bf = new Boyfriend(x, y, characterName);
-		if (characterName != 'bf')
-			add(bf);
+		add(bf);
+		if (characterName == 'bf')
+			bf.visible = false;
 
 		theEnd = new FlxSprite(200, -720);
 		theEnd.frames = Paths.getSparrowAtlas('Gameover');
@@ -59,16 +64,21 @@ class GameOverSubstate extends MusicBeatSubstate
 		theEnd.animation.addByPrefix('deathConfirm', 'Continue', 24, false);
 		theEnd.animation.play('firstDeath');
 		theEnd.setGraphicSize(Std.int(FlxG.width * 1.2));
-		if (characterName == 'bf') {
-			camGamOvr.bgColor.alpha = 1;
+		if (characterName == 'bf')
 			add(theEnd);
-		}
 
 		theEnd.cameras = [camGamOvr];
 
 		camFollow = new FlxPoint(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y);
 
-		FlxG.sound.play(Paths.sound(deathSoundName));
+		var randomTaunt:FlxRandom = new FlxRandom();
+
+		if (deathSoundName == 'taunt') {
+			FlxG.sound.play(Paths.sound('slash'));
+			FlxG.sound.play(Paths.sound('bentaunt/taunt' + randomTaunt.int(1, 17)));
+		}
+		else
+			FlxG.sound.play(Paths.sound(deathSoundName));
 		Conductor.changeBPM(100);
 		// FlxG.camera.followLerp = 1;
 		// FlxG.camera.focusOn(FlxPoint.get(FlxG.width / 2, FlxG.height / 2));

@@ -2,7 +2,6 @@
 	"song": {
 		"sectionLengths": [],
 		"player1": "ben-rebecca",
-		"gfVersion": "gf-car",
 		"player2": "ben-song1",
 		"notes": [
 			{
@@ -9026,7 +9025,7 @@
 				"mustHitSection": true
 			}
 		],
-		"player3": "gf-car",
+		"player3": "axel",
 		"song": "Silenthills",
 		"stage": "benstage",
 		"validScore": true,

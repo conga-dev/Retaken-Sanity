@@ -2,7 +2,6 @@
 	"song": {
 		"sectionLengths": [],
 		"player1": "wake-giz",
-		"gfVersion": "gf",
 		"player2": "wake-bf",
 		"notes": [
 			{
@@ -5572,7 +5571,7 @@
 				"mustHitSection": true
 			}
 		],
-		"player3": "gf",
+		"player3": "axel",
 		"song": "Wakeup",
 		"validScore": true,
 		"stage": "hospital",

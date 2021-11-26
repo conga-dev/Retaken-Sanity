@@ -38,6 +38,7 @@ class FlashingState extends MusicBeatState
 				FlxTransitionableState.skipNextTransOut = true;
 
 				FlxG.save.data.careful = true;
+				FlxG.save.data.lostAvailable = 0;
 				FlxG.save.flush();
 				FlxG.sound.play(Paths.sound('confirmMenu'));
 				FlxTween.tween(warnText, {alpha: 0}, 1, {

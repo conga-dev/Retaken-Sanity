@@ -257,7 +257,10 @@ class DialogueBoxPsych extends FlxSpriteGroup
 			box.visible = false;
 			bgFade.visible = false;
 			DEFAULT_TEXT_X = -30;
-			DEFAULT_TEXT_Y = 500;
+			if(ClientPrefs.downScroll)
+				DEFAULT_TEXT_Y = 500;
+			else 
+				DEFAULT_TEXT_Y = -20;
 			Alphabet.DEFAULT_WIDTH = 0.8;
 		}
 		else {
@@ -377,7 +380,10 @@ class DialogueBoxPsych extends FlxSpriteGroup
 									coolbox.visible = false;
 									box.visible = false;
 									DEFAULT_TEXT_X = -30;
-									DEFAULT_TEXT_Y = 500;
+									if(ClientPrefs.downScroll)
+										DEFAULT_TEXT_Y = 500;
+									else 
+										DEFAULT_TEXT_Y = -20;
 								}
 							}
 						}
@@ -428,7 +434,10 @@ class DialogueBoxPsych extends FlxSpriteGroup
 								coolbox.visible = false;
 								box.visible = false;
 								DEFAULT_TEXT_X = -30;
-								DEFAULT_TEXT_Y = 500;
+								if(ClientPrefs.downScroll)
+									DEFAULT_TEXT_Y = 500;
+								else 
+									DEFAULT_TEXT_Y = -20;
 							}
 						}
 					}
@@ -585,7 +594,10 @@ class DialogueBoxPsych extends FlxSpriteGroup
 				coolbox.visible = false;
 				box.visible = false;
 				DEFAULT_TEXT_X = -30;
-				DEFAULT_TEXT_Y = 500;
+				if(ClientPrefs.downScroll)
+					DEFAULT_TEXT_Y = 500;
+				else 
+					DEFAULT_TEXT_Y = -20;
 			}
 			updateBoxOffsets(box);
 			//box.flipX = (lePosition == 'left');
@@ -605,7 +617,10 @@ class DialogueBoxPsych extends FlxSpriteGroup
 				coolbox.visible = false;
 				box.visible = false;
 				DEFAULT_TEXT_X = -30;
-				DEFAULT_TEXT_Y = 500;
+				if(ClientPrefs.downScroll)
+					DEFAULT_TEXT_Y = 500;
+				else 
+					DEFAULT_TEXT_Y = -20;
 			}
 			updateBoxOffsets(box);
 		}

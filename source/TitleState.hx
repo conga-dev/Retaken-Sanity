@@ -302,6 +302,32 @@ class TitleState extends MusicBeatState
 			FlxG.fullscreen = !FlxG.fullscreen;
 		}
 
+		/*
+		if (FlxG.keys.justPressed.ONE)
+		{
+			FlxG.save.data.lostAvailable = 0;
+			FlxG.save.flush();
+		}
+
+		if (FlxG.keys.justPressed.TWO)
+		{
+			FlxG.save.data.lostAvailable = 1;
+			FlxG.save.flush();
+		}
+
+		if (FlxG.keys.justPressed.THREE)
+		{
+			FlxG.save.data.lostAvailable = 2;
+			FlxG.save.flush();
+		}
+
+		if (FlxG.keys.justPressed.FOUR)
+		{
+			FlxG.save.data.lostAvailable = 3;
+			FlxG.save.flush();
+		}
+		*/
+
 		var pressedEnter:Bool = FlxG.keys.justPressed.ENTER;
 
 		#if mobile

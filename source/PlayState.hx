@@ -237,14 +237,14 @@ class PlayState extends MusicBeatState
 	var thisYou:FlxSprite;
 
 	var coolbg1:BGSprite;
-	var boomboxes1:BGSprite;
+	var boomboxes1:FlxSprite;
 	var firecanons1:BGSprite;
 	var crowd1:BGSprite;
 	var mahlokie1:BGSprite;
 	var theLight1:BGSprite;
 
 	var coolbg2:BGSprite;
-	var boomboxes2:BGSprite;
+	var boomboxes2:FlxSprite;
 	var firecanons2:BGSprite;
 	var crowd2:BGSprite;
 	var mahlokie2:BGSprite;
@@ -666,28 +666,31 @@ class PlayState extends MusicBeatState
 			{
 				var bg:FlxSprite = new FlxSprite(-2000, -2000).makeGraphic(4000, 4000, FlxColor.RED);
 				add(bg);
-				gmend = new FlxSprite(470, 230);
+				gmend = new FlxSprite(710, 285);
 				gmend.frames = Paths.getSparrowAtlas('Gamma_ending');
 				gmend.animation.addByPrefix('end', 'Gammaending', 24, false);
 				gmend.animation.play('end');
 				gmend.visible = false;
 				add(gmend);
+
+				if (isStoryMode)
+					defaultCamZoom -= 0.1;
 			}
 			case 'hospital':
 			{
 
 				//dont yell at me i dont feel like doing math rn
-				var bg:BGSprite = new BGSprite('wakeup/Background', 0-600, 0-250, 1, 1);
+				var bg:BGSprite = new BGSprite('wakeup/Background', 0-400, 0-250, 1, 1);
 				
-				var curtains:BGSprite = new BGSprite('wakeup/curtains', 190-600, 250-250, 1, 1, ['curtains'], true);
+				var curtains:BGSprite = new BGSprite('wakeup/curtains', 190-400, 250-250, 1, 1, ['curtains'], true);
 
-				var gfChair:BGSprite = new BGSprite('wakeup/Gf_eating', 680-600, 780-250, 1, 1, ['GFBGsprite1'], true);
+				var gfChair:BGSprite = new BGSprite('wakeup/Gf_eating', 680-400, 780-250, 1, 1, ['GFBGsprite1'], true);
 
-				var starvinglol:BGSprite = new BGSprite('wakeup/rebeccaeating', 950-600, 660-250, 1, 1, ['BGloop'], true);
+				var starvinglol:BGSprite = new BGSprite('wakeup/rebeccaeating', 950-400, 660-250, 1, 1, ['BGloop'], true);
 
-				var table:BGSprite = new BGSprite('wakeup/Table', 1550-600, 940-250, 1, 1);
+				var table:BGSprite = new BGSprite('wakeup/Table', 1550-400, 940-250, 1, 1);
 
-				var sebreaster:BGSprite = new BGSprite('wakeup/sebdrinking', 1820-600, 490-250, 1, 1, ['BGSeberstersprite'], true);
+				var sebreaster:BGSprite = new BGSprite('wakeup/sebdrinking', 1820-400, 490-250, 1, 1, ['BGSeberstersprite'], true);
 
 				add(bg);
 				add(curtains);
@@ -698,64 +701,66 @@ class PlayState extends MusicBeatState
 			}
 			case 'beach':
 			{
-				var bg:BGSprite = new BGSprite('unwind/Background', -1000+500, 0, 1, 1);
+				var bg:BGSprite = new BGSprite('unwind/Background', -1000+1000, 0, 1, 1);
 
-				var waves:FlxSprite = new FlxSprite(-1000+500, 700);
+				var waves:FlxSprite = new FlxSprite(-1000+1000, 700);
 				waves.frames = Paths.getSparrowAtlas('unwind/beachnwaves');
 				waves.animation.addByPrefix('idle', 'beachwaves', 24, true);
 				waves.animation.play('idle');
 				waves.antialiasing = ClientPrefs.globalAntialiasing;
 
-				var sebhot:BGSprite = new BGSprite('unwind/beachseb', 0+500, 670, 1, 1, ['Beachseb'], true);
+				var sebhot:BGSprite = new BGSprite('unwind/beachseb', 0+1000, 670, 1, 1, ['Beachseb'], true);
 
-				var gfsit:BGSprite = new BGSprite('unwind/beachGF', -500+500, 600, 1, 1, ['BeachGF'], true);
+				var gfsit:BGSprite = new BGSprite('unwind/beachGF', -500+1000, 600, 1, 1, ['BeachGF'], true);
 
-				var ash:BGSprite = new BGSprite('unwind/Beachash', 300+500, 800, 1, 1);
-				ash.scale.set(0.7, 0.7);
+				var conga:BGSprite = new BGSprite('unwind/beachconga', 680+1000, 800, 1, 1);
 
-				var conga:BGSprite = new BGSprite('unwind/beachconga', 680+500, 800, 1, 1);
+				var axelLMAO:BGSprite = new BGSprite('unwind/BeachAxel', -900+1000, 940, 1, 1);
 
-				var axelLMAO:BGSprite = new BGSprite('unwind/BeachAxel', -900+500, 940, 1, 1);
-
-				var walkway:BGSprite = new BGSprite('unwind/walkway', -1035+500, 1100, 1, 1);
+				var walkway:BGSprite = new BGSprite('unwind/walkway', -1035+1000, 1100, 1, 1);
 
 				add(bg);
 				add(waves);
 				add(sebhot);
 				add(gfsit);
-				add(ash);
 				add(conga);
 				add(axelLMAO);
 				add(walkway);
 			}
 			case 'concert':
 			{
-				coolbg1 = new BGSprite('happyend/Background1', 0-1000, 0, 1, 1);
+				coolbg1 = new BGSprite('happyend/Background1', 0-500, 0, 1, 1);
 
-				boomboxes1 = new BGSprite('happyend/boomboxes1', -600-1000, 290, 1, 1, ['Boomboxes'], true);
+				boomboxes1 = new FlxSprite(-600-500, 290);
+				boomboxes1.frames = Paths.getSparrowAtlas('happyend/boomboxes1');
+				boomboxes1.animation.addByPrefix('idle', 'Boomboxes', 20);
+				boomboxes1.animation.play('idle');
 
-				firecanons1 = new BGSprite('happyend/firecanons1', 1300-1000, 1000, 1, 1);
+				firecanons1 = new BGSprite('happyend/firecanons1', 1300-500, 1000, 1, 1);
 
-				crowd1 = new BGSprite('happyend/people1', 0-1000 + 50, 600, 1, 1, ['stagecrowd'], true);
+				crowd1 = new BGSprite('happyend/people1', 0-500 + 50, 600, 1, 1, ['stagecrowd'], true);
 
-				mahlokie1 = new BGSprite('happyend/loki1', 870-1000, 820, 1, 1, ['Loki1'], true);
+				mahlokie1 = new BGSprite('happyend/loki1', 930-500, 820, 1, 1, ['Loki1'], true);
 				mahlokie1.scale.set(0.8, 0.8);
 
-				theLight1 = new BGSprite('happyend/Light1', 0-1000, 0, 1, 1);
+				theLight1 = new BGSprite('happyend/Light1', 0-500, 0, 1, 1);
 
 
-				coolbg2 = new BGSprite('happyend/Background2', 0-1000, 50, 1, 1);
+				coolbg2 = new BGSprite('happyend/Background2', 0-500, 50, 1, 1);
 
-				boomboxes2 = new BGSprite('happyend/boomboxes2', -600-1000, 290, 1, 1, ['Boomboxes2'], true);
+				boomboxes2 = new FlxSprite(-600-500, 290);
+				boomboxes2.frames = Paths.getSparrowAtlas('happyend/boomboxes2');
+				boomboxes2.animation.addByPrefix('idle', 'Boomboxes2', 20);
+				boomboxes2.animation.play('idle');
 
-				firecanons2 = new BGSprite('happyend/firecanons2', 960-1000, 620, 1, 1, ['firecanons2'], true);
+				firecanons2 = new BGSprite('happyend/firecanons2', 960-500, 620, 1, 1, ['firecanons2'], true);
 
-				crowd2 = new BGSprite('happyend/people2', 0-1000 + 50, 600, 1, 1, ['stagecrowd'], true);
+				crowd2 = new BGSprite('happyend/people2', 0-500 + 50, 600, 1, 1, ['stagecrowd'], true);
 
-				mahlokie2 = new BGSprite('happyend/loki2', 830-1000, 650, 1, 1, ['Loki2'], true);
+				mahlokie2 = new BGSprite('happyend/loki2', 830-500, 650, 1, 1, ['Loki2'], true);
 				mahlokie2.scale.set(0.8, 0.8);
 
-				theLight2 = new BGSprite('happyend/Light2', 0-1000, 900, 1, 1);
+				theLight2 = new BGSprite('happyend/Light2', 0-500, 900, 1, 1);
 
 				concert1 = new FlxTypedGroup<BGSprite>();
 				concert2 = new FlxTypedGroup<BGSprite>();
@@ -765,20 +770,21 @@ class PlayState extends MusicBeatState
 				concert1.add(coolbg1);
 				concert1.add(crowd1);
 				concert1.add(mahlokie1);
-				concert1.add(boomboxes1);
+				add(boomboxes1);
 				concert1.add(firecanons1);
 				concert1.add(theLight1);
 
 				concert2.add(coolbg2);
 				concert2.add(crowd2);
 				concert2.add(mahlokie2);
-				concert2.add(boomboxes2);
+				add(boomboxes2);
 
 				concert2.visible = false;
+				boomboxes2.visible = false;
 			}
 			case 'benstage':
 			{
-				GameOverSubstate.deathSoundName = 'ding';
+				GameOverSubstate.deathSoundName = 'taunt';
 				GameOverSubstate.loopSoundName = 'GameOver2';
 				GameOverSubstate.endSoundName = 'GameOverEnd2';
 				GameOverSubstate.characterName = 'dead-rebecca';
@@ -789,7 +795,7 @@ class PlayState extends MusicBeatState
 			}
 			case 'benstage2':
 			{
-				GameOverSubstate.deathSoundName = 'ding';
+				GameOverSubstate.deathSoundName = 'taunt';
 				GameOverSubstate.loopSoundName = 'GameOver2';
 				GameOverSubstate.endSoundName = 'GameOverEnd2';
 				GameOverSubstate.characterName = 'dead-rebecca';
@@ -1115,6 +1121,7 @@ class PlayState extends MusicBeatState
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
+		botplayTxt.visible = false;
 		add(botplayTxt);
 		if(ClientPrefs.downScroll) {
 			botplayTxt.y = timeBarBG.y - 78;
@@ -1546,6 +1553,10 @@ class PlayState extends MusicBeatState
 			return;
 		}
 
+		if(isStoryMode && curStage == 'gammastage') {
+			defaultCamZoom += 0.1;
+		}
+
 		inCutscene = false;
 		inVideoCutscene = false;
 		var ret:Dynamic = callOnLuas('onStartCountdown', []);
@@ -1597,7 +1608,6 @@ class PlayState extends MusicBeatState
 				{
 					dad.dance();
 				}
-
 				var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
 				introAssets.set('default', ['ready', 'set', 'go']);
 				introAssets.set('pixel', ['pixelUI/ready-pixel', 'pixelUI/set-pixel', 'pixelUI/date-pixel']);
@@ -2309,6 +2319,7 @@ songSpeed = SONG.speed;
 			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
 		}
 		botplayTxt.visible = cpuControlled;
+		botplayTxt.visible = false;
 
 		if (FlxG.keys.justPressed.ENTER && startedCountdown && canPause)
 		{
@@ -2705,7 +2716,7 @@ songSpeed = SONG.speed;
 			}
 		}
 		
-		#if debug
+		//#if debug
 		if(!endingSong && !startingSong) {
 			if (FlxG.keys.justPressed.ONE) {
 				KillNotes();
@@ -2752,7 +2763,7 @@ songSpeed = SONG.speed;
 		setOnLuas('cameraY', camFollowPos.y);
 		setOnLuas('botPlay', PlayState.cpuControlled);
 		callOnLuas('onUpdatePost', [elapsed]);
-		#end
+		//#end
 	}
 
 	var isDead:Bool = false;
@@ -2771,7 +2782,10 @@ songSpeed = SONG.speed;
 				vocals.stop();
 				FlxG.sound.music.stop();
 
-				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
+				if(dad.curCharacter.contains("ben"))
+					openSubState(new GameOverSubstate(dad.getScreenPosition().x, dad.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
+				else
+					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
 				for (tween in modchartTweens) {
 					tween.active = true;
 				}
@@ -3214,6 +3228,8 @@ songSpeed = SONG.speed;
 				if(curStage == 'concert') {
 					concert1.visible = false;
 					concert2.visible = true;
+					boomboxes1.visible = false;
+					boomboxes2.visible = true;
 					concert2overlay.visible = true;
 
 					if(boyfriend.curCharacter != 'concert-seberster2') {
@@ -3244,6 +3260,8 @@ songSpeed = SONG.speed;
 				if(curStage == 'concert') {
 					concert1.visible = true;
 					concert2.visible = false;
+					boomboxes1.visible = true;
+					boomboxes2.visible = false;
 					concert2overlay.visible = false;
 
 					if(boyfriend.curCharacter != 'concert-seberster1') {
@@ -3539,7 +3557,7 @@ songSpeed = SONG.speed;
 							Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
 						}
 
-						if (currSongg == 'lovetodeath' && FlxG.save.data.lostAvailable == 0) {
+						if (currSongg == 'lovetodeath' && (FlxG.save.data.lostAvailable < 2 || FlxG.save.data.lostAvailable == null)) {
 							FlxG.save.data.lostAvailable = 1;
 						}
 
@@ -4504,6 +4522,11 @@ songSpeed = SONG.speed;
 				{
 					trainCooldown = FlxG.random.int(-4, 0);
 					trainStart();
+				}
+			case "concert":
+				if (curBeat % 4 == 0) {
+					boomboxes1.animation.play('idle', true);
+					boomboxes2.animation.play('idle', true);
 				}
 			case "benstage2":
 				if (curBeat % 2 == 0) {

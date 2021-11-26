@@ -2341,6 +2341,7 @@ songSpeed = SONG.speed;
 			}
 		}
 
+		/*
 		if (FlxG.keys.justPressed.SEVEN && !endingSong && !inCutscene)
 		{
 			persistentUpdate = false;
@@ -2353,6 +2354,7 @@ songSpeed = SONG.speed;
 			DiscordClient.changePresence("Chart Editor", null, null, true);
 			#end
 		}
+		*/
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
@@ -2381,6 +2383,7 @@ songSpeed = SONG.speed;
 		else
 			iconP2.animation.curAnim.curFrame = 0;
 
+		/*
 		if (FlxG.keys.justPressed.EIGHT && !endingSong && !inCutscene) {
 			persistentUpdate = false;
 			paused = true;
@@ -2388,6 +2391,7 @@ songSpeed = SONG.speed;
 			CustomFadeTransition.nextCamera = camOther;
 			MusicBeatState.switchState(new CharacterEditorState(SONG.player2));
 		}
+		*/
 
 		if (startingSong)
 		{
@@ -2701,7 +2705,7 @@ songSpeed = SONG.speed;
 			}
 		}
 		
-		//#if debug
+		#if debug
 		if(!endingSong && !startingSong) {
 			if (FlxG.keys.justPressed.ONE) {
 				KillNotes();
@@ -2748,7 +2752,7 @@ songSpeed = SONG.speed;
 		setOnLuas('cameraY', camFollowPos.y);
 		setOnLuas('botPlay', PlayState.cpuControlled);
 		callOnLuas('onUpdatePost', [elapsed]);
-		//#end
+		#end
 	}
 
 	var isDead:Bool = false;

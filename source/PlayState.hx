@@ -173,6 +173,7 @@ class PlayState extends MusicBeatState
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
 	public var camHUD:FlxCamera;
+	public var camHUD2:FlxCamera;
 	public var camGame:FlxCamera;
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
@@ -224,10 +225,14 @@ class PlayState extends MusicBeatState
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
 
+	var canChangeVis:Bool = true;
+
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
 	public static var seenCutscene:Bool = false;
 	public static var deathCounter:Int = 0;
+
+	var gmend:FlxSprite;
 
 	var thisYou:FlxSprite;
 
@@ -255,6 +260,7 @@ class PlayState extends MusicBeatState
 	public static var daPixelZoom:Float = 6;
 
 	public var inCutscene:Bool = false;
+	public var inVideoCutscene:Bool = false;
 	var songLength:Float = 0;
 
 	#if desktop
@@ -289,12 +295,15 @@ class PlayState extends MusicBeatState
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
+		camHUD2 = new FlxCamera();
 		camOther = new FlxCamera();
 		camHUD.bgColor.alpha = 0;
+		camHUD2.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD);
+		FlxG.cameras.add(camHUD2);
 		FlxG.cameras.add(camOther);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
 
@@ -657,6 +666,12 @@ class PlayState extends MusicBeatState
 			{
 				var bg:FlxSprite = new FlxSprite(-2000, -2000).makeGraphic(4000, 4000, FlxColor.RED);
 				add(bg);
+				gmend = new FlxSprite(470, 230);
+				gmend.frames = Paths.getSparrowAtlas('Gamma_ending');
+				gmend.animation.addByPrefix('end', 'Gammaending', 24, false);
+				gmend.animation.play('end');
+				gmend.visible = false;
+				add(gmend);
 			}
 			case 'hospital':
 			{
@@ -763,12 +778,22 @@ class PlayState extends MusicBeatState
 			}
 			case 'benstage':
 			{
+				GameOverSubstate.deathSoundName = 'ding';
+				GameOverSubstate.loopSoundName = 'GameOver2';
+				GameOverSubstate.endSoundName = 'GameOverEnd2';
+				GameOverSubstate.characterName = 'dead-rebecca';
+				
 				var bg:BGSprite = new BGSprite('BenBG', 0, 0, 1, 1);
 				bg.scale.set(0.7, 0.7);
 				add(bg);
 			}
 			case 'benstage2':
 			{
+				GameOverSubstate.deathSoundName = 'ding';
+				GameOverSubstate.loopSoundName = 'GameOver2';
+				GameOverSubstate.endSoundName = 'GameOverEnd2';
+				GameOverSubstate.characterName = 'dead-rebecca';
+				
 				var bg:BGSprite = new BGSprite('BenBG2', 0, 0, 1, 1);
 				bg.scale.set(0.7, 0.7);
 				add(bg);
@@ -776,6 +801,12 @@ class PlayState extends MusicBeatState
 			}
 			case 'thehands':
 			{
+				
+				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
+				GameOverSubstate.loopSoundName = 'GameOver3';
+				GameOverSubstate.endSoundName = 'GameOverEnd3';
+				GameOverSubstate.characterName = 'chips';
+				
 				var bg:BGSprite = new BGSprite('Lostaxel_background', 0, 0, 1, 1, ['Therealistichands'], true);
 				bg.scale.set(2, 2);
 				add(bg);
@@ -1140,9 +1171,9 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
-		coolRedStuff.cameras = [camOther];
-		coolBlackStuff.cameras = [camHUD];
-		coolWhiteStuff.cameras = [camHUD];
+		coolRedStuff.cameras = [camHUD2];
+		coolBlackStuff.cameras = [camHUD2];
+		coolWhiteStuff.cameras = [camHUD2];
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
@@ -1232,7 +1263,7 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 
 				case 'inharmony':
-					startVideo('cuts1', 1);
+					startVideo('cuts1', 1, null, false);
 
 				case 'wakeup':
 					startVideo('cuts2', 1, 'hospital');
@@ -1330,7 +1361,7 @@ class PlayState extends MusicBeatState
 		char.y += char.positionArray[1];
 	}
 
-	public function startVideo(name:String, startEnd:Int = 0, ?song:String = null):Void {
+	public function startVideo(name:String, startEnd:Int = 0, ?song:String = null, diovisible:Bool = true):Void {
 		#if VIDEOS_ALLOWED
 		var foundFile:Bool = false;
 		var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
@@ -1353,6 +1384,7 @@ class PlayState extends MusicBeatState
 
 		if(foundFile) {
 			inCutscene = true;
+			inVideoCutscene = true;
 			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 			bg.scrollFactor.set();
 			bg.cameras = [camHUD];
@@ -1360,8 +1392,9 @@ class PlayState extends MusicBeatState
 
 			(new FlxVideo(fileName)).finishCallback = function() {
 				remove(bg);
+				inVideoCutscene = false;
 				if (startEnd == 1) {
-					startDialogue(dialogueJson, false, song);
+					startDialogue(dialogueJson, false, song, diovisible);
 				} else if (startEnd == 2) {
 					startVideo(song);
 				} else if(endingSong) {
@@ -1385,14 +1418,14 @@ class PlayState extends MusicBeatState
 
 	var dialogueCount:Int = 0;
 	//You don't have to add a song, just saying. You can just do "startDialogue(dialogueJson);" and it should work
-	public function startDialogue(dialogueFile:DialogueFile, walkies:Bool = false, ?song:String = null):Void
+	public function startDialogue(dialogueFile:DialogueFile, walkies:Bool = false, ?song:String = null, isvisible:Bool = true):Void
 	{
 		// TO DO: Make this more flexible, maybe?
 		if(dialogueFile.dialogue.length > 0) {
 			inCutscene = true;
 			CoolUtil.precacheSound('dialogue');
 			CoolUtil.precacheSound('dialogueClose');
-			var doof:DialogueBoxPsych = new DialogueBoxPsych(dialogueFile, walkies, song);
+			var doof:DialogueBoxPsych = new DialogueBoxPsych(dialogueFile, walkies, song, isvisible);
 			doof.scrollFactor.set();
 			if(endingSong) {
 				doof.finishThing = endSong;
@@ -1401,7 +1434,7 @@ class PlayState extends MusicBeatState
 			}
 			doof.nextDialogueThing = startNextDialogue;
 			doof.skipDialogueThing = skipDialogue;
-			doof.cameras = [camHUD];
+			doof.cameras = [camHUD2];
 			add(doof);
 		} else {
 			FlxG.log.warn('Your dialogue file is badly formatted!');
@@ -1514,6 +1547,7 @@ class PlayState extends MusicBeatState
 		}
 
 		inCutscene = false;
+		inVideoCutscene = false;
 		var ret:Dynamic = callOnLuas('onStartCountdown', []);
 		if(ret != FunkinLua.Function_Stop) {
 
@@ -2126,6 +2160,14 @@ songSpeed = SONG.speed;
 		{
 			iconP1.swapOldIcon();
 		}*/
+
+		if (inVideoCutscene) {
+			if(controls.ACCEPT){
+				#if desktop
+				FlxVideo.vlcBitmap.stop(true);
+				#end
+			}
+		}
 
 		callOnLuas('onUpdate', [elapsed]);
 
@@ -3242,6 +3284,13 @@ songSpeed = SONG.speed;
 
 			case 'Zoom To':
 				FlxTween.tween(FlxG.camera, {zoom: Std.parseFloat(value1)}, Std.parseFloat(value2));
+
+			case 'gamma do':
+				dad.visible = false;
+				boyfriend.visible = false;
+				gmend.visible = true;
+				canChangeVis = false;
+				gmend.animation.play('end', true);
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
@@ -3257,7 +3306,7 @@ songSpeed = SONG.speed;
 				callOnLuas('onMoveCamera', ['gf']);
 			}else{
 				callOnLuas('onMoveCamera', ['dad']);
-				if(curStage == 'gammastage') {
+				if(curStage == 'gammastage' && canChangeVis) {
 					boyfriend.visible = false;
 					dad.visible = true;
 				}
@@ -3362,7 +3411,7 @@ songSpeed = SONG.speed;
 		}
 		else if (currSongg == 'inharmony') {
 			endingSong = true;
-			startDialogue(dialogueJson2, false);
+			startDialogue(dialogueJson2, false, null, false);
 		}
 		else if (currSongg == 'wakeup') {
 			endingSong = true;
@@ -3419,6 +3468,7 @@ songSpeed = SONG.speed;
 		endingSong = true;
 		camZooming = false;
 		inCutscene = false;
+		inVideoCutscene = false;
 		updateTime = false;
 
 		deathCounter = 0;
@@ -3461,6 +3511,8 @@ songSpeed = SONG.speed;
 				campaignScore += songScore;
 				campaignMisses += songMisses;
 
+				var currSongg:String = storyPlaylist[0].toLowerCase();
+
 				storyPlaylist.remove(storyPlaylist[0]);
 
 				if (storyPlaylist.length <= 0)
@@ -3481,6 +3533,14 @@ songSpeed = SONG.speed;
 						if (SONG.validScore)
 						{
 							Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
+						}
+
+						if (currSongg == 'lovetodeath' && FlxG.save.data.lostAvailable == 0) {
+							FlxG.save.data.lostAvailable = 1;
+						}
+
+						if (currSongg == 'grey') {
+							FlxG.save.data.lostAvailable = 3;
 						}
 
 						FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;

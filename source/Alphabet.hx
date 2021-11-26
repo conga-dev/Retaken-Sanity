@@ -235,11 +235,13 @@ class Alphabet extends FlxSpriteGroup
 		}
 	}
 
+	public static var DEFAULT_WIDTH = 0.65;
+
 	var LONG_TEXT_ADD:Float = -24; //text is over 2 rows long, make it go up a bit
 	public function timerCheck(?tmr:FlxTimer = null) {
 		var autoBreak:Bool = false;
 		if ((loopNum <= splitWords.length - 2 && splitWords[loopNum] == "\\" && splitWords[loopNum+1] == "n") ||
-			((autoBreak = true) && xPos >= FlxG.width * 0.65 && splitWords[loopNum] == ' ' ))
+			((autoBreak = true) && xPos >= FlxG.width * DEFAULT_WIDTH && splitWords[loopNum] == ' ' ))
 		{
 			if(autoBreak) {
 				if(tmr != null) tmr.loops -= 1;

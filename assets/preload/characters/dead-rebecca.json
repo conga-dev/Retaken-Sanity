@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-46
+			],
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "gameover"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-46
+			],
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "gameoveridle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-46
+			],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "gameoveridle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Rebecca_ben_gameover",
+	"position": [
+		70,
+		20
+	],
+	"healthicon": "rebben",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		82,
+		106
+	],
+	"camera_position": [
+		250,
+		10
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

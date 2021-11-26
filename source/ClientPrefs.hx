@@ -9,7 +9,7 @@ import Controls;
 class ClientPrefs {
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
-	public static var showFPS:Bool = true;
+	public static var showFPS:Bool = false;
 	public static var flashing:Bool = true;
 	public static var globalAntialiasing:Bool = true;
 	public static var noteSplashes:Bool = true;
@@ -57,7 +57,7 @@ class ClientPrefs {
 	public static function saveSettings() {
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
-		FlxG.save.data.showFPS = showFPS;
+		FlxG.save.data.showFPS = false;
 		FlxG.save.data.flashing = flashing;
 		FlxG.save.data.globalAntialiasing = globalAntialiasing;
 		FlxG.save.data.noteSplashes = noteSplashes;
@@ -94,9 +94,9 @@ class ClientPrefs {
 			middleScroll = FlxG.save.data.middleScroll;
 		}
 		if(FlxG.save.data.showFPS != null) {
-			showFPS = FlxG.save.data.showFPS;
+			showFPS = false;
 			if(Main.fpsVar != null) {
-				Main.fpsVar.visible = showFPS;
+				Main.fpsVar.visible = false;
 			}
 		}
 		if(FlxG.save.data.flashing != null) {

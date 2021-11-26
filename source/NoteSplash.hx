@@ -27,6 +27,8 @@ class NoteSplash extends FlxSprite
 		antialiasing = ClientPrefs.globalAntialiasing;
 
 		alpha = valpha;
+
+		scale.set(0.7, 0.7);
 	}
 
 	public function setupNoteSplash(x:Float, y:Float, note:Int = 0, texture:String = null, hueColor:Float = 0, satColor:Float = 0, brtColor:Float = 0) {
@@ -46,7 +48,7 @@ class NoteSplash extends FlxSprite
 		colorSwap.brightness = brtColor;
 		offset.set(10*(ClientPrefs.noteSize/0.7), 10*(ClientPrefs.noteSize/0.7));
 
-		var animNum:Int = FlxG.random.int(1, 2);
+		var animNum:Int = 1; //FlxG.random.int(1, 2);
 		animation.play('note' + note + '-' + animNum, true);
 		animation.curAnim.frameRate = 24 + FlxG.random.int(-2, 2);
 	}
@@ -54,9 +56,9 @@ class NoteSplash extends FlxSprite
 	function loadAnims(skin:String) {
 		frames = Paths.getSparrowAtlas(skin);
 		for (i in 1...3) {
-			animation.addByPrefix("note1-" + i, "note splash blue " + i, 24, false);
+			animation.addByPrefix("note1-" + i, "note splash purple " + i, 24, false);
 			animation.addByPrefix("note2-" + i, "note splash green " + i, 24, false);
-			animation.addByPrefix("note0-" + i, "note splash purple " + i, 24, false);
+			animation.addByPrefix("note0-" + i, "note splash blue " + i, 24, false);
 			animation.addByPrefix("note3-" + i, "note splash red " + i, 24, false);
 		}
 	}

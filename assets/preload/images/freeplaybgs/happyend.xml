@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="stage4.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Stage40000" x="10" y="10" width="1446" height="604"/>
+	<SubTexture name="Stage40001" x="10" y="624" width="1446" height="604"/>
+	<SubTexture name="Stage40002" x="10" y="1238" width="1446" height="604"/>
+	<SubTexture name="Stage40003" x="10" y="1238" width="1446" height="604"/>
+	<SubTexture name="Stage40004" x="10" y="1238" width="1446" height="604"/>
+	<SubTexture name="Stage40005" x="10" y="1238" width="1446" height="604"/>
+	<SubTexture name="Stage40006" x="10" y="1238" width="1446" height="604"/>
+	<SubTexture name="Stage40007" x="10" y="1238" width="1446" height="604"/>
+	<SubTexture name="Stage40008" x="10" y="1238" width="1446" height="604"/>
+	<SubTexture name="Stage40009" x="10" y="1238" width="1446" height="604"/>
+	<SubTexture name="Stage40010" x="10" y="1238" width="1446" height="604"/>
+	<SubTexture name="Stage40011" x="10" y="1238" width="1446" height="604"/>
+</TextureAtlas>

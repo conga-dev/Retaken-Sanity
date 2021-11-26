@@ -9,6 +9,9 @@ import vlc.VlcBitmap;
 #end
 import flixel.FlxBasic;
 import flixel.FlxG;
+import flixel.text.FlxText;
+import flixel.util.FlxColor;
+import flixel.group.FlxGroup.FlxTypedGroup;
 
 class FlxVideo extends FlxBasic {
 	#if VIDEOS_ALLOWED
@@ -53,7 +56,8 @@ class FlxVideo extends FlxBasic {
 		vlcBitmap.set_height(FlxG.stage.stageHeight);
 		vlcBitmap.set_width(FlxG.stage.stageHeight * (16 / 9));
 
-		vlcBitmap.onComplete = onVLCComplete;
+		vlcBitmap.onComplete = onVLCStop;
+		vlcBitmap.onStop = onVLCStop;
 		vlcBitmap.onError = onVLCError;
 
 		FlxG.stage.addEventListener(Event.ENTER_FRAME, fixVolume);
@@ -98,7 +102,7 @@ class FlxVideo extends FlxBasic {
 		// shitty volume fix
 		vlcBitmap.volume = 0;
 		if(!FlxG.sound.muted && FlxG.sound.volume > 0.01) { //Kind of fixes the volume being too low when you decrease it
-			vlcBitmap.volume = FlxG.sound.volume * 0.5 + 0.5;
+			vlcBitmap.volume = FlxG.sound.volume * 0.8 + 0.5;
 		}
 	}
 
@@ -120,7 +124,21 @@ class FlxVideo extends FlxBasic {
 		}
 	}
 
-	
+	public function onVLCStop()
+	{
+		vlcBitmap.dispose();
+
+		if (FlxG.game.contains(vlcBitmap))
+		{
+			FlxG.game.removeChild(vlcBitmap);
+		}
+
+		if (finishCallback != null)
+		{
+			finishCallback();
+		}
+	}
+
 	function onVLCError()
 		{
 			trace("An error has occured while trying to load the video.\nPlease, check if the file you're loading exists.");

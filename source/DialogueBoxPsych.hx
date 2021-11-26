@@ -174,6 +174,8 @@ class DialogueBoxPsych extends FlxSpriteGroup
 
 	var walkies:Bool;
 
+	var isvisible:Bool;
+
 	var dialogueSound:FlxSound = null;
 
 	var dialoguePos:Int = 0;
@@ -186,7 +188,7 @@ class DialogueBoxPsych extends FlxSpriteGroup
 	var textBoxTypes:Array<String> = ['normal', 'angry'];
 	//var charPositionList:Array<String> = ['left', 'center', 'right'];
 
-	public function new(dialogueList:DialogueFile, walkies:Bool = false, ?song:String = null)
+	public function new(dialogueList:DialogueFile, walkies:Bool = false, ?song:String = null, isvisible:Bool = true)
 	{
 		super();
 
@@ -196,6 +198,8 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		}
 		
 		this.walkies = walkies;
+
+		this.isvisible = isvisible;
 
 		bgFade = new FlxSprite(-500, -500).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.WHITE);
 		bgFade.scrollFactor.set();
@@ -246,6 +250,18 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		} else {
 			coolbox.visible = false;
 			box.visible = true;
+		}
+
+		if (!isvisible) {
+			coolbox.visible = false;
+			box.visible = false;
+			bgFade.visible = false;
+			DEFAULT_TEXT_X = -30;
+			DEFAULT_TEXT_Y = 500;
+			Alphabet.DEFAULT_WIDTH = 0.8;
+		}
+		else {
+			Alphabet.DEFAULT_WIDTH = 0.65;
 		}
 
 		startNextDialog();
@@ -348,12 +364,20 @@ class DialogueBoxPsych extends FlxSpriteGroup
 							if(animName == checkArray[j] + textBoxTypes[i] || animName == checkArray[j] + textBoxTypes[i] + 'Open') {
 								box.animation.play(checkArray[j] + textBoxTypes[i] + 'Open', true);
 								coolbox.animation.play(checkArray[j] + textBoxTypes[i] + 'Open', true);
-								if (animName.contains('angry')) {
-									DEFAULT_TEXT_X = 220;
-									DEFAULT_TEXT_Y = 380;
-								} else {
-									DEFAULT_TEXT_X = 90;
-									DEFAULT_TEXT_Y = 430;
+								if (isvisible) {
+									if (animName.contains('angry')) {
+										DEFAULT_TEXT_X = 220;
+										DEFAULT_TEXT_Y = 380;
+									} else {
+										DEFAULT_TEXT_X = 90;
+										DEFAULT_TEXT_Y = 430;
+									}
+								}
+								else {
+									coolbox.visible = false;
+									box.visible = false;
+									DEFAULT_TEXT_X = -30;
+									DEFAULT_TEXT_Y = 500;
 								}
 							}
 						}
@@ -391,12 +415,20 @@ class DialogueBoxPsych extends FlxSpriteGroup
 						if(animName == checkArray[j] + textBoxTypes[i] || animName == checkArray[j] + textBoxTypes[i] + 'Open') {
 							box.animation.play(checkArray[j] + textBoxTypes[i], true);
 							coolbox.animation.play(checkArray[j] + textBoxTypes[i], true);
-							if (animName.contains('angry')) {
-								DEFAULT_TEXT_X = 220;
-								DEFAULT_TEXT_Y = 380;
-							} else {
-								DEFAULT_TEXT_X = 90;
-								DEFAULT_TEXT_Y = 430;
+							if (isvisible) {
+								if (animName.contains('angry')) {
+									DEFAULT_TEXT_X = 220;
+									DEFAULT_TEXT_Y = 380;
+								} else {
+									DEFAULT_TEXT_X = 90;
+									DEFAULT_TEXT_Y = 430;
+								}
+							}
+							else {
+								coolbox.visible = false;
+								box.visible = false;
+								DEFAULT_TEXT_X = -30;
+								DEFAULT_TEXT_Y = 500;
 							}
 						}
 					}
@@ -513,12 +545,18 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		}
 
 		var character:Int = 0;
-		if (walkies) {
-			coolbox.visible = true;
-			box.visible = false;
-		} else {
+		if (isvisible) {
+			if (walkies) {
+				coolbox.visible = true;
+				box.visible = false;
+			} else {
+				coolbox.visible = false;
+				box.visible = true;
+			}
+		}
+		else {
 			coolbox.visible = false;
-			box.visible = true;
+			box.visible = false;
 		}
 		for (i in 0...arrayCharacters.length) {
 			if(arrayCharacters[i].curCharacter == curDialogue.portrait) {
@@ -534,24 +572,40 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		if(character != lastCharacter) {
 			box.animation.play(centerPrefix + boxType + 'Open', true);
 			coolbox.animation.play(centerPrefix + boxType + 'Open', true);
-			if (animName.contains('angry')) {
-				DEFAULT_TEXT_X = 220;
-				DEFAULT_TEXT_Y = 380;
-			} else {
-				DEFAULT_TEXT_X = 90;
-				DEFAULT_TEXT_Y = 430;
+			if (isvisible) {
+				if (animName.contains('angry')) {
+					DEFAULT_TEXT_X = 220;
+					DEFAULT_TEXT_Y = 380;
+				} else {
+					DEFAULT_TEXT_X = 90;
+					DEFAULT_TEXT_Y = 430;
+				}
+			}
+			else {
+				coolbox.visible = false;
+				box.visible = false;
+				DEFAULT_TEXT_X = -30;
+				DEFAULT_TEXT_Y = 500;
 			}
 			updateBoxOffsets(box);
 			//box.flipX = (lePosition == 'left');
 		} else if(boxType != lastBoxType) {
 			box.animation.play(centerPrefix + boxType, true);
 			coolbox.animation.play(centerPrefix + boxType, true);
-			if (animName.contains('angry')) {
-				DEFAULT_TEXT_X = 220;
-				DEFAULT_TEXT_Y = 380;
-			} else {
-				DEFAULT_TEXT_X = 90;
-				DEFAULT_TEXT_Y = 430;
+			if (isvisible) {
+				if (animName.contains('angry')) {
+					DEFAULT_TEXT_X = 220;
+					DEFAULT_TEXT_Y = 380;
+				} else {
+					DEFAULT_TEXT_X = 90;
+					DEFAULT_TEXT_Y = 430;
+				}
+			}
+			else {
+				coolbox.visible = false;
+				box.visible = false;
+				DEFAULT_TEXT_X = -30;
+				DEFAULT_TEXT_Y = 500;
 			}
 			updateBoxOffsets(box);
 		}

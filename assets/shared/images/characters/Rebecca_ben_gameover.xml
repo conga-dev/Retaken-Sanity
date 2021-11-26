@@ -92,4 +92,5 @@
 	<SubTexture name="gameover0087" x="5494" y="1828" width="447" height="902" frameX="-52" frameY="-4" frameWidth="889" frameHeight="906"/>
 	<SubTexture name="gameover0088" x="5494" y="1828" width="447" height="902" frameX="-52" frameY="-4" frameWidth="889" frameHeight="906"/>
 	<SubTexture name="gameover0089" x="5494" y="1828" width="447" height="902" frameX="-52" frameY="-4" frameWidth="889" frameHeight="906"/>
+	<SubTexture name="gameoveridle0000" x="5494" y="1828" width="447" height="902" frameX="-52" frameY="-4" frameWidth="889" frameHeight="906"/>
 </TextureAtlas>

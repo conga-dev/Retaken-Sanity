@@ -83,8 +83,10 @@ class ChartingState extends MusicBeatState
 		['Change Character Blood', "Applies only to Silent Hills"],
 		['HUD Change', "Value 1: Change opacity to this \nValue 2: Duration of change"],
 		['Fade Black', "Value 1: Change opacity to this \nValue 2: Duration of change"],
+		['Fade White', "Value 1: Change opacity to this \nValue 2: Duration of change"],
 		['change ThisYou', "Value 1: Change opacity to this \nValue 2: Duration of change"],
-		['Zoom To', "Value 1: Cam Zoom \nValue 2: Duration of change"]
+		['Zoom To', "Value 1: Cam Zoom \nValue 2: Duration of change"],
+		['gamma do', "haha gamma do the funny plz\ndo the thing it good lolol"]
 	];
 
 	var _file:FileReference;
@@ -242,7 +244,7 @@ class ChartingState extends MusicBeatState
 		if(curSection >= _song.notes.length) curSection = _song.notes.length - 1;
 
 		FlxG.mouse.visible = true;
-		FlxG.save.bind('funkin', 'ninjamuffin99');
+		FlxG.save.bind('retakensanity');
 
 		tempBpm = _song.bpm;
 

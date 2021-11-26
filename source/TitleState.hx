@@ -48,7 +48,7 @@ class TitleState extends MusicBeatState
 
 	var wackyImage:FlxSprite;
 
-	var easterEggEnabled:Bool = true; //Disable this to hide the easter egg
+	var easterEggEnabled:Bool = false; //Disable this to hide the easter egg
 	var easterEggKeyCombination:Array<FlxKey> = [FlxKey.B, FlxKey.B]; //bb stands for bbpanzu cuz he wanted this lmao
 	var lastKeysPressed:Array<FlxKey> = [];
 
@@ -110,7 +110,7 @@ class TitleState extends MusicBeatState
 		swagShader = new ColorSwap();
 		super.create();
 
-		FlxG.save.bind('funkin', 'ninjamuffin99');
+		FlxG.save.bind('retakensanity');
 		ClientPrefs.loadPrefs();
 
 		Highscore.load();
@@ -126,7 +126,7 @@ class TitleState extends MusicBeatState
 		#elseif CHARTING
 		MusicBeatState.switchState(new ChartingState());
 		#else
-		if(FlxG.save.data.flashing == null && !FlashingState.leftState) {
+		if(FlxG.save.data.careful == null && !FlashingState.leftState) {
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
 			MusicBeatState.switchState(new FlashingState());
@@ -300,6 +300,30 @@ class TitleState extends MusicBeatState
 		if (FlxG.keys.justPressed.F)
 		{
 			FlxG.fullscreen = !FlxG.fullscreen;
+		}
+
+		if (FlxG.keys.justPressed.ONE)
+		{
+			FlxG.save.data.lostAvailable = 0;
+			FlxG.save.flush();
+		}
+
+		if (FlxG.keys.justPressed.TWO)
+		{
+			FlxG.save.data.lostAvailable = 1;
+			FlxG.save.flush();
+		}
+
+		if (FlxG.keys.justPressed.THREE)
+		{
+			FlxG.save.data.lostAvailable = 2;
+			FlxG.save.flush();
+		}
+
+		if (FlxG.keys.justPressed.FOUR)
+		{
+			FlxG.save.data.lostAvailable = 3;
+			FlxG.save.flush();
 		}
 
 		var pressedEnter:Bool = FlxG.keys.justPressed.ENTER;

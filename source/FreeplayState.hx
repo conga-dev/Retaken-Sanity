@@ -1,5 +1,6 @@
 package;
 
+import flixel.ui.FlxButton.FlxTypedButton;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -43,10 +44,22 @@ class FreeplayState extends MusicBeatState
 
 	private var iconArray:Array<HealthIcon> = [];
 
+	var bgs:FlxTypedGroup<FlxSprite>;
+
+	var bg1:FlxSprite;
+	var bg2:FlxSprite;
+	var bg3:FlxSprite;
+	var bg4:FlxSprite;
+	var bg5:FlxSprite;
+	var bg6:FlxSprite;
+
+	var blackthing:FlxSprite;
 	var bar:FlxSprite;
 	var hand:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
+
+	var checkWeeks:Int;
 
 	
 
@@ -61,7 +74,12 @@ class FreeplayState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
-		for (i in 0...WeekData.weeksList.length) {
+		if (FlxG.save.data.lostAvailable == 3)
+			checkWeeks = WeekData.weeksList.length;
+		else 
+			checkWeeks = WeekData.weeksList.length - 1;
+
+		for (i in 0...checkWeeks) {
 			var leWeek:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[i]);
 			var leSongs:Array<String> = [];
 			var leChars:Array<String> = [];
@@ -94,6 +112,74 @@ class FreeplayState extends MusicBeatState
 
 		// LOAD CHARACTERS
 
+		bgs = new FlxTypedGroup<FlxSprite>();
+		add(bgs);
+
+		bg1 = new FlxSprite(-300, -200);
+		bg1.frames = Paths.getSparrowAtlas('freeplaybgs/wakeup');
+		bg1.animation.addByPrefix('idle', 'Stage2', 24, true);
+		bg1.animation.play('idle');
+		bg1.setGraphicSize(Std.int(FlxG.width * 1.3));
+		//bg1.screenCenter(Y);
+		bg1.antialiasing = ClientPrefs.globalAntialiasing;
+		bg1.alpha = 0;
+		bg1.ID = 1;
+		bgs.add(bg1);
+
+		bg2 = new FlxSprite(-215, 0);
+		bg2.frames = Paths.getSparrowAtlas('freeplaybgs/unwind');
+		bg2.animation.addByPrefix('idle', 'Stage3', 24, true);
+		bg2.animation.play('idle');
+		bg2.setGraphicSize(Std.int(FlxG.width * 1.3));
+		//bg2.screenCenter(Y);
+		bg2.antialiasing = ClientPrefs.globalAntialiasing;
+		bg2.alpha = 0;
+		bg2.ID = 2;
+		bgs.add(bg2);
+
+		bg3 = new FlxSprite(-220, 60);
+		bg3.frames = Paths.getSparrowAtlas('freeplaybgs/happyend');
+		bg3.animation.addByPrefix('idle', 'Stage4', 24, true);
+		bg3.animation.play('idle');
+		bg3.setGraphicSize(Std.int(FlxG.width * 1.6));
+		bg3.antialiasing = ClientPrefs.globalAntialiasing;
+		//bg3.screenCenter(Y);
+		bg3.alpha = 0;
+		bg3.ID = 3;
+		bgs.add(bg3);
+
+		bg4 = new FlxSprite(-2000, -1050).loadGraphic(Paths.image('freeplaybgs/silenthills'));
+		bg4.setGraphicSize(FlxG.width);
+		bg4.antialiasing = ClientPrefs.globalAntialiasing;
+		//bg4.screenCenter(Y);
+		bg4.alpha = 0;
+		bg4.ID = 4;
+		bgs.add(bg4);
+
+		bg5 = new FlxSprite(-2000, -1050).loadGraphic(Paths.image('freeplaybgs/lovetodeath'));
+		bg5.setGraphicSize(FlxG.width);
+		bg5.antialiasing = ClientPrefs.globalAntialiasing;
+		//bg5.screenCenter(Y);
+		bg5.alpha = 0;
+		bg5.ID = 5;
+		bgs.add(bg5);
+
+		bg6 = new FlxSprite(-800, -380);
+		bg6.frames = Paths.getSparrowAtlas('freeplaybgs/grey');
+		bg6.animation.addByPrefix('idle', 'Therealistichands', 24, true);
+		bg6.animation.play('idle');
+		bg6.setGraphicSize(Std.int(FlxG.width * 1.3));
+		//bg6.screenCenter(Y);
+		bg6.antialiasing = ClientPrefs.globalAntialiasing;
+		bg6.alpha = 0;
+		bg6.ID = 6;
+		bgs.add(bg6);
+
+		blackthing = new FlxSprite(0, 0).loadGraphic(Paths.image('freeplayblack'));
+		//blackthing.scale.set(FlxG.width, FlxG.height);
+		//blackthing.antialiasing = ClientPrefs.globalAntialiasing;
+		add(blackthing);
+
 		bar = new FlxSprite(0, -400);
 		bar.frames = Paths.getSparrowAtlas('menu_line');
 		bar.animation.addByPrefix('idle', 'menu_Line1');
@@ -110,6 +196,7 @@ class FreeplayState extends MusicBeatState
 		hand.animation.play('open');
 		hand.scale.set(0.6, 0.6);
 		hand.antialiasing = ClientPrefs.globalAntialiasing;
+		hand.visible = true;
 		add(hand);
 
 		var selectedBar:FlxSprite = new FlxSprite(638, 408).makeGraphic(460, 55, FlxColor.WHITE);
@@ -162,8 +249,11 @@ class FreeplayState extends MusicBeatState
 		add(scoreText);
 
 		if(curSelected >= songs.length) curSelected = 0;
+		trace('susususus');
 		changeSelection();
+		trace('susususus');
 		changeDiff();
+		trace('susususus');
 
 		var swag:Alphabet = new Alphabet(1, 0, "swag");
 
@@ -196,6 +286,7 @@ class FreeplayState extends MusicBeatState
 		text.setFormat(Paths.font("vcr.ttf"), 18, FlxColor.WHITE, RIGHT);
 		text.scrollFactor.set();
 		add(text);
+
 		super.create();
 	}
 
@@ -376,6 +467,8 @@ class FreeplayState extends MusicBeatState
 
 	function changeSelection(change:Int = 0)
 	{
+		var prevSelected:Int = curSelected;
+
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 
 		curSelected += change;
@@ -393,6 +486,30 @@ class FreeplayState extends MusicBeatState
 		#end
 
 		var bullShit:Int = 0;
+
+		if (curSelected == 0) {
+			hand.visible = true;
+			hand.animation.play('open', true);
+			bgs.forEach(function(spr:FlxSprite) { 
+				if (spr.ID == prevSelected) {
+					function tweenFunction(spr2:FlxSprite, v:Float) { spr2.alpha = v; }
+					FlxTween.num(1, 0, 0.3, {}, tweenFunction.bind(spr)); 
+				}
+			});
+		}
+		else {
+			bgs.forEach(function(spr:FlxSprite) {
+				if (spr.ID == curSelected) {
+					function tweenFunction(spr2:FlxSprite, v:Float) { spr2.alpha = v; }
+					FlxTween.num(0, 1, 0.3, {}, tweenFunction.bind(spr));
+				}
+				else if (spr.ID == prevSelected) {
+					function tweenFunction(spr2:FlxSprite, v:Float) { spr2.alpha = v; }
+					FlxTween.num(1, 0, 0.3, {}, tweenFunction.bind(spr));
+				}
+			});
+			hand.visible = false;
+		}
 
 		for (i in 0...iconArray.length)
 		{

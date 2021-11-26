@@ -41,6 +41,7 @@ class StoryMenuState extends MusicBeatState
 	private static var curWeek:Int = 0;
 	var bar:FlxSprite;
 	var txtTracklist:FlxText;
+	var checkWeeks:Int;
 
 	var grpWeekText:FlxTypedGroup<FlxSprite>;
 	var grpWeekCharacters:FlxTypedGroup<MenuCharacter>;
@@ -108,9 +109,9 @@ class StoryMenuState extends MusicBeatState
 		}
 
 		difficultySelectors = new FlxGroup();
-		//add(difficultySelectors);
+		add(difficultySelectors);
 
-		leftArrow = new FlxSprite(0 + 0 + 10, 0 + 10);
+		leftArrow = new FlxSprite(930, 40);
 		leftArrow.frames = ui_tex;
 		leftArrow.animation.addByPrefix('idle', "arrow left");
 		leftArrow.animation.addByPrefix('press', "arrow push left");
@@ -120,7 +121,7 @@ class StoryMenuState extends MusicBeatState
 		difficultySelectors.add(leftArrow);
 
 		sprDifficultyGroup = new FlxTypedGroup<FlxSprite>();
-		//add(sprDifficultyGroup);
+		add(sprDifficultyGroup);
 
 		
 		for (i in 0...CoolUtil.difficultyStuff.length) {
@@ -178,7 +179,12 @@ class StoryMenuState extends MusicBeatState
 		bar2.flipX = true;
 		add(bar2);
 
-		for (i in 0...WeekData.weeksList.length)
+		if (FlxG.save.data.lostAvailable > 1)
+			checkWeeks = WeekData.weeksList.length;
+		else 
+			checkWeeks = WeekData.weeksList.length - 1;
+
+		for (i in 0...checkWeeks)
 		{
 			trace(WeekData.weeksList[i]);
 			
@@ -252,6 +258,11 @@ class StoryMenuState extends MusicBeatState
 			else
 				leftArrow.animation.play('idle');
 
+			if (controls.UI_LEFT_P)
+				changeDifficulty(-1);
+			if (controls.UI_RIGHT_P)
+				changeDifficulty(1);
+
 			if (controls.ACCEPT)
 			{
 				selectWeek();
@@ -313,7 +324,7 @@ class StoryMenuState extends MusicBeatState
 			PlayState.storyWeek = curWeek;
 			PlayState.campaignScore = 0;
 			PlayState.campaignMisses = 0;
-			new FlxTimer().start(1, function(tmr:FlxTimer)
+			new FlxTimer().start(0.3, function(tmr:FlxTimer)
 			{
 				LoadingState.loadAndSwitchState(new PlayState(), true);
 				FreeplayState.destroyFreeplayVocals();
@@ -360,10 +371,10 @@ class StoryMenuState extends MusicBeatState
 	{
 		curWeek += change;
 
-		if (curWeek >= WeekData.weeksList.length)
+		if (curWeek >= checkWeeks)
 			curWeek = 0;
 		if (curWeek < 0)
-			curWeek = WeekData.weeksList.length - 1;
+			curWeek = checkWeeks - 1;
 
 		var leWeek:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[curWeek]);
 		WeekData.setDirectoryFromWeek(leWeek);

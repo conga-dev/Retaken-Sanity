@@ -147,13 +147,13 @@ class VlcBitmap extends Bitmap
 		#end
 	}
 
-	public function stop()
+	public function stop(disp:Bool = false)
 	{
 		#if (cpp && !mobile)
 		isPlaying = false;
 		libvlc.stop();
-		// if (disposeOnStop)
-		// dispose();
+		//if (disposeOnStop || disp)
+		//	dispose();
 
 		if (onStop != null)
 			onStop();
@@ -459,8 +459,10 @@ class VlcBitmap extends Bitmap
 
 	function statusOnEndReached()
 	{
-		if (isPlaying)
+		if (isPlaying) {
 			isPlaying = false;
+			libvlc.stop();
+		}
 
 		// trace("end reached!");
 		if (onComplete != null)

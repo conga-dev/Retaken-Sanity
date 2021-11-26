@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="stage3.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Stage30000" x="10" y="10" width="1227" height="615"/>
+	<SubTexture name="Stage30001" x="10" y="10" width="1227" height="615"/>
+	<SubTexture name="Stage30002" x="1247" y="10" width="1227" height="615"/>
+	<SubTexture name="Stage30003" x="1247" y="10" width="1227" height="615"/>
+	<SubTexture name="Stage30004" x="2484" y="10" width="1227" height="615"/>
+	<SubTexture name="Stage30005" x="3721" y="10" width="1227" height="615"/>
+	<SubTexture name="Stage30006" x="3721" y="10" width="1227" height="615"/>
+	<SubTexture name="Stage30007" x="4958" y="10" width="1227" height="615"/>
+	<SubTexture name="Stage30008" x="6195" y="10" width="1227" height="615"/>
+	<SubTexture name="Stage30009" x="10" y="635" width="1227" height="615"/>
+	<SubTexture name="Stage30010" x="1247" y="635" width="1227" height="615"/>
+	<SubTexture name="Stage30011" x="2484" y="635" width="1227" height="615"/>
+	<SubTexture name="Stage30012" x="3721" y="635" width="1227" height="615"/>
+	<SubTexture name="Stage30013" x="4958" y="635" width="1227" height="615"/>
+	<SubTexture name="Stage30014" x="6195" y="635" width="1227" height="615"/>
+	<SubTexture name="Stage30015" x="10" y="1260" width="1227" height="615"/>
+	<SubTexture name="Stage30016" x="1247" y="1260" width="1227" height="615"/>
+	<SubTexture name="Stage30017" x="2484" y="1260" width="1227" height="615"/>
+	<SubTexture name="Stage30018" x="3721" y="1260" width="1227" height="615"/>
+	<SubTexture name="Stage30019" x="4958" y="1260" width="1227" height="615"/>
+	<SubTexture name="Stage30020" x="6195" y="1260" width="1227" height="615"/>
+	<SubTexture name="Stage30021" x="10" y="1885" width="1227" height="615"/>
+	<SubTexture name="Stage30022" x="1247" y="1885" width="1227" height="615"/>
+	<SubTexture name="Stage30023" x="2484" y="1885" width="1227" height="615"/>
+	<SubTexture name="Stage30024" x="3721" y="1885" width="1227" height="615"/>
+	<SubTexture name="Stage30025" x="4958" y="1885" width="1227" height="615"/>
+	<SubTexture name="Stage30026" x="6195" y="1885" width="1227" height="615"/>
+	<SubTexture name="Stage30027" x="10" y="2510" width="1227" height="615"/>
+	<SubTexture name="Stage30028" x="1247" y="2510" width="1227" height="615"/>
+	<SubTexture name="Stage30029" x="2484" y="2510" width="1227" height="615"/>
+	<SubTexture name="Stage30030" x="2484" y="2510" width="1227" height="615"/>
+	<SubTexture name="Stage30031" x="3721" y="2510" width="1227" height="615"/>
+	<SubTexture name="Stage30032" x="4958" y="2510" width="1227" height="615"/>
+	<SubTexture name="Stage30033" x="6195" y="2510" width="1227" height="615"/>
+	<SubTexture name="Stage30034" x="6195" y="2510" width="1227" height="615"/>
+</TextureAtlas>

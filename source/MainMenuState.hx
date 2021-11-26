@@ -19,6 +19,7 @@ import flixel.util.FlxColor;
 import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
+import editors.SecretMenu;
 
 using StringTools;
 
@@ -38,6 +39,8 @@ class MainMenuState extends MusicBeatState
 	var rightHand:FlxSprite;
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
+
+	var lostThing:FlxSprite;
 
 	override function create()
 	{
@@ -134,12 +137,15 @@ class MainMenuState extends MusicBeatState
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
-		var textScrolling:FlxSprite = new FlxSprite(500, 50);
-		textScrolling.frames = Paths.getSparrowAtlas('temp_name_scroll1');
-		textScrolling.animation.addByPrefix('idle', 'Namescrowl', 24, true);
-		textScrolling.animation.play('idle');
-		textScrolling.scrollFactor.set();
-		add(textScrolling);
+		trace(FlxG.save.data.lostAvailable);
+
+		if (FlxG.save.data.lostAvailable == 1) {
+			FlxG.mouse.visible = true;
+			lostThing = new FlxSprite(950, FlxG.height - 200).loadGraphic(Paths.image('lost'));
+			lostThing.scale.set(0.7, 0.7);
+			lostThing.scrollFactor.set();
+			add(lostThing);
+		}
 
 		// NG.core.calls.event.logEvent('swag').send();
 
@@ -182,6 +188,15 @@ class MainMenuState extends MusicBeatState
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 5.6, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
+		if (FlxG.save.data.lostAvailable == 1) {
+			if (FlxG.mouse.overlaps(lostThing)) {
+				if (FlxG.mouse.justPressed) {
+					FlxG.mouse.visible = false;
+					MusicBeatState.switchState(new SecretMenu());
+				}
+			}
+		}
+
 		if (!selectedSomethin)
 		{
 			if (controls.UI_UP_P)
@@ -205,6 +220,8 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
+				FlxG.mouse.visible = false;
+
 				if (optionShit[curSelected] == 'donate')
 				{
 					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
